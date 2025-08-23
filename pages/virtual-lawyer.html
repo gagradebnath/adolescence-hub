@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Lawyer AI - Adolescence HUB</title>
+    <title>Virtual Lawyer - Adolescence HUB</title>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,7 +23,7 @@
             
             <div class="search-container">
                 <i class="fas fa-search search-icon"></i>
-                <input type="text" class="search-input" placeholder="Search legal topics, questions...">
+                <input type="text" class="search-input" placeholder="Search legal topics...">
             </div>
             
             <div class="header-actions">
@@ -78,18 +78,18 @@
             <div class="sidebar-section">
                 <h3 class="section-title">AI Tools</h3>
                 <nav class="sidebar-nav">
+                    <a href="virtual-lawyer.html" class="sidebar-item active">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Virtual Lawyer</span>
+                    </a>
                     <a href="influencer-analyzer.html" class="sidebar-item">
                         <i class="fas fa-user-check"></i>
                         <span>Influencer Analyzer</span>
                     </a>
-                    <a href="virtual-lawyer.html" class="sidebar-item active">
-                        <i class="fas fa-gavel"></i>
-                        <span>Virtual Lawyer</span>
-                    </a>
                 </nav>
             </div>
 
-            <!-- Legal Categories -->
+            <!-- Legal Topics -->
             <div class="sidebar-section">
                 <h3 class="section-title">Legal Topics</h3>
                 <nav class="sidebar-nav">
@@ -144,8 +144,8 @@
                     <div class="post-media" style="background: linear-gradient(135deg, #dbeafe, #f3e8ff);">
                         <i class="fas fa-balance-scale"></i>
                     </div>
-                    <div class="mt-3 p-3 bg-blue-50 rounded-lg">
-                        <div class="flex items-center gap-2 text-sm text-blue-600">
+                    <div style="margin-top: 0.75rem; padding: 0.75rem; background: #dbeafe; border-radius: 0.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: #1e40af;">
                             <i class="fas fa-info-circle"></i>
                             <span>For educational purposes only - consult a real lawyer for serious legal matters</span>
                         </div>
@@ -190,36 +190,36 @@
                     </p>
                     
                     <!-- Chat Interface -->
-                    <div class="bg-gray-50 rounded-lg p-4 mt-4">
-                        <div class="space-y-3 mb-4 max-h-64 overflow-y-auto">
+                    <div style="background: #f8fafc; border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
+                        <div style="margin-bottom: 1rem; max-height: 16rem; overflow-y: auto;">
                             <!-- AI Message -->
-                            <div class="flex gap-3">
-                                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm">
+                            <div style="display: flex; gap: 0.75rem;">
+                                <div style="width: 2rem; height: 2rem; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.875rem;">
                                     <i class="fas fa-gavel"></i>
                                 </div>
-                                <div class="flex-1 bg-white p-3 rounded-lg">
-                                    <p class="text-sm">Hello! I'm your Virtual Lawyer AI. I can help you understand legal issues related to digital rights, privacy, and online safety. What would you like to know?</p>
+                                <div style="flex: 1; background: white; padding: 0.75rem; border-radius: 0.5rem;">
+                                    <p style="font-size: 0.875rem;">Hello! I'm your Virtual Lawyer AI. I can help you understand legal issues related to digital rights, privacy, and online safety. What would you like to know?</p>
                                 </div>
                             </div>
                             
                             <!-- Quick Questions -->
-                            <div class="flex flex-wrap gap-2 mt-3">
-                                <button class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem;">
+                                <button style="font-size: 0.75rem; background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 9999px; border: none; cursor: pointer;">
                                     "Can schools monitor my social media?"
                                 </button>
-                                <button class="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full hover:bg-green-200">
+                                <button style="font-size: 0.75rem; background: #dcfce7; color: #166534; padding: 0.25rem 0.75rem; border-radius: 9999px; border: none; cursor: pointer;">
                                     "What are my privacy rights online?"
                                 </button>
-                                <button class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full hover:bg-purple-200">
+                                <button style="font-size: 0.75rem; background: #e9d5ff; color: #6b21a8; padding: 0.25rem 0.75rem; border-radius: 9999px; border: none; cursor: pointer;">
                                     "How to report cyberbullying?"
                                 </button>
                             </div>
                         </div>
                         
                         <!-- Chat Input -->
-                        <div class="flex gap-2">
-                            <input type="text" placeholder="Ask a legal question..." class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                        <div style="display: flex; gap: 0.5rem;">
+                            <input type="text" placeholder="Ask a legal question..." style="flex: 1; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 0.5rem; outline: none;">
+                            <button style="background: #3b82f6; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; border: none; cursor: pointer;">
                                 <i class="fas fa-paper-plane"></i>
                             </button>
                         </div>
@@ -240,43 +240,7 @@
                     </button>
                 </div>
             </article>
-                
-                <div class="chat-messages bg-gray-50 h-96 overflow-y-auto p-4">
-                    <!-- AI Welcome Message -->
-                    <div class="mb-4">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm">
-                                AI
-                            </div>
-                            <div class="bg-white rounded-lg p-3 max-w-md">
-                                <p class="text-sm">Hello! I'm your Virtual Lawyer AI. I can help you understand digital rights, privacy laws, and online safety. What legal question do you have?</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Sample User Message -->
-                    <div class="mb-4 flex justify-end">
-                        <div class="bg-blue-500 text-white rounded-lg p-3 max-w-xs">
-                            <p class="text-sm">Can someone use my photos from social media without permission?</p>
-                        </div>
-                    </div>
-                    
-                    <!-- AI Response -->
-                    <div class="mb-4">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm">
-                                AI
-                            </div>
-                            <div class="bg-white rounded-lg p-3 max-w-md">
-                                <p class="text-sm">Generally, photos you post on social media are protected by copyright law. Others cannot use them commercially without your permission. However, check the platform's terms of service as you may have granted certain usage rights. For personal use, laws vary by jurisdiction.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="p-4 border-t">
-                    <div class="flex gap-2 mb-2">
-                        <input type="text" class="flex-1 border rounded-lg px-3 py-2 text-sm" placeholder="Ask a legal question...">
+
             <!-- Legal Resources Post -->
             <article class="post-card card">
                 <div class="post-header">
@@ -298,41 +262,41 @@
                     <p class="post-description">
                         Quick access to important legal information every digital citizen should know.
                     </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                        <div class="border rounded-lg p-4 hover:bg-gray-50">
-                            <div class="flex items-center gap-3 mb-2">
-                                <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
-                                <h4 class="font-medium">Privacy Rights</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                <i class="fas fa-shield-alt" style="color: #3b82f6; font-size: 1.25rem;"></i>
+                                <h4 style="font-weight: 500;">Privacy Rights</h4>
                             </div>
-                            <p class="text-sm text-gray-600 mb-3">Learn about your right to privacy online and how to protect personal data</p>
-                            <div class="text-xs text-gray-500">📖 5 min read • 🏷️ Essential</div>
+                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Learn about your right to privacy online and how to protect personal data</p>
+                            <div style="font-size: 0.75rem; color: #64748b;">📖 5 min read • 🏷️ Essential</div>
                         </div>
                         
-                        <div class="border rounded-lg p-4 hover:bg-gray-50">
-                            <div class="flex items-center gap-3 mb-2">
-                                <i class="fas fa-copyright text-green-500 text-xl"></i>
-                                <h4 class="font-medium">Copyright Basics</h4>
+                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                <i class="fas fa-copyright" style="color: #10b981; font-size: 1.25rem;"></i>
+                                <h4 style="font-weight: 500;">Copyright Basics</h4>
                             </div>
-                            <p class="text-sm text-gray-600 mb-3">Understand copyright law for photos, videos, and content creation</p>
-                            <div class="text-xs text-gray-500">📖 7 min read • 🎨 Creators</div>
+                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Understand copyright law for photos, videos, and content creation</p>
+                            <div style="font-size: 0.75rem; color: #64748b;">📖 7 min read • 🎨 Creators</div>
                         </div>
                         
-                        <div class="border rounded-lg p-4 hover:bg-gray-50">
-                            <div class="flex items-center gap-3 mb-2">
-                                <i class="fas fa-user-secret text-red-500 text-xl"></i>
-                                <h4 class="font-medium">Cyberbullying Laws</h4>
+                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                <i class="fas fa-user-secret" style="color: #ef4444; font-size: 1.25rem;"></i>
+                                <h4 style="font-weight: 500;">Cyberbullying Laws</h4>
                             </div>
-                            <p class="text-sm text-gray-600 mb-3">Know your rights and legal options against online harassment</p>
-                            <div class="text-xs text-gray-500">📖 6 min read • 🚨 Safety</div>
+                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Know your rights and legal options against online harassment</p>
+                            <div style="font-size: 0.75rem; color: #64748b;">📖 6 min read • 🚨 Safety</div>
                         </div>
                         
-                        <div class="border rounded-lg p-4 hover:bg-gray-50">
-                            <div class="flex items-center gap-3 mb-2">
-                                <i class="fas fa-mobile-alt text-purple-500 text-xl"></i>
-                                <h4 class="font-medium">Digital Rights</h4>
+                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                <i class="fas fa-mobile-alt" style="color: #8b5cf6; font-size: 1.25rem;"></i>
+                                <h4 style="font-weight: 500;">Digital Rights</h4>
                             </div>
-                            <p class="text-sm text-gray-600 mb-3">Your rights in the digital age and how to exercise them</p>
-                            <div class="text-xs text-gray-500">📖 8 min read • ⚖️ Rights</div>
+                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Your rights in the digital age and how to exercise them</p>
+                            <div style="font-size: 0.75rem; color: #64748b;">📖 8 min read • ⚖️ Rights</div>
                         </div>
                     </div>
                 </div>
@@ -353,96 +317,5 @@
             </article>
         </main>
     </div>
-</body>
-</html>
-                            <p class="text-sm text-secondary mb-3">Your rights in the digital world and how to exercise them</p>
-                            <button class="btn btn-outline btn-sm">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-</body>
-</html>
-                        </div>
-                        
-                        <div class="resource-card">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <h5 class="mb-0">Cyberbullying Prevention</h5>
-                                <span class="topic-badge">Safety</span>
-                            </div>
-                            <p class="text-muted mb-3">Legal definitions, prevention strategies, and how to report cyberbullying incidents.</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">Read Guide</a>
-                        </div>
-                        
-                        <div class="resource-card">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <h5 class="mb-0">Digital Consent Laws</h5>
-                                <span class="topic-badge">Legal</span>
-                            </div>
-                            <p class="text-muted mb-3">Understanding consent in the digital age, including image sharing and data collection.</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">Explore</a>
-                        </div>
-                        
-                        <div class="resource-card">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <h5 class="mb-0">Emergency Contacts</h5>
-                                <span class="topic-badge">Help</span>
-                            </div>
-                            <div class="mb-3">
-                                <strong>Cybertipline:</strong><br>
-                                <a href="tel:1-800-843-5678">1-800-THE-LOST</a>
-                                <br><br>
-                                <strong>Crisis Text Line:</strong><br>
-                                Text HOME to 741741
-                                <br><br>
-                                <strong>Teen Legal Helpline:</strong><br>
-                                <a href="tel:1-844-435-7553">1-844-HELP-ME3</a>
-                            </div>
-                        </div>
-                        
-                        <div class="alert alert-info">
-                            <i class="fas fa-info-circle me-2"></i>
-                            <strong>Remember:</strong> This AI provides educational information. For serious legal matters, always consult with a qualified attorney.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Adolescence HUB</h5>
-                    <p>Empowering young minds with digital literacy and safety knowledge.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <div class="social-links">
-                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-light"><i class="fab fa-discord"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-4">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2024 Adolescence HUB. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-light me-3">Privacy Policy</a>
-                    <a href="#" class="text-light">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/virtual-lawyer.js"></script>
 </body>
 </html>
