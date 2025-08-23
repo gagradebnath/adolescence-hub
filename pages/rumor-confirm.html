@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumor Confirm - Adolescence HUB</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Modern Social CSS -->
+    <link rel="stylesheet" href="../css/modern-social.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>Adolescence HUB</span>
+            </a>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search rumors, fact-checks...">
+            </div>
+            
+            <div class="header-actions">
+                <button class="header-btn has-notification" title="Notifications">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <button class="header-btn" title="Messages">
+                    <i class="fas fa-comment"></i>
+                </button>
+                <button class="header-btn" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <div class="user-avatar" title="Youth Member">
+                    YM
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <!-- Navigation -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Menu</h3>
+                <nav class="sidebar-nav">
+                    <a href="../index.html" class="sidebar-item">
+                        <i class="fas fa-home"></i>
+                        <span>Home Feed</span>
+                    </a>
+                    <a href="community.html" class="sidebar-item">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                    </a>
+                    <a href="rumor-confirm.html" class="sidebar-item active">
+                        <i class="fas fa-search"></i>
+                        <span>Rumor Confirm</span>
+                    </a>
+                    <a href="biased-news.html" class="sidebar-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Bias Checker</span>
+                    </a>
+                    <a href="newsletter.html" class="sidebar-item">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Newsletter</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Quick Submit -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Quick Submit</h3>
+                <div class="quick-submit">
+                    <textarea class="form-input" placeholder="Submit a rumor for verification..." rows="3"></textarea>
+                    <button class="btn btn-primary w-100 mt-2">
+                        <i class="fas fa-paper-plane"></i>
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Submit Rumor for Fact Check -->
+            <div class="card mb-6">
+                <div class="fact-check-header">
+                    <h2><i class="fas fa-search"></i> Submit for Fact Check</h2>
+                    <p>Found something suspicious? Let our community verify it together!</p>
+                </div>
+                <div class="p-5">
+                    <div class="form-group">
+                        <label class="form-label">Rumor/Claim to Verify</label>
+                        <textarea class="form-input form-textarea" rows="3" placeholder="Paste the claim or describe what you heard..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Source (if known)</label>
+                        <input type="text" class="form-input" placeholder="Where did you see/hear this? (social media, website, person, etc.)">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Category</label>
+                        <select class="form-input" title="Select category">
+                            <option>Select a category...</option>
+                            <option>Health &amp; Medicine</option>
+                            <option>Technology</option>
+                            <option>Social Media Claims</option>
+                            <option>Politics &amp; Government</option>
+                            <option>Education</option>
+                            <option>Science</option>
+                            <option>Entertainment</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Submit for Verification
+                        </button>
+                        <div class="text-sm text-secondary">
+                            <i class="fas fa-clock"></i>
+                            Typical response time: 2-24 hours
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Fact Checks -->
+            <div class="fact-checks-container">
+                <h2 class="mb-4">Recent Fact Checks</h2>
+
+                <!-- Verified as FALSE -->
+                <article class="fact-check-card card">
+                    <div class="fact-check-status status-false">
+                        <i class="fas fa-times-circle"></i>
+                        <span>FALSE</span>
+                    </div>
+                    <div class="fact-check-content">
+                        <h3 class="fact-check-claim">"Drinking cold water after meals causes cancer"</h3>
+                        <div class="fact-check-meta">
+                            <span class="badge badge-danger">Health</span>
+                            <span>•</span>
+                            <span>Verified 3 hours ago</span>
+                            <span>•</span>
+                            <span>Expert: Dr. Sarah Chen, MD</span>
+                        </div>
+                        <p class="fact-check-explanation">
+                            This claim has been circulating on social media but has no scientific basis. There's no evidence that 
+                            drinking cold water affects digestion in harmful ways or causes cancer. Multiple medical studies 
+                            confirm this is a myth.
+                        </p>
+                        <div class="fact-check-sources">
+                            <h4>Sources:</h4>
+                            <ul>
+                                <li><a href="#" target="_blank" rel="noopener">Mayo Clinic - Hydration Facts</a></li>
+                                <li><a href="#" target="_blank" rel="noopener">American Cancer Society - Cancer Myths</a></li>
+                                <li><a href="#" target="_blank" rel="noopener">Journal of Clinical Medicine Study</a></li>
+                            </ul>
+                        </div>
+                        <div class="fact-check-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>Helpful (47)</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-share"></i>
+                                <span>Share Correction</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-question-circle"></i>
+                                <span>Ask Follow-up</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Verified as TRUE -->
+                <article class="fact-check-card card">
+                    <div class="fact-check-status status-true">
+                        <i class="fas fa-check-circle"></i>
+                        <span>TRUE</span>
+                    </div>
+                    <div class="fact-check-content">
+                        <h3 class="fact-check-claim">"Screen time before bed can affect sleep quality"</h3>
+                        <div class="fact-check-meta">
+                            <span class="badge badge-primary">Technology</span>
+                            <span>•</span>
+                            <span>Verified 6 hours ago</span>
+                            <span>•</span>
+                            <span>Expert: Dr. Michael Rodriguez, Sleep Specialist</span>
+                        </div>
+                        <p class="fact-check-explanation">
+                            This claim is scientifically accurate. Blue light from screens can suppress melatonin production, 
+                            making it harder to fall asleep. Studies recommend avoiding screens 1-2 hours before bedtime 
+                            for better sleep hygiene.
+                        </p>
+                        <div class="fact-check-sources">
+                            <h4>Sources:</h4>
+                            <ul>
+                                <li><a href="#" target="_blank" rel="noopener">Sleep Foundation - Blue Light Research</a></li>
+                                <li><a href="#" target="_blank" rel="noopener">Harvard Health - Sleep and Technology</a></li>
+                                <li><a href="#" target="_blank" rel="noopener">National Sleep Institute Studies</a></li>
+                            </ul>
+                        </div>
+                        <div class="fact-check-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>Helpful (89)</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-share"></i>
+                                <span>Share Info</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Sleep Tips</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Under Investigation -->
+                <article class="fact-check-card card">
+                    <div class="fact-check-status status-investigating">
+                        <i class="fas fa-search"></i>
+                        <span>INVESTIGATING</span>
+                    </div>
+                    <div class="fact-check-content">
+                        <h3 class="fact-check-claim">"New study shows video games improve academic performance"</h3>
+                        <div class="fact-check-meta">
+                            <span class="badge badge-info">Education</span>
+                            <span>•</span>
+                            <span>Submitted 2 hours ago</span>
+                            <span>•</span>
+                            <span>Assigned to: Gaming Research Team</span>
+                        </div>
+                        <p class="fact-check-explanation">
+                            Our team is currently reviewing recent studies and academic papers to verify this claim. 
+                            We're consulting with education experts and game researchers to provide a comprehensive analysis.
+                        </p>
+                        <div class="investigation-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="65"></div>
+                            </div>
+                            <span>Investigation Progress: 65%</span>
+                        </div>
+                        <div class="fact-check-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-bell"></i>
+                                <span>Notify Me (34)</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-plus"></i>
+                                <span>Add Evidence</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-comments"></i>
+                                <span>Discuss (12)</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Expert Panel -->
+            <div class="widget">
+                <h3 class="widget-title">Expert Verification Panel</h3>
+                
+                <div class="expert-card">
+                    <div class="expert-avatar bg-gradient-1">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="expert-info">
+                        <div class="expert-name">Dr. Sarah Chen</div>
+                        <div class="expert-title">Medical Doctor</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-check"></i> 47 verifications</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="expert-card">
+                    <div class="expert-avatar bg-gradient-2">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="expert-info">
+                        <div class="expert-name">Prof. Lisa Kim</div>
+                        <div class="expert-title">Digital Media Researcher</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-check"></i> 23 verifications</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="expert-card">
+                    <div class="expert-avatar bg-gradient-3">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="expert-info">
+                        <div class="expert-name">Dr. Michael Rodriguez</div>
+                        <div class="expert-title">Sleep Specialist</div>
+                        <div class="expert-stats">
+                            <span><i class="fas fa-check"></i> 31 verifications</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Verification Stats -->
+            <div class="widget">
+                <h3 class="widget-title">This Week's Stats</h3>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="stat-number text-success">67</div>
+                        <div class="stat-label">Claims Verified</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number text-danger">23</div>
+                        <div class="stat-label">False Claims</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number text-primary">31</div>
+                        <div class="stat-label">True Claims</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number text-warning">13</div>
+                        <div class="stat-label">Partially True</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Fact-Check Tips -->
+            <div class="widget">
+                <h3 class="widget-title">Quick Fact-Check Tips</h3>
+                <div class="tips-list">
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb text-warning"></i>
+                        <span>Check multiple reliable sources</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb text-warning"></i>
+                        <span>Look for author credentials</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb text-warning"></i>
+                        <span>Verify publication date</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-lightbulb text-warning"></i>
+                        <span>Check if it sounds too good to be true</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Fact check submission
+        document.querySelector('.btn-primary').addEventListener('click', function() {
+            const claim = document.querySelector('textarea').value.trim();
+            const source = document.querySelector('input[type="text"]').value.trim();
+            const category = document.querySelector('select').value;
+            
+            if (!claim) {
+                alert('Please enter the claim you want to verify.');
+                return;
+            }
+            
+            if (!category || category === 'Select a category...') {
+                alert('Please select a category for better verification.');
+                return;
+            }
+            
+            alert('Your claim has been submitted for verification! Our expert panel will review it within 24 hours.');
+            
+            // Clear form
+            document.querySelector('textarea').value = '';
+            document.querySelector('input[type="text"]').value = '';
+            document.querySelector('select').selectedIndex = 0;
+        });
+
+        // Helpful button interactions
+        document.querySelectorAll('.action-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.querySelector('.fa-thumbs-up')) {
+                    this.classList.toggle('active');
+                    const count = this.querySelector('span');
+                    if (count) {
+                        const match = count.textContent.match(/\d+/);
+                        if (match) {
+                            const currentCount = parseInt(match[0]);
+                            const newCount = this.classList.contains('active') ? 
+                                currentCount + 1 : currentCount - 1;
+                            count.textContent = count.textContent.replace(/\d+/, newCount);
+                        }
+                    }
+                }
+            });
+        });
+
+        // Progress bar animation
+        document.querySelectorAll('.progress-fill').forEach(bar => {
+            const progress = bar.dataset.progress;
+            setTimeout(() => {
+                bar.style.width = progress + '%';
+            }, 500);
+        });
+    </script>
+
+    <style>
+        .fact-check-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            color: white;
+            padding: 24px;
+            text-align: center;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .fact-checks-container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .fact-check-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .fact-check-status {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            z-index: 2;
+        }
+
+        .status-true {
+            background: var(--success-light);
+            color: var(--success);
+        }
+
+        .status-false {
+            background: var(--danger-light);
+            color: var(--danger);
+        }
+
+        .status-investigating {
+            background: var(--info-light);
+            color: var(--info);
+        }
+
+        .fact-check-content {
+            padding: 24px;
+            padding-top: 60px;
+        }
+
+        .fact-check-claim {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .fact-check-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .fact-check-explanation {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .fact-check-sources {
+            background: var(--surface-secondary);
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .fact-check-sources h4 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .fact-check-sources ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .fact-check-sources li {
+            margin-bottom: 6px;
+        }
+
+        .fact-check-sources a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .fact-check-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .investigation-progress {
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--surface-secondary);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .expert-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .expert-card:last-child {
+            border-bottom: none;
+        }
+
+        .expert-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .expert-info {
+            flex: 1;
+        }
+
+        .expert-name {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .expert-title {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .expert-stats {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .tips-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .tip-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .action-btn.active {
+            background: var(--primary-light);
+            color: var(--primary-blue);
+        }
+    </style>
+</body>
+</html>

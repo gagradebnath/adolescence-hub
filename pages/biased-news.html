@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bias Checker - Adolescence HUB</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Modern Social CSS -->
+    <link rel="stylesheet" href="../css/modern-social.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>Adolescence HUB</span>
+            </a>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search news, analyze bias...">
+            </div>
+            
+            <div class="header-actions">
+                <button class="header-btn has-notification" title="Notifications">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <button class="header-btn" title="Messages">
+                    <i class="fas fa-comment"></i>
+                </button>
+                <button class="header-btn" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <div class="user-avatar" title="Youth Member">
+                    YM
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <!-- Navigation -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Menu</h3>
+                <nav class="sidebar-nav">
+                    <a href="../index.html" class="sidebar-item">
+                        <i class="fas fa-home"></i>
+                        <span>Home Feed</span>
+                    </a>
+                    <a href="community.html" class="sidebar-item">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                    </a>
+                    <a href="rumor-confirm.html" class="sidebar-item">
+                        <i class="fas fa-search"></i>
+                        <span>Rumor Confirm</span>
+                    </a>
+                    <a href="biased-news.html" class="sidebar-item active">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Bias Checker</span>
+                    </a>
+                    <a href="newsletter.html" class="sidebar-item">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Newsletter</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Bias Types -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Common Biases</h3>
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-item" data-bias="confirmation">
+                        <i class="fas fa-check-double"></i>
+                        <span>Confirmation Bias</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-bias="selection">
+                        <i class="fas fa-filter"></i>
+                        <span>Selection Bias</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-bias="framing">
+                        <i class="fas fa-frame"></i>
+                        <span>Framing Bias</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-bias="sensational">
+                        <i class="fas fa-exclamation"></i>
+                        <span>Sensationalism</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-bias="political">
+                        <i class="fas fa-vote-yea"></i>
+                        <span>Political Bias</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Quick Analysis -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Quick Analysis</h3>
+                <div class="quick-analysis">
+                    <input type="url" class="form-input" placeholder="Paste news article URL...">
+                    <button class="btn btn-primary w-100 mt-2">
+                        <i class="fas fa-chart-line"></i>
+                        Analyze Bias
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Bias Analysis Tool -->
+            <div class="card mb-6">
+                <div class="bias-header">
+                    <h2><i class="fas fa-balance-scale"></i> News Bias Analyzer</h2>
+                    <p>Learn to identify bias and misinformation in news articles and social media posts</p>
+                </div>
+                <div class="p-5">
+                    <div class="form-group">
+                        <label class="form-label">Article URL or Text</label>
+                        <textarea class="form-input form-textarea" rows="4" placeholder="Paste the article URL or copy the text you want to analyze for bias..."></textarea>
+                    </div>
+                    <div class="analysis-options">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="form-label">Analysis Type</label>
+                                <select class="form-input" title="Select analysis type">
+                                    <option>Comprehensive Analysis</option>
+                                    <option>Political Bias</option>
+                                    <option>Emotional Language</option>
+                                    <option>Source Credibility</option>
+                                    <option>Fact vs Opinion</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Source Type</label>
+                                <select class="form-input" title="Select source type">
+                                    <option>News Article</option>
+                                    <option>Social Media Post</option>
+                                    <option>Blog Post</option>
+                                    <option>Opinion Piece</option>
+                                    <option>Academic Paper</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-chart-line"></i>
+                        Analyze for Bias
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sample Analysis Results -->
+            <div class="analysis-results">
+                <h2 class="mb-4">Recent Bias Analysis</h2>
+
+                <!-- Analysis Result 1 - High Bias -->
+                <article class="analysis-card card">
+                    <div class="bias-score high-bias">
+                        <div class="score-circle">
+                            <span class="score-value">8.2</span>
+                            <span class="score-label">HIGH BIAS</span>
+                        </div>
+                    </div>
+                    <div class="analysis-content">
+                        <h3 class="article-title">"SHOCKING: Tech Company DESTROYS Local Economy!"</h3>
+                        <div class="analysis-meta">
+                            <span class="source-badge unreliable">Questionable Source</span>
+                            <span>•</span>
+                            <span>Analyzed 2 hours ago</span>
+                            <span>•</span>
+                            <span>Article Type: Opinion disguised as news</span>
+                        </div>
+                        
+                        <div class="bias-breakdown">
+                            <h4>Bias Analysis Breakdown:</h4>
+                            <div class="bias-indicators">
+                                <div class="bias-item high">
+                                    <span class="bias-type">Emotional Language</span>
+                                    <div class="bias-bar">
+                                        <div class="bias-fill" data-width="90"></div>
+                                    </div>
+                                    <span class="bias-score">9.0/10</span>
+                                </div>
+                                <div class="bias-item high">
+                                    <span class="bias-type">Sensationalism</span>
+                                    <div class="bias-bar">
+                                        <div class="bias-fill" data-width="85"></div>
+                                    </div>
+                                    <span class="bias-score">8.5/10</span>
+                                </div>
+                                <div class="bias-item medium">
+                                    <span class="bias-type">Source Citations</span>
+                                    <div class="bias-bar">
+                                        <div class="bias-fill" data-width="30"></div>
+                                    </div>
+                                    <span class="bias-score">3.0/10</span>
+                                </div>
+                                <div class="bias-item high">
+                                    <span class="bias-type">Political Slant</span>
+                                    <div class="bias-bar">
+                                        <div class="bias-fill" data-width="75"></div>
+                                    </div>
+                                    <span class="bias-score">7.5/10</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="red-flags">
+                            <h4>🚩 Red Flags Detected:</h4>
+                            <ul>
+                                <li>ALL CAPS words used for emotional impact</li>
+                                <li>Loaded language: "DESTROYS", "SHOCKING"</li>
+                                <li>No quotes from company representatives</li>
+                                <li>Anonymous sources only</li>
+                                <li>Opinion presented as fact</li>
+                            </ul>
+                        </div>
+
+                        <div class="suggestions">
+                            <h4>💡 How to Read This Better:</h4>
+                            <ul>
+                                <li>Look for more balanced reporting from multiple sources</li>
+                                <li>Check if company provided response</li>
+                                <li>Search for economic data to verify claims</li>
+                                <li>Consider the source's track record</li>
+                            </ul>
+                        </div>
+
+                        <div class="analysis-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-share"></i>
+                                <span>Share Analysis</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-bookmark"></i>
+                                <span>Save Example</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-comments"></i>
+                                <span>Discuss (23)</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Analysis Result 2 - Low Bias -->
+                <article class="analysis-card card">
+                    <div class="bias-score low-bias">
+                        <div class="score-circle">
+                            <span class="score-value">2.1</span>
+                            <span class="score-label">LOW BIAS</span>
+                        </div>
+                    </div>
+                    <div class="analysis-content">
+                        <h3 class="article-title">"Local Tech Company Announces 200 New Jobs, Some Residents Concerned About Traffic"</h3>
+                        <div class="analysis-meta">
+                            <span class="source-badge reliable">Reliable Source</span>
+                            <span>•</span>
+                            <span>Analyzed 4 hours ago</span>
+                            <span>•</span>
+                            <span>Article Type: Balanced news reporting</span>
+                        </div>
+                        
+                        <div class="bias-breakdown">
+                            <h4>Bias Analysis Breakdown:</h4>
+                            <div class="bias-indicators">
+                                <div class="bias-item low">
+                                    <span class="bias-type">Emotional Language</span>
+                                    <div class="bias-bar">
+                                        <div class="bias-fill" data-width="15"></div>
+                                    </div>
+                                    <span class="bias-score">1.5/10</span>
+                                </div>
+                                <div class="bias-item low">
+                                    <span class="bias-type">Sensationalism</span>
+                                    <div class="bias-bar">
+                                        <div class="bias-fill" data-width="10"></div>
+                                    </div>
+                                    <span class="bias-score">1.0/10</span>
+                                </div>
+                                <div class="bias-item low">
+                                    <span class="bias-type">Source Citations</span>
+                                    <div class="bias-bar">
+                                        <div class="bias-fill" data-width="85"></div>
+                                    </div>
+                                    <span class="bias-score">8.5/10</span>
+                                </div>
+                                <div class="bias-item low">
+                                    <span class="bias-type">Political Slant</span>
+                                    <div class="bias-bar">
+                                        <div class="bias-fill" data-width="20"></div>
+                                    </div>
+                                    <span class="bias-score">2.0/10</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="green-flags">
+                            <h4>✅ Good Practices Found:</h4>
+                            <ul>
+                                <li>Neutral, factual headline</li>
+                                <li>Multiple perspectives included</li>
+                                <li>Direct quotes from relevant parties</li>
+                                <li>Specific numbers and data provided</li>
+                                <li>Clear distinction between facts and opinions</li>
+                            </ul>
+                        </div>
+
+                        <div class="analysis-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>Good Example (67)</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-share"></i>
+                                <span>Share Analysis</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-bookmark"></i>
+                                <span>Save Example</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Analysis Result 3 - Medium Bias -->
+                <article class="analysis-card card">
+                    <div class="bias-score medium-bias">
+                        <div class="score-circle">
+                            <span class="score-value">5.7</span>
+                            <span class="score-label">MEDIUM BIAS</span>
+                        </div>
+                    </div>
+                    <div class="analysis-content">
+                        <h3 class="article-title">"Social Media Platform's New Policy Sparks Debate Among Users"</h3>
+                        <div class="analysis-meta">
+                            <span class="source-badge mixed">Mixed Reliability</span>
+                            <span>•</span>
+                            <span>Analyzed 1 day ago</span>
+                            <span>•</span>
+                            <span>Article Type: News with editorial elements</span>
+                        </div>
+                        
+                        <div class="bias-breakdown">
+                            <h4>Bias Analysis Breakdown:</h4>
+                            <div class="bias-indicators">
+                                <div class="bias-item medium">
+                                    <span class="bias-type">Emotional Language</span>
+                                    <div class="bias-bar">
+                                        <div class="bias-fill" data-width="60"></div>
+                                    </div>
+                                    <span class="bias-score">6.0/10</span>
+                                </div>
+                                <div class="bias-item medium">
+                                    <span class="bias-type">Selection Bias</span>
+                                    <div class="bias-bar">
+                                        <div class="bias-fill" data-width="55"></div>
+                                    </div>
+                                    <span class="bias-score">5.5/10</span>
+                                </div>
+                                <div class="bias-item medium">
+                                    <span class="bias-type">Source Citations</span>
+                                    <div class="bias-bar">
+                                        <div class="bias-fill" data-width="65"></div>
+                                    </div>
+                                    <span class="bias-score">6.5/10</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="yellow-flags">
+                            <h4>⚠️ Areas for Improvement:</h4>
+                            <ul>
+                                <li>More negative user comments highlighted than positive</li>
+                                <li>Some loaded language in descriptions</li>
+                                <li>Company response buried in article</li>
+                                <li>Missing context about similar policies</li>
+                            </ul>
+                        </div>
+
+                        <div class="analysis-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>Compare Sources</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-share"></i>
+                                <span>Share Analysis</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-comments"></i>
+                                <span>Discuss (15)</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Bias Education -->
+            <div class="widget">
+                <h3 class="widget-title">Learn About Bias</h3>
+                
+                <div class="bias-lesson">
+                    <div class="lesson-icon bg-gradient-1">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="lesson-content">
+                        <h4>Confirmation Bias</h4>
+                        <p>The tendency to search for information that confirms our existing beliefs.</p>
+                        <button class="btn btn-outline btn-sm">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="bias-lesson">
+                    <div class="lesson-icon bg-gradient-2">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <div class="lesson-content">
+                        <h4>Selection Bias</h4>
+                        <p>Cherry-picking facts or quotes that support a particular narrative.</p>
+                        <button class="btn btn-outline btn-sm">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="bias-lesson">
+                    <div class="lesson-icon bg-gradient-3">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="lesson-content">
+                        <h4>Sensationalism</h4>
+                        <p>Using shocking or emotional language to grab attention.</p>
+                        <button class="btn btn-outline btn-sm">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bias Detection Checklist -->
+            <div class="widget">
+                <h3 class="widget-title">Bias Detection Checklist</h3>
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <i class="fas fa-check text-success"></i>
+                        <span>Check the source's reputation</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check text-success"></i>
+                        <span>Look for emotional language</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check text-success"></i>
+                        <span>Verify facts independently</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check text-success"></i>
+                        <span>Check for multiple perspectives</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check text-success"></i>
+                        <span>Examine the evidence provided</span>
+                    </div>
+                    <div class="checklist-item">
+                        <i class="fas fa-check text-success"></i>
+                        <span>Consider what's not mentioned</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Challenge -->
+            <div class="widget">
+                <h3 class="widget-title">Weekly Bias Challenge</h3>
+                <div class="challenge-content">
+                    <h4>Compare Coverage Challenge</h4>
+                    <p>Find the same news story covered by 3 different sources and analyze the differences in tone, facts presented, and perspective.</p>
+                    <div class="challenge-progress">
+                        <div class="progress-text">Progress: 2/3 sources analyzed</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="67"></div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm w-100 mt-3">Continue Challenge</button>
+                </div>
+            </div>
+
+            <!-- Reliable Sources -->
+            <div class="widget">
+                <h3 class="widget-title">Trusted News Sources</h3>
+                <div class="source-list">
+                    <div class="source-item">
+                        <div class="source-rating high">A+</div>
+                        <div class="source-info">
+                            <div class="source-name">Associated Press</div>
+                            <div class="source-desc">News wire service</div>
+                        </div>
+                    </div>
+                    <div class="source-item">
+                        <div class="source-rating high">A</div>
+                        <div class="source-info">
+                            <div class="source-name">Reuters</div>
+                            <div class="source-desc">International news</div>
+                        </div>
+                    </div>
+                    <div class="source-item">
+                        <div class="source-rating medium">B+</div>
+                        <div class="source-info">
+                            <div class="source-name">BBC News</div>
+                            <div class="source-desc">British public broadcaster</div>
+                        </div>
+                    </div>
+                    <div class="source-item">
+                        <div class="source-rating medium">B</div>
+                        <div class="source-info">
+                            <div class="source-name">NPR</div>
+                            <div class="source-desc">Public radio network</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Bias analysis simulation
+        document.querySelector('.btn-primary').addEventListener('click', function() {
+            const content = document.querySelector('textarea').value.trim();
+            const analysisType = document.querySelectorAll('select')[0].value;
+            const sourceType = document.querySelectorAll('select')[1].value;
+            
+            if (!content) {
+                alert('Please enter article URL or text to analyze.');
+                return;
+            }
+            
+            // Simulate analysis
+            alert(`Analysis started for ${sourceType}!\n\nAnalyzing for: ${analysisType}\n\nResults will appear below in a few moments.`);
+            
+            // Clear form
+            document.querySelector('textarea').value = '';
+        });
+
+        // Animate bias bars
+        setTimeout(() => {
+            document.querySelectorAll('.bias-fill').forEach(bar => {
+                const width = bar.dataset.width;
+                bar.style.width = width + '%';
+            });
+        }, 500);
+
+        // Animate progress bars
+        document.querySelectorAll('.progress-fill').forEach(bar => {
+            const progress = bar.dataset.progress;
+            setTimeout(() => {
+                bar.style.width = progress + '%';
+            }, 500);
+        });
+
+        // Bias type filtering
+        document.querySelectorAll('[data-bias]').forEach(biasBtn => {
+            biasBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const biasType = this.dataset.bias;
+                
+                // Remove active state from all
+                document.querySelectorAll('[data-bias]').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter analysis cards (in real implementation)
+                console.log('Filtering by bias type:', biasType);
+            });
+        });
+
+        // Interactive checklist
+        document.querySelectorAll('.checklist-item').forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.toggle('completed');
+                const icon = this.querySelector('i');
+                if (this.classList.contains('completed')) {
+                    icon.className = 'fas fa-check-circle text-success';
+                } else {
+                    icon.className = 'fas fa-check text-success';
+                }
+            });
+        });
+    </script>
+
+    <style>
+        .bias-header {
+            background: linear-gradient(135deg, var(--warning), var(--primary-orange));
+            color: white;
+            padding: 24px;
+            text-align: center;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .analysis-results {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .analysis-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bias-score {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
+        }
+
+        .score-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .high-bias .score-circle {
+            background: linear-gradient(135deg, var(--danger), #dc2626);
+        }
+
+        .medium-bias .score-circle {
+            background: linear-gradient(135deg, var(--warning), #f59e0b);
+        }
+
+        .low-bias .score-circle {
+            background: linear-gradient(135deg, var(--success), #059669);
+        }
+
+        .score-value {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .score-label {
+            font-size: 10px;
+            opacity: 0.9;
+        }
+
+        .analysis-content {
+            padding: 24px;
+            padding-top: 60px;
+        }
+
+        .article-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .analysis-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .source-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .source-badge.reliable {
+            background: var(--success-light);
+            color: var(--success);
+        }
+
+        .source-badge.unreliable {
+            background: var(--danger-light);
+            color: var(--danger);
+        }
+
+        .source-badge.mixed {
+            background: var(--warning-light);
+            color: var(--warning);
+        }
+
+        .bias-breakdown {
+            margin-bottom: 24px;
+        }
+
+        .bias-indicators {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .bias-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .bias-type {
+            flex: 0 0 140px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .bias-bar {
+            flex: 1;
+            height: 8px;
+            background: var(--surface-secondary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bias-fill {
+            height: 100%;
+            width: 0%;
+            transition: width 1s ease;
+            border-radius: 4px;
+        }
+
+        .bias-item.high .bias-fill {
+            background: linear-gradient(90deg, var(--danger), #dc2626);
+        }
+
+        .bias-item.medium .bias-fill {
+            background: linear-gradient(90deg, var(--warning), #f59e0b);
+        }
+
+        .bias-item.low .bias-fill {
+            background: linear-gradient(90deg, var(--success), #059669);
+        }
+
+        .bias-score {
+            flex: 0 0 60px;
+            text-align: right;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .red-flags, .green-flags, .yellow-flags {
+            background: var(--surface-secondary);
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .red-flags {
+            border-left: 4px solid var(--danger);
+        }
+
+        .green-flags {
+            border-left: 4px solid var(--success);
+        }
+
+        .yellow-flags {
+            border-left: 4px solid var(--warning);
+        }
+
+        .bias-lesson {
+            display: flex;
+            gap: 12px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .bias-lesson:last-child {
+            border-bottom: none;
+        }
+
+        .lesson-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .lesson-content h4 {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .lesson-content p {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .checklist-item:hover {
+            color: var(--primary-blue);
+        }
+
+        .checklist-item.completed {
+            opacity: 0.7;
+            text-decoration: line-through;
+        }
+
+        .challenge-content h4 {
+            margin: 0 0 12px 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .challenge-content p {
+            margin: 0 0 16px 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .challenge-progress {
+            margin-bottom: 16px;
+        }
+
+        .progress-text {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: var(--surface-secondary);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .source-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .source-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .source-rating {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .source-rating.high {
+            background: var(--success);
+        }
+
+        .source-rating.medium {
+            background: var(--warning);
+        }
+
+        .source-rating.low {
+            background: var(--danger);
+        }
+
+        .source-info {
+            flex: 1;
+        }
+
+        .source-name {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .source-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .analysis-options {
+            margin-bottom: 20px;
+        }
+
+        .quick-analysis input {
+            margin-bottom: 8px;
+        }
+    </style>
+</body>
+</html>

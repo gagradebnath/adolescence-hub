@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-Courses - Adolescence HUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../css/app-style.css" rel="stylesheet">
+    <link href="../css/page-components.css" rel="stylesheet">
+    <style>
+        .courses-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .course-thumbnail {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .course-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .difficulty-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .difficulty-beginner {
+            background: rgba(34, 197, 94, 0.1);
+            color: #16a34a;
+        }
+        
+        .difficulty-intermediate {
+            background: rgba(251, 191, 36, 0.1);
+            color: #d97706;
+        }
+        
+        .difficulty-advanced {
+            background: rgba(239, 68, 68, 0.1);
+            color: #dc2626;
+        }
+        
+        .progress-bar-custom {
+            height: 8px;
+            border-radius: 4px;
+            background: #e2e8f0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
+        .course-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+        
+        .course-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .filter-tabs {
+            background: white;
+            border-radius: 15px;
+            padding: 0.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .filter-tab {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background: transparent;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #64748b;
+        }
+        
+        .filter-tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .course-modal .modal-content {
+            border-radius: 20px;
+            border: none;
+        }
+        
+        .lesson-item {
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            margin-bottom: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        
+        .lesson-item:hover {
+            background: #f8fafc;
+            border-color: #667eea;
+        }
+        
+        .lesson-item.completed {
+            background: rgba(34, 197, 94, 0.1);
+            border-color: #22c55e;
+        }
+        
+        .lesson-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+        
+        .lesson-icon.video {
+            background: rgba(239, 68, 68, 0.1);
+            color: #dc2626;
+        }
+        
+        .lesson-icon.reading {
+            background: rgba(59, 130, 246, 0.1);
+            color: #2563eb;
+        }
+        
+        .lesson-icon.quiz {
+            background: rgba(168, 85, 247, 0.1);
+            color: #9333ea;
+        }
+        
+        .learning-path {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .achievement-badge {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #92400e;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-seedling me-2"></i>Adolescence HUB
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="community.html">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="micro-courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="games.html">Games</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="courses-header">
+        <div class="container text-center">
+            <i class="fas fa-graduation-cap fa-3x mb-3"></i>
+            <h1 class="display-4 fw-bold mb-3">Micro-Courses</h1>
+            <p class="lead mb-4">Short, engaging courses about adolescence, media literacy, mental health, and more</p>
+            <div class="row justify-content-center">
+                <div class="col-md-3 col-6 text-center mb-3">
+                    <h3 class="fw-bold" id="totalCourses">12</h3>
+                    <p class="mb-0">Total Courses</p>
+                </div>
+                <div class="col-md-3 col-6 text-center mb-3">
+                    <h3 class="fw-bold" id="completedCourses">3</h3>
+                    <p class="mb-0">Completed</p>
+                </div>
+                <div class="col-md-3 col-6 text-center mb-3">
+                    <h3 class="fw-bold" id="totalHours">24</h3>
+                    <p class="mb-0">Hours Content</p>
+                </div>
+                <div class="col-md-3 col-6 text-center mb-3">
+                    <h3 class="fw-bold" id="certificatesEarned">2</h3>
+                    <p class="mb-0">Certificates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path -->
+    <section class="py-5">
+        <div class="container">
+            <div class="learning-path">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 text-center mb-3 mb-lg-0">
+                        <div class="achievement-badge">
+                            <i class="fas fa-route"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <h3 class="fw-bold mb-2">Recommended Learning Path</h3>
+                        <p class="mb-3">Follow our expertly designed curriculum to build comprehensive digital literacy skills step by step.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-white text-dark">Digital Basics</span>
+                            <span class="badge bg-white text-dark">→</span>
+                            <span class="badge bg-white text-dark">Media Literacy</span>
+                            <span class="badge bg-white text-dark">→</span>
+                            <span class="badge bg-white text-dark">Mental Health</span>
+                            <span class="badge bg-white text-dark">→</span>
+                            <span class="badge bg-white text-dark">Advanced Topics</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <button class="btn btn-dark btn-lg" onclick="MicroCourses.startLearningPath()">
+                            Start Path
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Filters -->
+    <section class="py-3">
+        <div class="container">
+            <div class="filter-tabs d-flex flex-wrap justify-content-center">
+                <button class="filter-tab active" data-filter="all" onclick="MicroCourses.filterCourses('all')">
+                    All Courses
+                </button>
+                <button class="filter-tab" data-filter="digital-literacy" onclick="MicroCourses.filterCourses('digital-literacy')">
+                    Digital Literacy
+                </button>
+                <button class="filter-tab" data-filter="mental-health" onclick="MicroCourses.filterCourses('mental-health')">
+                    Mental Health
+                </button>
+                <button class="filter-tab" data-filter="adolescence" onclick="MicroCourses.filterCourses('adolescence')">
+                    Adolescence
+                </button>
+                <button class="filter-tab" data-filter="climate" onclick="MicroCourses.filterCourses('climate')">
+                    Climate
+                </button>
+                <button class="filter-tab" data-filter="ai-tech" onclick="MicroCourses.filterCourses('ai-tech')">
+                    AI & Tech
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row" id="coursesGrid">
+                <!-- Courses will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Detail Modal -->
+    <div class="modal fade course-modal" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="courseModalLabel">Course Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="courseModalBody">
+                    <!-- Course details will be populated by JavaScript -->
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="enrollBtn" onclick="MicroCourses.enrollInCourse()">
+                        Enroll Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Player Modal -->
+    <div class="modal fade" id="coursePlayerModal" tabindex="-1" aria-labelledby="coursePlayerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="coursePlayerLabel">Course Player</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0" id="coursePlayerBody">
+                    <!-- Course player will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Adolescence HUB</h5>
+                    <p>Empowering young minds with digital literacy and safety knowledge.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light" title="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Adolescence HUB. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">Privacy Policy</a>
+                    <a href="#" class="text-light">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/micro-courses.js"></script>
+</body>
+</html>

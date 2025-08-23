@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Groups - Adolescence HUB</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Modern Social CSS -->
+    <link rel="stylesheet" href="../css/modern-social.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>Adolescence HUB</span>
+            </a>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search interest groups...">
+            </div>
+            
+            <div class="header-actions">
+                <button class="header-btn has-notification" title="Notifications">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <button class="header-btn" title="Messages">
+                    <i class="fas fa-comment"></i>
+                </button>
+                <button class="header-btn" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <div class="user-avatar" title="Youth Member">
+                    YM
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <!-- Navigation -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Menu</h3>
+                <nav class="sidebar-nav">
+                    <a href="../index.html" class="sidebar-item">
+                        <i class="fas fa-home"></i>
+                        <span>Home Feed</span>
+                    </a>
+                    <a href="community.html" class="sidebar-item">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                    </a>
+                    <a href="anonymous-qa.html" class="sidebar-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Anonymous Q&A</span>
+                    </a>
+                    <a href="blog.html" class="sidebar-item">
+                        <i class="fas fa-pen"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                    <a href="interest-groups.html" class="sidebar-item active">
+                        <i class="fas fa-heart"></i>
+                        <span>Interest Groups</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- My Groups -->
+            <div class="sidebar-section">
+                <h3 class="section-title">My Groups</h3>
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-music"></i>
+                        <span>Music Lovers</span>
+                        <span class="badge badge-primary">3</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Gaming Hub</span>
+                        <span class="badge badge-success">12</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-book"></i>
+                        <span>Book Club</span>
+                        <span class="badge">5</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-code"></i>
+                        <span>Young Coders</span>
+                        <span class="badge badge-warning">7</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Quick Actions</h3>
+                <button class="btn btn-primary w-100 mb-3">
+                    <i class="fas fa-plus"></i>
+                    Create Group
+                </button>
+                <button class="btn btn-outline w-100">
+                    <i class="fas fa-search"></i>
+                    Discover Groups
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Group Categories -->
+            <div class="card mb-6">
+                <div class="p-5">
+                    <h2 class="mb-4">Popular Interest Groups</h2>
+                    <div class="d-flex gap-3 mb-4 flex-wrap">
+                        <button class="btn btn-primary">All</button>
+                        <button class="btn btn-outline">Creative</button>
+                        <button class="btn btn-outline">Technology</button>
+                        <button class="btn btn-outline">Sports</button>
+                        <button class="btn btn-outline">Academic</button>
+                        <button class="btn btn-outline">Social</button>
+                        <button class="btn btn-outline">Hobbies</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Groups Grid -->
+            <div class="groups-grid">
+                <!-- Music Lovers Group -->
+                <div class="group-card card">
+                    <div class="group-header bg-gradient-1">
+                        <i class="fas fa-music group-icon"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3 class="group-title">Music Lovers United</h3>
+                        <p class="group-description">Share your favorite songs, discover new artists, and connect with fellow music enthusiasts from all genres.</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 2,847 members</span>
+                            <span><i class="fas fa-comment"></i> 156 posts today</span>
+                        </div>
+                        <div class="group-tags">
+                            <span class="tag">#music</span>
+                            <span class="tag">#artists</span>
+                            <span class="tag">#discovery</span>
+                        </div>
+                        <button class="btn btn-primary group-join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Group
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gaming Hub -->
+                <div class="group-card card">
+                    <div class="group-header bg-gradient-2">
+                        <i class="fas fa-gamepad group-icon"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3 class="group-title">Gaming Hub</h3>
+                        <p class="group-description">From casual mobile games to competitive esports - discuss strategies, share achievements, and find gaming buddies.</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 4,231 members</span>
+                            <span><i class="fas fa-comment"></i> 89 posts today</span>
+                        </div>
+                        <div class="group-tags">
+                            <span class="tag">#gaming</span>
+                            <span class="tag">#esports</span>
+                            <span class="tag">#community</span>
+                        </div>
+                        <button class="btn btn-success group-join-btn joined">
+                            <i class="fas fa-check"></i>
+                            Joined
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Young Coders -->
+                <div class="group-card card">
+                    <div class="group-header bg-gradient-3">
+                        <i class="fas fa-code group-icon"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3 class="group-title">Young Coders</h3>
+                        <p class="group-description">Learn programming, share coding projects, get help with debugging, and collaborate on exciting tech initiatives.</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 1,892 members</span>
+                            <span><i class="fas fa-comment"></i> 67 posts today</span>
+                        </div>
+                        <div class="group-tags">
+                            <span class="tag">#coding</span>
+                            <span class="tag">#programming</span>
+                            <span class="tag">#projects</span>
+                        </div>
+                        <button class="btn btn-primary group-join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Group
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Art & Design -->
+                <div class="group-card card">
+                    <div class="group-header bg-gradient-4">
+                        <i class="fas fa-palette group-icon"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3 class="group-title">Art & Design Studio</h3>
+                        <p class="group-description">Share your artwork, get feedback, learn new techniques, and participate in creative challenges with fellow artists.</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 3,156 members</span>
+                            <span><i class="fas fa-comment"></i> 124 posts today</span>
+                        </div>
+                        <div class="group-tags">
+                            <span class="tag">#art</span>
+                            <span class="tag">#design</span>
+                            <span class="tag">#creative</span>
+                        </div>
+                        <button class="btn btn-primary group-join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Group
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Book Club -->
+                <div class="group-card card">
+                    <div class="group-header bg-gradient-5">
+                        <i class="fas fa-book group-icon"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3 class="group-title">Teen Book Club</h3>
+                        <p class="group-description">Monthly book discussions, reading recommendations, author interviews, and literary analysis for young readers.</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 967 members</span>
+                            <span><i class="fas fa-comment"></i> 34 posts today</span>
+                        </div>
+                        <div class="group-tags">
+                            <span class="tag">#books</span>
+                            <span class="tag">#reading</span>
+                            <span class="tag">#literature</span>
+                        </div>
+                        <button class="btn btn-success group-join-btn joined">
+                            <i class="fas fa-check"></i>
+                            Joined
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sports & Fitness -->
+                <div class="group-card card">
+                    <div class="group-header bg-gradient-1">
+                        <i class="fas fa-running group-icon"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3 class="group-title">Sports & Fitness</h3>
+                        <p class="group-description">Stay active, share workout routines, discuss sports events, and motivate each other to reach fitness goals.</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 2,134 members</span>
+                            <span><i class="fas fa-comment"></i> 78 posts today</span>
+                        </div>
+                        <div class="group-tags">
+                            <span class="tag">#fitness</span>
+                            <span class="tag">#sports</span>
+                            <span class="tag">#health</span>
+                        </div>
+                        <button class="btn btn-primary group-join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Group
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Photography -->
+                <div class="group-card card">
+                    <div class="group-header bg-gradient-2">
+                        <i class="fas fa-camera group-icon"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3 class="group-title">Photography Enthusiasts</h3>
+                        <p class="group-description">Share your photos, learn editing techniques, discuss equipment, and participate in photo challenges.</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 1,543 members</span>
+                            <span><i class="fas fa-comment"></i> 92 posts today</span>
+                        </div>
+                        <div class="group-tags">
+                            <span class="tag">#photography</span>
+                            <span class="tag">#editing</span>
+                            <span class="tag">#visual</span>
+                        </div>
+                        <button class="btn btn-primary group-join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Group
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Science & Tech -->
+                <div class="group-card card">
+                    <div class="group-header bg-gradient-3">
+                        <i class="fas fa-flask group-icon"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3 class="group-title">Future Scientists</h3>
+                        <p class="group-description">Explore scientific discoveries, discuss research, share experiments, and connect with fellow science enthusiasts.</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 1,287 members</span>
+                            <span><i class="fas fa-comment"></i> 45 posts today</span>
+                        </div>
+                        <div class="group-tags">
+                            <span class="tag">#science</span>
+                            <span class="tag">#research</span>
+                            <span class="tag">#discovery</span>
+                        </div>
+                        <button class="btn btn-primary group-join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Group
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mental Health Support -->
+                <div class="group-card card">
+                    <div class="group-header bg-gradient-4">
+                        <i class="fas fa-heart group-icon"></i>
+                    </div>
+                    <div class="group-info">
+                        <h3 class="group-title">Mental Wellness Circle</h3>
+                        <p class="group-description">A supportive space for mental health discussions, coping strategies, and peer support in a safe environment.</p>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 856 members</span>
+                            <span><i class="fas fa-comment"></i> 23 posts today</span>
+                        </div>
+                        <div class="group-tags">
+                            <span class="tag">#mentalhealth</span>
+                            <span class="tag">#support</span>
+                            <span class="tag">#wellness</span>
+                        </div>
+                        <button class="btn btn-primary group-join-btn">
+                            <i class="fas fa-plus"></i>
+                            Join Group
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Group Recommendations -->
+            <div class="widget">
+                <h3 class="widget-title">Recommended for You</h3>
+                
+                <div class="recommendation-item">
+                    <div class="rec-icon bg-gradient-5">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <div class="rec-content">
+                        <div class="rec-title">Drama Club</div>
+                        <div class="rec-meta">Based on your interests • 234 members</div>
+                    </div>
+                    <button class="btn btn-outline btn-sm">Join</button>
+                </div>
+                
+                <div class="recommendation-item">
+                    <div class="rec-icon bg-gradient-1">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="rec-content">
+                        <div class="rec-title">Cooking Corner</div>
+                        <div class="rec-meta">Popular with teens • 567 members</div>
+                    </div>
+                    <button class="btn btn-outline btn-sm">Join</button>
+                </div>
+                
+                <div class="recommendation-item">
+                    <div class="rec-icon bg-gradient-3">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="rec-content">
+                        <div class="rec-title">Language Exchange</div>
+                        <div class="rec-meta">Learn together • 892 members</div>
+                    </div>
+                    <button class="btn btn-outline btn-sm">Join</button>
+                </div>
+            </div>
+
+            <!-- Group Statistics -->
+            <div class="widget">
+                <h3 class="widget-title">Community Stats</h3>
+                <div class="stat-item">
+                    <span>Total Groups</span>
+                    <strong>247</strong>
+                </div>
+                <div class="stat-item">
+                    <span>Active Members</span>
+                    <strong>15.2k</strong>
+                </div>
+                <div class="stat-item">
+                    <span>Posts Today</span>
+                    <strong>1,234</strong>
+                </div>
+                <div class="stat-item">
+                    <span>New Groups This Week</span>
+                    <span class="badge badge-success">8</span>
+                </div>
+            </div>
+
+            <!-- Group Guidelines -->
+            <div class="widget">
+                <h3 class="widget-title">Group Guidelines</h3>
+                <div class="guideline-text">
+                    <div class="guideline-item">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <span>Be respectful and inclusive</span>
+                    </div>
+                    <div class="guideline-item">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <span>Stay on topic for each group</span>
+                    </div>
+                    <div class="guideline-item">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <span>Share knowledge and help others</span>
+                    </div>
+                    <div class="guideline-item">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <span>Report inappropriate content</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Create Group Widget -->
+            <div class="widget">
+                <h3 class="widget-title">Start Your Own Group</h3>
+                <p class="widget-text">Have a passion or interest that's not covered? Create your own group and bring together like-minded teens!</p>
+                <button class="btn btn-primary w-100">
+                    <i class="fas fa-plus"></i>
+                    Create New Group
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Group join/leave functionality
+        document.querySelectorAll('.group-join-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.classList.contains('joined')) {
+                    // Leave group
+                    this.classList.remove('btn-success', 'joined');
+                    this.classList.add('btn-primary');
+                    this.innerHTML = '<i class="fas fa-plus"></i> Join Group';
+                } else {
+                    // Join group
+                    this.classList.remove('btn-primary');
+                    this.classList.add('btn-success', 'joined');
+                    this.innerHTML = '<i class="fas fa-check"></i> Joined';
+                }
+            });
+        });
+
+        // Category filtering
+        document.querySelectorAll('.btn').forEach(btn => {
+            if (btn.parentElement.classList.contains('d-flex')) {
+                btn.addEventListener('click', function() {
+                    // Remove active from all category buttons
+                    this.parentElement.querySelectorAll('.btn').forEach(b => {
+                        b.classList.remove('btn-primary');
+                        b.classList.add('btn-outline');
+                    });
+                    
+                    // Add active to clicked button
+                    this.classList.remove('btn-outline');
+                    this.classList.add('btn-primary');
+                });
+            }
+        });
+
+        // Search functionality
+        document.querySelector('.search-input').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const groupCards = document.querySelectorAll('.group-card');
+            
+            groupCards.forEach(card => {
+                const title = card.querySelector('.group-title').textContent.toLowerCase();
+                const description = card.querySelector('.group-description').textContent.toLowerCase();
+                const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase()).join(' ');
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm) || tags.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Mobile menu functionality
+        if (window.innerWidth <= 768) {
+            const mobileMenuToggle = document.createElement('button');
+            mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuToggle.className = 'mobile-menu-toggle';
+            document.body.appendChild(mobileMenuToggle);
+
+            mobileMenuToggle.addEventListener('click', () => {
+                document.querySelector('.sidebar').classList.toggle('open');
+            });
+        }
+    </script>
+
+    <style>
+        .groups-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .group-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: fit-content;
+        }
+
+        .group-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .group-header {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .group-icon {
+            font-size: 48px;
+            color: white;
+        }
+
+        .group-info {
+            padding: 24px;
+        }
+
+        .group-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .group-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .group-stats {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .group-stats span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .group-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: var(--surface-secondary);
+            color: var(--text-secondary);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .group-join-btn {
+            width: 100%;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .recommendation-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .recommendation-item:last-child {
+            border-bottom: none;
+        }
+
+        .rec-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .rec-content {
+            flex: 1;
+        }
+
+        .rec-title {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .rec-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stat-item:last-child {
+            border-bottom: none;
+        }
+
+        .guideline-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .guideline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .widget-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .mobile-menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 101;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .groups-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
