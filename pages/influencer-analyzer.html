@@ -3,615 +3,453 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Influencer Analyzer - Adolescence HUB</title>
+    <title>Influencer Analyzer - Adolescence HUB</title>
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- App-Style CSS -->
-    <link rel="stylesheet" href="../css/app-style.css">
-    <link rel="stylesheet" href="../css/page-components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Modern Social CSS -->
+    <link rel="stylesheet" href="../css/modern-social.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-graduation-cap me-2"></i>
-                <span class="brand-text">Adolescence HUB</span>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>Adolescence HUB</span>
             </a>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search influencer content...">
+            </div>
             
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Community
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="community.html">Community Feed</a></li>
-                            <li><a class="dropdown-item" href="anonymous-qa.html">Anonymous Q&A</a></li>
-                            <li><a class="dropdown-item" href="blog.html">Blog Posts</a></li>
-                            <li><a class="dropdown-item" href="interest-groups.html">Interest Groups</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            News & Literacy
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="rumor-confirm.html">Rumor Confirm</a></li>
-                            <li><a class="dropdown-item" href="biased-news.html">Biased News</a></li>
-                            <li><a class="dropdown-item" href="newsletter.html">Newsletter</a></li>
-                            <li><a class="dropdown-item" href="news-archive.html">News Archive</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Games & Learning
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="games.html">Games & Quizzes</a></li>
-                            <li><a class="dropdown-item" href="micro-courses.html">Micro-Courses</a></li>
-                            <li><a class="dropdown-item" href="habit-corner.html">Habit Corner</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
-                            AI Tools
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item active" href="influencer-analyzer.html">Influencer Analyzer</a></li>
-                            <li><a class="dropdown-item" href="virtual-lawyer.html">Virtual Lawyer</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
+            <div class="header-actions">
+                <button class="header-btn has-notification" title="Notifications">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <button class="header-btn" title="Messages">
+                    <i class="fas fa-comment"></i>
+                </button>
+                <button class="header-btn" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <div class="user-avatar" title="Youth Member">
+                    YM
+                </div>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Analyzer Header -->
-    <section class="analyzer-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h1 class="page-title">
-                        <i class="fas fa-robot me-3"></i>
-                        AI Influencer Analyzer
-                    </h1>
-                    <p class="page-subtitle">
-                        Decode influencer marketing tactics with AI! Analyze posts to detect FOMO triggers, 
-                        hidden sponsorships, fake products, and manipulation techniques.
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <!-- Navigation -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Menu</h3>
+                <nav class="sidebar-nav">
+                    <a href="../index.html" class="sidebar-item">
+                        <i class="fas fa-home"></i>
+                        <span>Home Feed</span>
+                    </a>
+                    <a href="community.html" class="sidebar-item">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                    </a>
+                    <a href="anonymous-qa.html" class="sidebar-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Anonymous Q&A</span>
+                    </a>
+                    <a href="blog.html" class="sidebar-item">
+                        <i class="fas fa-pen"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                    <a href="interest-groups.html" class="sidebar-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Interest Groups</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- AI Tools Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">AI Tools</h3>
+                <nav class="sidebar-nav">
+                    <a href="influencer-analyzer.html" class="sidebar-item active">
+                        <i class="fas fa-user-check"></i>
+                        <span>Influencer Analyzer</span>
+                    </a>
+                    <a href="virtual-lawyer.html" class="sidebar-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Virtual Lawyer</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Analysis Types -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Analysis Focus</h3>
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>FOMO Tactics</span>
+                        <span class="badge badge-warning">High</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-eye-slash"></i>
+                        <span>Hidden Sponsors</span>
+                        <span class="badge badge-danger">Critical</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-ban"></i>
+                        <span>Fake Products</span>
+                        <span class="badge">Detected</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-brain"></i>
+                        <span>Manipulation</span>
+                        <span class="badge badge-warning">Active</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome to Influencer Analyzer -->
+            <article class="post-card card">
+                <div class="post-header">
+                    <div class="post-avatar" style="background: linear-gradient(135deg, #7c3aed, #3b82f6);">IA</div>
+                    <div class="post-info">
+                        <div class="post-author">Influencer Analyzer AI</div>
+                        <div class="post-meta">
+                            <span>Content Analysis Tool</span>
+                            <span>•</span>
+                            <span>Real-time Detection</span>
+                        </div>
+                    </div>
+                    <div class="post-time">
+                        AI
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">🔍 AI-Powered Influencer Analysis</h2>
+                    <p class="post-description">
+                        Decode influencer marketing tactics with advanced AI! Detect FOMO triggers, hidden sponsorships, 
+                        fake products, and psychological manipulation techniques in social media content.
                     </p>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <div class="analyzer-stats">
-                        <div class="stat-item">
-                            <h3 class="counter" data-target="47293">0</h3>
-                            <p>Posts Analyzed</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="counter" data-target="1847">0</h3>
-                            <p>Tactics Detected</p>
+                    <div class="post-media" style="background: linear-gradient(135deg, #ddd6fe, #bfdbfe);">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div style="margin-top: 0.75rem; padding: 0.75rem; background: #ddd6fe; border-radius: 0.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: #5b21b6;">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Privacy protected - No data stored or shared</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="post-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>47,293 Analyzed</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>1,847 Tactics Found</span>
+                    </button>
+                    <button class="action-btn primary">
+                        <i class="fas fa-play"></i>
+                        <span>Start Analysis</span>
+                    </button>
+                </div>
+            </article>
 
-    <!-- Main Content -->
-    <section class="analyzer-content py-5">
-        <div class="container">
-            <div class="row">
-                <!-- Analysis Input -->
-                <div class="col-lg-4 mb-4">
-                    <div class="analyzer-sidebar">
-                        <!-- Input Card -->
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <h5 class="mb-0">
-                                    <i class="fas fa-search me-2"></i>
-                                    Analyze Content
-                                </h5>
-                            </div>
-                            <div class="card-body">
-                                <form id="analyzerForm">
-                                    <div class="mb-3">
-                                        <label for="analysisType" class="form-label">Analysis Type</label>
-                                        <select id="analysisType" class="form-select" required>
-                                            <option value="">Choose analysis type</option>
-                                            <option value="profile">Influencer Profile</option>
-                                            <option value="post">Single Post</option>
-                                            <option value="campaign">Ad Campaign</option>
-                                            <option value="video">Video Content</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <div class="mb-3">
-                                        <label for="contentUrl" class="form-label">Content URL or Handle</label>
-                                        <input 
-                                            type="text" 
-                                            id="contentUrl"
-                                            class="form-control" 
-                                            placeholder="@influencer or post URL"
-                                            required
-                                        >
-                                        <div class="form-text">
-                                            <i class="fas fa-shield-alt me-1"></i>
-                                            We don't store or share your searches
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="mb-3">
-                                        <label class="form-label">Detection Focus</label>
-                                        <div class="detection-options">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="detectFOMO" checked>
-                                                <label class="form-check-label" for="detectFOMO">
-                                                    FOMO Tactics
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="detectSponsorship" checked>
-                                                <label class="form-check-label" for="detectSponsorship">
-                                                    Hidden Sponsorships
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="detectFakeProducts" checked>
-                                                <label class="form-check-label" for="detectFakeProducts">
-                                                    Fake Products
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="detectManipulation" checked>
-                                                <label class="form-check-label" for="detectManipulation">
-                                                    Manipulation Techniques
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <button type="submit" class="btn btn-primary w-100">
-                                        <i class="fas fa-brain me-2"></i>
-                                        Analyze with AI
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-
-                        <!-- How It Works -->
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <h6 class="mb-0">
-                                    <i class="fas fa-info-circle me-2"></i>
-                                    How It Works
-                                </h6>
-                            </div>
-                            <div class="card-body">
-                                <div class="how-it-works">
-                                    <div class="step-item">
-                                        <div class="step-number">1</div>
-                                        <div class="step-content">
-                                            <h6>Content Analysis</h6>
-                                            <p>AI scans text, images, and engagement patterns</p>
-                                        </div>
-                                    </div>
-                                    <div class="step-item">
-                                        <div class="step-number">2</div>
-                                        <div class="step-content">
-                                            <h6>Pattern Detection</h6>
-                                            <p>Identifies known manipulation techniques</p>
-                                        </div>
-                                    </div>
-                                    <div class="step-item">
-                                        <div class="step-number">3</div>
-                                        <div class="step-content">
-                                            <h6>Risk Assessment</h6>
-                                            <p>Provides detailed breakdown and tips</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Privacy Notice -->
-                        <div class="card">
-                            <div class="card-header bg-success text-white">
-                                <h6 class="mb-0">
-                                    <i class="fas fa-lock me-2"></i>
-                                    Privacy Protected
-                                </h6>
-                            </div>
-                            <div class="card-body">
-                                <ul class="privacy-features">
-                                    <li>No data storage or tracking</li>
-                                    <li>Anonymous analysis</li>
-                                    <li>Local processing when possible</li>
-                                    <li>No personal information collected</li>
-                                </ul>
-                            </div>
+            <!-- Content Analysis Interface -->
+            <article class="post-card card">
+                <div class="post-header">
+                    <div class="post-avatar" style="background: linear-gradient(135deg, #059669, #0891b2);">CA</div>
+                    <div class="post-info">
+                        <div class="post-author">Content Analyzer</div>
+                        <div class="post-meta">
+                            <span>AI Analysis Engine</span>
+                            <span>•</span>
+                            <span>Ready for Input</span>
                         </div>
                     </div>
+                    <div class="post-time">
+                        SCAN
+                    </div>
                 </div>
-
-                <!-- Analysis Results -->
-                <div class="col-lg-8">
-                    <!-- Welcome State -->
-                    <div id="welcomeState" class="analysis-welcome">
-                        <div class="welcome-content text-center">
-                            <div class="welcome-icon mb-4">
-                                <i class="fas fa-robot"></i>
+                <div class="post-content">
+                    <h2 class="post-title">📊 Analyze Influencer Content</h2>
+                    <p class="post-description">
+                        Enter an influencer profile, post URL, or content to analyze for manipulation tactics and hidden agendas.
+                    </p>
+                    
+                    <!-- Analysis Form -->
+                    <div style="background: #f8fafc; border-radius: 0.5rem; padding: 1.5rem; margin-top: 1rem;">
+                        <form style="display: flex; flex-direction: column; gap: 1rem;">
+                            <!-- Analysis Type -->
+                            <div>
+                                <label style="font-weight: 500; margin-bottom: 0.5rem; display: block;">Analysis Type</label>
+                                <select style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem; outline: none;">
+                                    <option value="profile">Influencer Profile</option>
+                                    <option value="post">Single Post</option>
+                                    <option value="campaign">Ad Campaign</option>
+                                    <option value="video">Video Content</option>
+                                </select>
                             </div>
-                            <h3>AI-Powered Influence Detection</h3>
-                            <p class="lead mb-4">
-                                Enter an influencer profile or post URL to analyze marketing tactics, 
-                                detect manipulation techniques, and understand how content is designed to influence you.
-                            </p>
                             
-                            <div class="feature-highlights">
-                                <div class="row g-4">
-                                    <div class="col-md-6">
-                                        <div class="feature-item">
-                                            <div class="feature-icon">
-                                                <i class="fas fa-exclamation-triangle"></i>
-                                            </div>
-                                            <h5>FOMO Detection</h5>
-                                            <p>Identifies fear-of-missing-out triggers and urgency tactics</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="feature-item">
-                                            <div class="feature-icon">
-                                                <i class="fas fa-eye-slash"></i>
-                                            </div>
-                                            <h5>Hidden Sponsorships</h5>
-                                            <p>Detects undisclosed partnerships and paid promotions</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="feature-item">
-                                            <div class="feature-icon">
-                                                <i class="fas fa-ban"></i>
-                                            </div>
-                                            <h5>Fake Products</h5>
-                                            <p>Identifies suspicious products and dropshipping schemes</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="feature-item">
-                                            <div class="feature-icon">
-                                                <i class="fas fa-brain"></i>
-                                            </div>
-                                            <h5>Psychology Tactics</h5>
-                                            <p>Reveals psychological manipulation and persuasion techniques</p>
-                                        </div>
-                                    </div>
+                            <!-- Content URL -->
+                            <div>
+                                <label style="font-weight: 500; margin-bottom: 0.5rem; display: block;">Content URL or Handle</label>
+                                <input type="text" placeholder="@influencer or post URL" style="width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem; outline: none;">
+                                <div style="font-size: 0.875rem; color: #64748b; margin-top: 0.25rem;">
+                                    <i class="fas fa-shield-alt"></i> We don't store or share your searches
                                 </div>
                             </div>
-
-                            <div class="demo-section mt-5">
-                                <h4>Try a Demo Analysis</h4>
-                                <p>Click below to see how the analyzer works with sample content</p>
-                                <button class="btn btn-outline-primary btn-lg" onclick="InfluencerAnalyzer.runDemo()">
-                                    <i class="fas fa-play me-2"></i>
-                                    Run Demo Analysis
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Loading State -->
-                    <div id="loadingState" class="analysis-loading d-none">
-                        <div class="loading-content text-center">
-                            <div class="loading-spinner mb-4">
-                                <div class="spinner-border text-primary" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-                            <h4>Analyzing Content...</h4>
-                            <p id="loadingMessage">Scanning for manipulation tactics...</p>
-                            <div class="progress">
-                                <div id="loadingProgress" class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Results State -->
-                    <div id="resultsState" class="analysis-results d-none">
-                        <!-- Analysis Summary -->
-                        <div class="results-header mb-4">
-                            <div class="d-flex justify-content-between align-items-start">
-                                <div>
-                                    <h3 id="analyzedContentTitle">Analysis Results</h3>
-                                    <p id="analyzedContentInfo" class="text-muted">Content analysis completed</p>
-                                </div>
-                                <div class="overall-risk">
-                                    <div id="riskMeter" class="risk-meter">
-                                        <div class="risk-score">
-                                            <span id="riskLevel">Medium</span>
-                                            <small>Risk Level</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Detection Results -->
-                        <div class="detection-results">
-                            <div class="row g-4">
-                                <!-- FOMO Tactics -->
-                                <div class="col-md-6">
-                                    <div class="detection-card fomo">
-                                        <div class="detection-header">
-                                            <div class="detection-icon">
-                                                <i class="fas fa-exclamation-triangle"></i>
-                                            </div>
-                                            <h5>FOMO Tactics</h5>
-                                            <span id="fomoRating" class="detection-rating">High</span>
-                                        </div>
-                                        <div class="detection-content">
-                                            <div class="detection-meter">
-                                                <div class="meter-bar">
-                                                    <div id="fomoMeter" class="meter-fill" data-percentage="85"></div>
-                                                </div>
-                                                <span class="meter-label">85% Detected</span>
-                                            </div>
-                                            <ul id="fomoIndicators" class="detection-indicators">
-                                                <li>Limited time offer language</li>
-                                                <li>Scarcity claims ("Only 5 left!")</li>
-                                                <li>Urgency words ("Hurry!", "Now!")</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Hidden Sponsorships -->
-                                <div class="col-md-6">
-                                    <div class="detection-card sponsorship">
-                                        <div class="detection-header">
-                                            <div class="detection-icon">
-                                                <i class="fas fa-eye-slash"></i>
-                                            </div>
-                                            <h5>Hidden Sponsorships</h5>
-                                            <span id="sponsorshipRating" class="detection-rating">Medium</span>
-                                        </div>
-                                        <div class="detection-content">
-                                            <div class="detection-meter">
-                                                <div class="meter-bar">
-                                                    <div id="sponsorshipMeter" class="meter-fill" data-percentage="60"></div>
-                                                </div>
-                                                <span class="meter-label">60% Detected</span>
-                                            </div>
-                                            <ul id="sponsorshipIndicators" class="detection-indicators">
-                                                <li>Vague disclosure language</li>
-                                                <li>Suspicious product placement</li>
-                                                <li>Repeated brand mentions</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Fake Products -->
-                                <div class="col-md-6">
-                                    <div class="detection-card fake-products">
-                                        <div class="detection-header">
-                                            <div class="detection-icon">
-                                                <i class="fas fa-ban"></i>
-                                            </div>
-                                            <h5>Fake Products</h5>
-                                            <span id="fakeProductsRating" class="detection-rating">Low</span>
-                                        </div>
-                                        <div class="detection-content">
-                                            <div class="detection-meter">
-                                                <div class="meter-bar">
-                                                    <div id="fakeProductsMeter" class="meter-fill" data-percentage="25"></div>
-                                                </div>
-                                                <span class="meter-label">25% Detected</span>
-                                            </div>
-                                            <ul id="fakeProductsIndicators" class="detection-indicators">
-                                                <li>Unverified product claims</li>
-                                                <li>No legitimate reviews found</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Manipulation Techniques -->
-                                <div class="col-md-6">
-                                    <div class="detection-card manipulation">
-                                        <div class="detection-header">
-                                            <div class="detection-icon">
-                                                <i class="fas fa-brain"></i>
-                                            </div>
-                                            <h5>Manipulation Techniques</h5>
-                                            <span id="manipulationRating" class="detection-rating">High</span>
-                                        </div>
-                                        <div class="detection-content">
-                                            <div class="detection-meter">
-                                                <div class="meter-bar">
-                                                    <div id="manipulationMeter" class="meter-fill" data-percentage="78"></div>
-                                                </div>
-                                                <span class="meter-label">78% Detected</span>
-                                            </div>
-                                            <ul id="manipulationIndicators" class="detection-indicators">
-                                                <li>Social proof manipulation</li>
-                                                <li>Authority bias exploitation</li>
-                                                <li>Emotional trigger words</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Detailed Analysis -->
-                        <div class="detailed-analysis mt-5">
-                            <h4>Detailed Analysis</h4>
                             
-                            <div class="analysis-tabs">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" data-bs-toggle="tab" href="#content-analysis" role="tab">
-                                            Content Analysis
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-bs-toggle="tab" href="#psychology-insights" role="tab">
-                                            Psychology Insights
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-bs-toggle="tab" href="#protection-tips" role="tab">
-                                            Protection Tips
-                                        </a>
-                                    </li>
-                                </ul>
-                                
-                                <div class="tab-content">
-                                    <div class="tab-pane fade show active" id="content-analysis" role="tabpanel">
-                                        <div class="content-analysis">
-                                            <h5>Language Analysis</h5>
-                                            <div class="language-insights">
-                                                <div class="insight-item">
-                                                    <strong>Emotional Words:</strong>
-                                                    <span class="highlight-words">amazing, incredible, life-changing, must-have</span>
-                                                </div>
-                                                <div class="insight-item">
-                                                    <strong>Urgency Indicators:</strong>
-                                                    <span class="highlight-words">limited time, hurry, don't miss out, act now</span>
-                                                </div>
-                                                <div class="insight-item">
-                                                    <strong>Credibility Claims:</strong>
-                                                    <span class="highlight-words">scientifically proven, doctor recommended, celebrity endorsed</span>
-                                                </div>
-                                            </div>
-                                            
-                                            <h5 class="mt-4">Visual Elements</h5>
-                                            <div class="visual-analysis">
-                                                <ul>
-                                                    <li>Bright, attention-grabbing colors</li>
-                                                    <li>Before/after comparison images</li>
-                                                    <li>Fake countdown timers detected</li>
-                                                    <li>Stock photo usage identified</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="tab-pane fade" id="psychology-insights" role="tabpanel">
-                                        <div class="psychology-insights">
-                                            <h5>Psychological Techniques Detected</h5>
-                                            
-                                            <div class="technique-item">
-                                                <h6><i class="fas fa-users me-2"></i>Social Proof</h6>
-                                                <p>Uses testimonials and fake reviews to create illusion of popularity</p>
-                                                <div class="technique-examples">
-                                                    <strong>Examples found:</strong> "Join 50,000+ happy customers", fake review screenshots
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="technique-item">
-                                                <h6><i class="fas fa-hourglass me-2"></i>Scarcity Principle</h6>
-                                                <p>Creates artificial scarcity to pressure quick decisions</p>
-                                                <div class="technique-examples">
-                                                    <strong>Examples found:</strong> "Only 3 left in stock", countdown timers
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="technique-item">
-                                                <h6><i class="fas fa-crown me-2"></i>Authority Bias</h6>
-                                                <p>Uses fake expert endorsements to appear credible</p>
-                                                <div class="technique-examples">
-                                                    <strong>Examples found:</strong> "As seen on TV", unverified doctor quotes
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="tab-pane fade" id="protection-tips" role="tabpanel">
-                                        <div class="protection-tips">
-                                            <h5>How to Protect Yourself</h5>
-                                            
-                                            <div class="tip-category">
-                                                <h6><i class="fas fa-pause me-2"></i>Before Buying</h6>
-                                                <ul>
-                                                    <li>Wait 24 hours before making impulse purchases</li>
-                                                    <li>Research the product independently</li>
-                                                    <li>Check for verified reviews on multiple platforms</li>
-                                                    <li>Reverse-search product images for dropshipping</li>
-                                                </ul>
-                                            </div>
-                                            
-                                            <div class="tip-category">
-                                                <h6><i class="fas fa-search me-2"></i>Red Flags to Watch</h6>
-                                                <ul>
-                                                    <li>Too-good-to-be-true claims</li>
-                                                    <li>Extreme urgency or pressure tactics</li>
-                                                    <li>Lack of clear return/refund policy</li>
-                                                    <li>No contact information or company details</li>
-                                                </ul>
-                                            </div>
-                                            
-                                            <div class="tip-category">
-                                                <h6><i class="fas fa-shield-alt me-2"></i>Smart Shopping</h6>
-                                                <ul>
-                                                    <li>Use price comparison tools</li>
-                                                    <li>Check Better Business Bureau ratings</li>
-                                                    <li>Look for SSL certificates and secure payment</li>
-                                                    <li>Read the fine print and terms of service</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <!-- Detection Options -->
+                            <div>
+                                <label style="font-weight: 500; margin-bottom: 0.75rem; display: block;">Detection Focus</label>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem;">
+                                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                        <input type="checkbox" checked style="width: 1rem; height: 1rem;">
+                                        <span>FOMO Tactics</span>
+                                    </label>
+                                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                        <input type="checkbox" checked style="width: 1rem; height: 1rem;">
+                                        <span>Hidden Sponsorships</span>
+                                    </label>
+                                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                        <input type="checkbox" checked style="width: 1rem; height: 1rem;">
+                                        <span>Fake Products</span>
+                                    </label>
+                                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                        <input type="checkbox" checked style="width: 1rem; height: 1rem;">
+                                        <span>Manipulation Techniques</span>
+                                    </label>
                                 </div>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" style="background: #3b82f6; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; border: none; cursor: pointer; font-weight: 500;">
+                                <i class="fas fa-brain"></i> Analyze with AI
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-history"></i>
+                        <span>Analysis History</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-play"></i>
+                        <span>Demo Analysis</span>
+                    </button>
+                    <button class="action-btn primary">
+                        <i class="fas fa-download"></i>
+                        <span>Export Results</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Sample Analysis Results -->
+            <article class="post-card card">
+                <div class="post-header">
+                    <div class="post-avatar" style="background: linear-gradient(135deg, #ef4444, #f97316);">AR</div>
+                    <div class="post-info">
+                        <div class="post-author">Analysis Results</div>
+                        <div class="post-meta">
+                            <span>Sample Analysis</span>
+                            <span>•</span>
+                            <span>Demo Mode</span>
+                        </div>
+                    </div>
+                    <div class="post-time">
+                        RESULTS
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">⚠️ Analysis Complete: High Risk Detected</h2>
+                    <p class="post-description">
+                        Sample analysis of a popular fitness influencer's sponsored post reveals multiple manipulation tactics.
+                    </p>
+                    
+                    <!-- Risk Meter -->
+                    <div style="background: #fef2f2; border: 1px solid #ef4444; border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
+                        <div style="display: flex; align-items: center; justify-content: between; margin-bottom: 1rem;">
+                            <h4 style="color: #dc2626; margin: 0;">Overall Risk Level: HIGH</h4>
+                            <div style="background: #ef4444; color: white; padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 600;">
+                                78% Risk Score
                             </div>
                         </div>
-
-                        <!-- Action Buttons -->
-                        <div class="analysis-actions mt-4">
-                            <div class="d-flex justify-content-between">
+                    </div>
+                    
+                    <!-- Detection Results Grid -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                        <!-- FOMO Tactics -->
+                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem; background: #fefefe;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                                <i class="fas fa-exclamation-triangle" style="color: #ef4444; font-size: 1.25rem;"></i>
                                 <div>
-                                    <button class="btn btn-outline-primary me-2" onclick="InfluencerAnalyzer.exportResults()">
-                                        <i class="fas fa-download me-1"></i>
-                                        Export Report
-                                    </button>
-                                    <button class="btn btn-outline-secondary" onclick="InfluencerAnalyzer.shareResults()">
-                                        <i class="fas fa-share me-1"></i>
-                                        Share Findings
-                                    </button>
+                                    <h5 style="margin: 0; font-weight: 600;">FOMO Tactics</h5>
+                                    <div style="background: #fee2e2; color: #991b1b; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; display: inline-block;">85% Detected</div>
                                 </div>
-                                <button class="btn btn-primary" onclick="InfluencerAnalyzer.analyzeNew()">
-                                    <i class="fas fa-plus me-1"></i>
-                                    Analyze New Content
-                                </button>
                             </div>
+                            <ul style="font-size: 0.875rem; color: #64748b; margin: 0; padding-left: 1.25rem;">
+                                <li>Limited time offer language</li>
+                                <li>Scarcity claims ("Only 5 left!")</li>
+                                <li>Urgency words ("Hurry!", "Now!")</li>
+                            </ul>
+                        </div>
+
+                        <!-- Hidden Sponsorships -->
+                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem; background: #fefefe;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                                <i class="fas fa-eye-slash" style="color: #f59e0b; font-size: 1.25rem;"></i>
+                                <div>
+                                    <h5 style="margin: 0; font-weight: 600;">Hidden Sponsorships</h5>
+                                    <div style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; display: inline-block;">60% Detected</div>
+                                </div>
+                            </div>
+                            <ul style="font-size: 0.875rem; color: #64748b; margin: 0; padding-left: 1.25rem;">
+                                <li>Vague disclosure language</li>
+                                <li>Suspicious product placement</li>
+                                <li>Repeated brand mentions</li>
+                            </ul>
+                        </div>
+
+                        <!-- Fake Products -->
+                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem; background: #fefefe;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                                <i class="fas fa-ban" style="color: #10b981; font-size: 1.25rem;"></i>
+                                <div>
+                                    <h5 style="margin: 0; font-weight: 600;">Fake Products</h5>
+                                    <div style="background: #dcfce7; color: #166534; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; display: inline-block;">25% Detected</div>
+                                </div>
+                            </div>
+                            <ul style="font-size: 0.875rem; color: #64748b; margin: 0; padding-left: 1.25rem;">
+                                <li>Unverified product claims</li>
+                                <li>No legitimate reviews found</li>
+                            </ul>
+                        </div>
+
+                        <!-- Manipulation Techniques -->
+                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem; background: #fefefe;">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                                <i class="fas fa-brain" style="color: #8b5cf6; font-size: 1.25rem;"></i>
+                                <div>
+                                    <h5 style="margin: 0; font-weight: 600;">Manipulation</h5>
+                                    <div style="background: #e9d5ff; color: #6b21a8; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; display: inline-block;">78% Detected</div>
+                                </div>
+                            </div>
+                            <ul style="font-size: 0.875rem; color: #64748b; margin: 0; padding-left: 1.25rem;">
+                                <li>Social proof manipulation</li>
+                                <li>Authority bias exploitation</li>
+                                <li>Emotional trigger words</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="post-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-eye"></i>
+                        <span>View Details</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Protection Tips</span>
+                    </button>
+                    <button class="action-btn primary">
+                        <i class="fas fa-share"></i>
+                        <span>Share Analysis</span>
+                    </button>
+                </div>
+            </article>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="../js/main.js"></script>
-    <script src="../js/influencer-analyzer.js"></script>
+            <!-- How It Works Guide -->
+            <article class="post-card card">
+                <div class="post-header">
+                    <div class="post-avatar" style="background: linear-gradient(135deg, #0891b2, #3b82f6);">HW</div>
+                    <div class="post-info">
+                        <div class="post-author">How It Works</div>
+                        <div class="post-meta">
+                            <span>User Guide</span>
+                            <span>•</span>
+                            <span>Educational Resource</span>
+                        </div>
+                    </div>
+                    <div class="post-time">
+                        GUIDE
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">🛠️ How the AI Analyzer Works</h2>
+                    <p class="post-description">
+                        Learn how our AI system detects manipulation tactics and protects you from influencer marketing schemes.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                        <div style="text-align: center;">
+                            <div style="width: 4rem; height: 4rem; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                <i class="fas fa-search" style="color: #3b82f6; font-size: 1.5rem;"></i>
+                            </div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.5rem;">1. Content Analysis</h4>
+                            <p style="font-size: 0.875rem; color: #64748b;">AI scans text, images, and engagement patterns for manipulation signs</p>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <div style="width: 4rem; height: 4rem; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                <i class="fas fa-brain" style="color: #10b981; font-size: 1.5rem;"></i>
+                            </div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.5rem;">2. Pattern Detection</h4>
+                            <p style="font-size: 0.875rem; color: #64748b;">Identifies known psychological tactics and manipulation techniques</p>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <div style="width: 4rem; height: 4rem; background: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                <i class="fas fa-chart-bar" style="color: #f59e0b; font-size: 1.5rem;"></i>
+                            </div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.5rem;">3. Risk Assessment</h4>
+                            <p style="font-size: 0.875rem; color: #64748b;">Provides detailed breakdown with risk scores and protective advice</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Privacy Features -->
+                    <div style="background: #dcfce7; border-radius: 0.5rem; padding: 1rem; margin-top: 1.5rem;">
+                        <h4 style="color: #166534; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-lock"></i>
+                            Privacy Protected Analysis
+                        </h4>
+                        <ul style="font-size: 0.875rem; color: #166534; margin: 0; padding-left: 1.25rem;">
+                            <li>No data storage or tracking</li>
+                            <li>Anonymous analysis process</li>
+                            <li>Local processing when possible</li>
+                            <li>No personal information collected</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-play"></i>
+                        <span>Try Demo</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </button>
+                    <button class="action-btn primary">
+                        <i class="fas fa-rocket"></i>
+                        <span>Start Analyzing</span>
+                    </button>
+                </div>
+            </article>
+        </main>
+    </div>
 </body>
 </html>
