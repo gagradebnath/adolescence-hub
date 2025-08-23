@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adolescence HUB - Modern Youth Community Platform</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Social Platform CSS -->
+    <link rel="stylesheet" href="css/social-style.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>Adolescence HUB</span>
+            </a>
+            
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search communities, topics, friends...">
+            </div>
+            
+            <div class="header-actions">
+                <button class="header-btn" title="Notifications">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <button class="header-btn" title="Messages">
+                    <i class="fas fa-comment"></i>
+                </button>
+                <button class="header-btn" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <div class="user-avatar" title="Adam Lelana">
+                    AL
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3 class="section-title">Your Group</h3>
+                <a href="pages/community.html" class="sidebar-item active">
+                    <i class="fas fa-users" style="color: #0066cc;"></i>
+                    <span>Youth Community</span>
+                </a>
+                <a href="pages/interest-groups.html" class="sidebar-item">
+                    <i class="fas fa-palette" style="color: #ff6b35;"></i>
+                    <span>Creative Corner</span>
+                </a>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="section-title">Friends</h3>
+                <a href="#" class="sidebar-item">
+                    <div class="post-avatar" style="width: 32px; height: 32px; font-size: 12px;">EB</div>
+                    <span>Eleanor Pena</span>
+                    <span class="status-indicator"></span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <div class="post-avatar" style="width: 32px; height: 32px; font-size: 12px; background: linear-gradient(135deg, #ff6b35, #f59e0b);">LA</div>
+                    <span>Leslie Alexander</span>
+                    <span class="status-indicator"></span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <div class="post-avatar" style="width: 32px; height: 32px; font-size: 12px; background: linear-gradient(135deg, #10b981, #00bcd4);">BS</div>
+                    <span>Brooklyn Simmons</span>
+                    <span class="status-indicator"></span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <div class="post-avatar" style="width: 32px; height: 32px; font-size: 12px; background: linear-gradient(135deg, #8b5cf6, #ec4899);">AM</div>
+                    <span>Arlene McCoy</span>
+                    <span class="status-indicator away"></span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <div class="post-avatar" style="width: 32px; height: 32px; font-size: 12px; background: linear-gradient(135deg, #f59e0b, #ef4444);">JB</div>
+                    <span>Jerome Bell</span>
+                    <span class="status-indicator"></span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-container">
+                <!-- Featured Post -->
+                <article class="post-card">
+                    <div class="post-header">
+                        <div class="post-avatar">VM</div>
+                        <div class="post-info">
+                            <div class="post-author">Valentino Del More</div>
+                            <div class="post-meta">Youth Manager • <i class="fab fa-paypal" style="color: #0070ba;"></i> PayPal</div>
+                        </div>
+                        <div class="post-date">
+                            <span class="day">08</span>
+                            MAY
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">How To Manage Your Time & Get More Done</h2>
+                        <p class="post-description">
+                            If you're not yet possible to squeeze more time in that busy schedule, here are some time management tips that will help you feel more in control and accomplish more.
+                        </p>
+                        <div class="post-image">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn liked">
+                            <i class="fas fa-heart"></i>
+                            <span>12</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-comment"></i>
+                            <span>30</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                        <button class="action-btn participants-btn">
+                            <i class="fas fa-users"></i>
+                            <span>Participants</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Second Post -->
+                <article class="post-card">
+                    <div class="post-header">
+                        <div class="post-avatar" style="background: linear-gradient(135deg, #10b981, #00bcd4);">AJ</div>
+                        <div class="post-info">
+                            <div class="post-author">Angelina Joly</div>
+                            <div class="post-meta">Creative Director • <i class="fab fa-google" style="color: #4285f4;"></i> Google</div>
+                        </div>
+                        <div class="post-date">
+                            <span class="day">09</span>
+                            MAY
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">How to Learn Anything! For Creative Self-Learners</h2>
+                        <p class="post-description">
+                            Whether we're students in traditional classrooms or lifelong learners, mastering the skill of self-directed learning is essential. Let's discover your learning style first.
+                        </p>
+                        <div class="post-image" style="background: linear-gradient(135deg, #ff6b35, #f59e0b);">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-heart"></i>
+                            <span>12</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-comment"></i>
+                            <span>30</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                        <button class="action-btn participants-btn">
+                            <i class="fas fa-users"></i>
+                            <span>Participants</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Third Post - Anonymous Q&A -->
+                <article class="post-card">
+                    <div class="post-header">
+                        <div class="post-avatar" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">AQ</div>
+                        <div class="post-info">
+                            <div class="post-author">Anonymous Questions</div>
+                            <div class="post-meta">Safe Space • <span class="badge">Anonymous</span></div>
+                        </div>
+                        <div class="post-date">
+                            <span class="day">10</span>
+                            MAY
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">How do I deal with social anxiety at school?</h2>
+                        <p class="post-description">
+                            I've been struggling with feeling anxious in social situations at school. Does anyone have tips for managing this? I want to make friends but I get nervous talking to new people.
+                        </p>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-heart"></i>
+                            <span>24</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-comment"></i>
+                            <span>18</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                        <a href="pages/anonymous-qa.html" class="action-btn participants-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Answer</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Gaming & Learning Post -->
+                <article class="post-card">
+                    <div class="post-header">
+                        <div class="post-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">GL</div>
+                        <div class="post-info">
+                            <div class="post-author">Gaming & Learning Hub</div>
+                            <div class="post-meta">Educational Games • <span class="badge">Interactive</span></div>
+                        </div>
+                        <div class="post-date">
+                            <span class="day">11</span>
+                            MAY
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title">New Digital Literacy Quiz Challenge!</h2>
+                        <p class="post-description">
+                            Test your knowledge about online safety, digital footprints, and media literacy. Complete all levels to earn your Digital Citizen badge!
+                        </p>
+                        <div class="post-image" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-heart"></i>
+                            <span>45</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-comment"></i>
+                            <span>22</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                        <a href="pages/games.html" class="action-btn participants-btn">
+                            <i class="fas fa-play"></i>
+                            <span>Play Now</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Live Stream Widget -->
+            <div class="widget">
+                <div style="position: relative; margin-bottom: 16px;">
+                    <div style="width: 100%; height: 180px; background: linear-gradient(135deg, #0066cc, #00bcd4); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 48px;">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <span class="live-badge" style="position: absolute; top: 12px; left: 12px;">LIVE</span>
+                </div>
+                <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Youth Podcast Session</h3>
+                <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 16px;">How to make YouTube subscriber grow faster</p>
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                    <div style="width: 24px; height: 24px; background: linear-gradient(135deg, #ff6b35, #f59e0b); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 10px; font-weight: 600;">SP</div>
+                    <span style="font-size: 14px; color: var(--text-primary);">Sarah Posel</span>
+                </div>
+                <button style="width: 100%; padding: 12px; background: var(--primary-blue); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">
+                    Join Stream
+                </button>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="widget">
+                <h3 class="widget-title">Recent Activity</h3>
+                
+                <div class="activity-item">
+                    <div class="activity-avatar">AF</div>
+                    <div class="activity-content">
+                        <div class="activity-text">Anna posted: How to make YouTube subscriber grow faster</div>
+                        <div class="activity-time">9 min</div>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-avatar" style="background: linear-gradient(135deg, #10b981, #00bcd4);">SS</div>
+                    <div class="activity-content">
+                        <div class="activity-text">Susy Suka shared: Wow, Keep it up dude 🔥</div>
+                        <div class="activity-time">12 min</div>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-avatar" style="background: linear-gradient(135deg, #ff6b35, #f59e0b);">AB</div>
+                    <div class="activity-content">
+                        <div class="activity-text">Arman Bakr joined the community</div>
+                        <div class="activity-time">20 min</div>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-avatar" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">JD</div>
+                    <div class="activity-content">
+                        <div class="activity-text">John Doe liked your comment here 🤙</div>
+                        <div class="activity-time">32 min</div>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">SP</div>
+                    <div class="activity-content">
+                        <div class="activity-text">Stevany Posel shared: Great quality video, thanks guys.</div>
+                        <div class="activity-time">38 min</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Access Links -->
+            <div class="widget">
+                <h3 class="widget-title">Quick Access</h3>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <a href="pages/micro-courses.html" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--bg-hover); border-radius: 8px; text-decoration: none; color: var(--text-primary);">
+                        <i class="fas fa-graduation-cap" style="color: var(--primary-blue);"></i>
+                        <span>Micro Courses</span>
+                    </a>
+                    <a href="pages/virtual-lawyer.html" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--bg-hover); border-radius: 8px; text-decoration: none; color: var(--text-primary);">
+                        <i class="fas fa-balance-scale" style="color: var(--accent-orange);"></i>
+                        <span>Virtual Lawyer</span>
+                    </a>
+                    <a href="pages/rumor-confirm.html" style="display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--bg-hover); border-radius: 8px; text-decoration: none; color: var(--text-primary);">
+                        <i class="fas fa-search" style="color: var(--secondary-teal);"></i>
+                        <span>Fact Check</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Comment Input -->
+            <div class="comment-input">
+                <input type="text" placeholder="Add your comment">
+                <button class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Simple interactivity
+        document.querySelectorAll('.action-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (this.querySelector('.fas.fa-heart')) {
+                    this.classList.toggle('liked');
+                    const count = this.querySelector('span');
+                    if (count) {
+                        const currentCount = parseInt(count.textContent);
+                        count.textContent = this.classList.contains('liked') ? 
+                            currentCount + 1 : currentCount - 1;
+                    }
+                }
+            });
+        });
+
+        // Search functionality
+        document.querySelector('.search-input').addEventListener('focus', function() {
+            this.parentElement.style.boxShadow = '0 0 0 3px var(--primary-blue-light)';
+        });
+
+        document.querySelector('.search-input').addEventListener('blur', function() {
+            this.parentElement.style.boxShadow = 'none';
+        });
+
+        // Mobile sidebar toggle
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('open');
+        }
+
+        // Add mobile menu button functionality
+        if (window.innerWidth <= 768) {
+            const headerActions = document.querySelector('.header-actions');
+            const menuBtn = document.createElement('button');
+            menuBtn.className = 'header-btn';
+            menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            menuBtn.onclick = toggleSidebar;
+            headerActions.insertBefore(menuBtn, headerActions.firstChild);
+        }
+    </script>
+</body>
+</html>

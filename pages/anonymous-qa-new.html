@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Q&A - Adolescence HUB</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Modern Social CSS -->
+    <link rel="stylesheet" href="../css/modern-social.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>Adolescence HUB</span>
+            </a>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search questions, topics...">
+            </div>
+            
+            <div class="header-actions">
+                <button class="header-btn has-notification" title="Notifications">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <button class="header-btn" title="Messages">
+                    <i class="fas fa-comment"></i>
+                </button>
+                <button class="header-btn" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <div class="user-avatar" title="Youth Member">
+                    YM
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <!-- Navigation -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Menu</h3>
+                <nav class="sidebar-nav">
+                    <a href="../index.html" class="sidebar-item">
+                        <i class="fas fa-home"></i>
+                        <span>Home Feed</span>
+                    </a>
+                    <a href="community.html" class="sidebar-item">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                    </a>
+                    <a href="anonymous-qa.html" class="sidebar-item active">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Anonymous Q&A</span>
+                    </a>
+                    <a href="blog.html" class="sidebar-item">
+                        <i class="fas fa-pen"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                    <a href="interest-groups.html" class="sidebar-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Interest Groups</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Q&A Categories -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Categories</h3>
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Mental Health</span>
+                        <span class="badge">24</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>School & Studies</span>
+                        <span class="badge">18</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-users"></i>
+                        <span>Relationships</span>
+                        <span class="badge">31</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Online Safety</span>
+                        <span class="badge">12</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-home"></i>
+                        <span>Family</span>
+                        <span class="badge">15</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Career & Future</span>
+                        <span class="badge">9</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-question"></i>
+                        <span>General</span>
+                        <span class="badge">22</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Guidelines -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Safe Space Guidelines</h3>
+                <div style="font-size: 12px; color: var(--text-secondary); line-height: 1.5;">
+                    <div class="mb-2">✓ Complete anonymity</div>
+                    <div class="mb-2">✓ No personal info sharing</div>
+                    <div class="mb-2">✓ Respectful responses only</div>
+                    <div class="mb-2">✓ Moderated for safety</div>
+                    <div>✓ Professional support available</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Ask Question -->
+            <div class="card mb-6">
+                <div class="p-5">
+                    <h2 class="mb-4">Ask an Anonymous Question</h2>
+                    <div class="form-group">
+                        <label class="form-label">Category</label>
+                        <select class="form-input">
+                            <option>Select a category...</option>
+                            <option>Mental Health</option>
+                            <option>School & Studies</option>
+                            <option>Relationships</option>
+                            <option>Online Safety</option>
+                            <option>Family</option>
+                            <option>Career & Future</option>
+                            <option>General</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Your Question</label>
+                        <textarea class="form-input form-textarea" placeholder="Ask your question here... Remember, this is completely anonymous and safe."></textarea>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Post Question
+                        </button>
+                        <div style="font-size: 12px; color: var(--text-muted);">
+                            <i class="fas fa-shield-alt"></i>
+                            Your identity is completely protected
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anonymous Questions -->
+            <article class="post-card card">
+                <div class="post-header">
+                    <div class="post-avatar" style="background: linear-gradient(135deg, #7c3aed, #ec4899);">?</div>
+                    <div class="post-info">
+                        <div class="post-author">Anonymous</div>
+                        <div class="post-meta">
+                            <span class="badge badge-success">Mental Health</span>
+                            <span>•</span>
+                            <span>2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="post-time">
+                        Q&A
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">How do I deal with social anxiety at school?</h2>
+                    <p class="post-description">
+                        I've been struggling with feeling anxious in social situations at school. Even simple things like 
+                        speaking up in class or talking to classmates make me nervous. It's affecting my grades and friendships. 
+                        Has anyone else experienced this? What helped you?
+                    </p>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-heart"></i>
+                        <span>45</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-comment"></i>
+                        <span>23</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </button>
+                    <button class="action-btn primary">
+                        <i class="fas fa-reply"></i>
+                        <span>Answer</span>
+                    </button>
+                </div>
+
+                <!-- Sample Answers -->
+                <div class="mt-4" style="border-top: 1px solid var(--border-light); padding-top: 16px;">
+                    <div class="d-flex gap-3 mb-4">
+                        <div class="post-avatar" style="width: 36px; height: 36px; font-size: 14px; background: linear-gradient(135deg, #059669, #0891b2);">A</div>
+                        <div style="flex: 1;">
+                            <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">Anonymous Helper</div>
+                            <div style="font-size: 14px; color: var(--text-secondary); line-height: 1.5;">
+                                I went through something similar. What helped me was starting small - like making eye contact and smiling. 
+                                Breathing exercises before social situations also helped. You're not alone in this! 💚
+                            </div>
+                            <div class="d-flex gap-2 mt-2">
+                                <button class="btn btn-secondary btn-sm">
+                                    <i class="fas fa-heart"></i>
+                                    12
+                                </button>
+                                <button class="btn btn-secondary btn-sm">Reply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post-card card">
+                <div class="post-header">
+                    <div class="post-avatar" style="background: linear-gradient(135deg, #059669, #0891b2);">?</div>
+                    <div class="post-info">
+                        <div class="post-author">Anonymous</div>
+                        <div class="post-meta">
+                            <span class="badge badge-warning">School & Studies</span>
+                            <span>•</span>
+                            <span>4 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="post-time">
+                        Q&A
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">Is it normal to feel overwhelmed by homework?</h2>
+                    <p class="post-description">
+                        I feel like I'm drowning in assignments and can never catch up. Even when I try to organize, 
+                        something always comes up. My parents keep saying "just manage your time better" but I don't know how. 
+                        Any tips for handling the stress?
+                    </p>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-heart"></i>
+                        <span>67</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-comment"></i>
+                        <span>31</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </button>
+                    <button class="action-btn primary">
+                        <i class="fas fa-reply"></i>
+                        <span>Answer</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="post-card card">
+                <div class="post-header">
+                    <div class="post-avatar" style="background: linear-gradient(135deg, #ea580c, #dc2626);">?</div>
+                    <div class="post-info">
+                        <div class="post-author">Anonymous</div>
+                        <div class="post-meta">
+                            <span class="badge">Online Safety</span>
+                            <span>•</span>
+                            <span>6 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="post-time">
+                        Q&A
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">Someone is bothering me online, what should I do?</h2>
+                    <p class="post-description">
+                        A person I don't know keeps messaging me on social media and won't stop even though I've told them 
+                        to leave me alone. They found my accounts somehow and it's making me uncomfortable. 
+                        Should I tell my parents? What steps should I take?
+                    </p>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-heart"></i>
+                        <span>89</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-comment"></i>
+                        <span>42</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </button>
+                    <button class="action-btn primary">
+                        <i class="fas fa-reply"></i>
+                        <span>Answer</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="post-card card">
+                <div class="post-header">
+                    <div class="post-avatar" style="background: linear-gradient(135deg, #0891b2, #1e3a8a);">?</div>
+                    <div class="post-info">
+                        <div class="post-author">Anonymous</div>
+                        <div class="post-meta">
+                            <span class="badge badge-danger">Relationships</span>
+                            <span>•</span>
+                            <span>8 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="post-time">
+                        Q&A
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">How do I know if a friendship is toxic?</h2>
+                    <p class="post-description">
+                        I have a friend who always puts me down and makes me feel bad about myself. They're nice sometimes 
+                        but other times they say really hurtful things. I'm confused because we've been friends for years. 
+                        Is this normal or should I distance myself?
+                    </p>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-heart"></i>
+                        <span>156</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-comment"></i>
+                        <span>78</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </button>
+                    <button class="action-btn primary">
+                        <i class="fas fa-reply"></i>
+                        <span>Answer</span>
+                    </button>
+                </div>
+            </article>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Crisis Support -->
+            <div class="widget" style="border: 2px solid var(--text-danger); background: #fef2f2;">
+                <h3 class="widget-title" style="color: var(--text-danger);">Need Immediate Help?</h3>
+                <div style="font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
+                    If you're in crisis or having thoughts of self-harm, please reach out immediately:
+                </div>
+                <div class="mb-3">
+                    <strong>Crisis Text Line:</strong><br>
+                    Text HOME to 741741
+                </div>
+                <div class="mb-3">
+                    <strong>National Suicide Prevention:</strong><br>
+                    988 or 1-800-273-8255
+                </div>
+                <button class="btn btn-danger btn-sm">Get Help Now</button>
+            </div>
+
+            <!-- Popular Topics -->
+            <div class="widget">
+                <h3 class="widget-title">Popular This Week</h3>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <span>Exam Stress</span>
+                    <span class="badge badge-warning">Hot</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <span>Social Anxiety</span>
+                    <span class="badge">Trending</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <span>Friendship Issues</span>
+                    <span class="badge badge-success">Active</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <span>Online Safety</span>
+                    <span class="badge">Rising</span>
+                </div>
+            </div>
+
+            <!-- Expert Moderators -->
+            <div class="widget">
+                <h3 class="widget-title">Expert Moderators Online</h3>
+                
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="post-avatar" style="width: 40px; height: 40px; background: linear-gradient(135deg, #7c3aed, #ec4899);">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 2px;">Dr. Mental Health</div>
+                        <div style="font-size: 12px; color: var(--text-success);">
+                            <i class="fas fa-circle" style="font-size: 8px;"></i>
+                            Online now
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="post-avatar" style="width: 40px; height: 40px; background: linear-gradient(135deg, #059669, #0891b2);">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 2px;">Education Expert</div>
+                        <div style="font-size: 12px; color: var(--text-success);">
+                            <i class="fas fa-circle" style="font-size: 8px;"></i>
+                            Online now
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex align-items-center gap-3">
+                    <div class="post-avatar" style="width: 40px; height: 40px; background: linear-gradient(135deg, #ea580c, #dc2626);">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 2px;">Safety Coordinator</div>
+                        <div style="font-size: 12px; color: var(--text-warning);">
+                            <i class="fas fa-circle" style="font-size: 8px;"></i>
+                            Away
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Stats -->
+            <div class="widget">
+                <h3 class="widget-title">Q&A Stats</h3>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <span>Questions Today</span>
+                    <strong>47</strong>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <span>Answers Given</span>
+                    <strong>123</strong>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <span>Active Helpers</span>
+                    <strong>89</strong>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <span>Response Rate</span>
+                    <span class="badge badge-success">94%</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Interactive features
+        document.querySelectorAll('.action-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (this.querySelector('.fas.fa-heart')) {
+                    e.preventDefault();
+                    this.classList.toggle('liked');
+                    const count = this.querySelector('span');
+                    if (count && !isNaN(count.textContent)) {
+                        const currentCount = parseInt(count.textContent);
+                        count.textContent = this.classList.contains('liked') ? 
+                            currentCount + 1 : currentCount - 1;
+                    }
+                }
+            });
+        });
+
+        // Question submission
+        document.querySelector('.btn-primary').addEventListener('click', function() {
+            const category = document.querySelector('select').value;
+            const question = document.querySelector('textarea').value;
+            
+            if (!category || category === 'Select a category...') {
+                alert('Please select a category for your question.');
+                return;
+            }
+            
+            if (!question.trim()) {
+                alert('Please enter your question.');
+                return;
+            }
+            
+            alert('Your anonymous question has been posted! Thank you for trusting our safe space.');
+            document.querySelector('textarea').value = '';
+            document.querySelector('select').selectedIndex = 0;
+        });
+
+        // Mobile menu functionality
+        if (window.innerWidth <= 768) {
+            const mobileMenuToggle = document.createElement('button');
+            mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuToggle.style.position = 'fixed';
+            mobileMenuToggle.style.top = '20px';
+            mobileMenuToggle.style.left = '20px';
+            mobileMenuToggle.style.zIndex = '101';
+            mobileMenuToggle.style.background = 'var(--primary-blue)';
+            mobileMenuToggle.style.color = 'white';
+            mobileMenuToggle.style.border = 'none';
+            mobileMenuToggle.style.borderRadius = '50%';
+            mobileMenuToggle.style.width = '44px';
+            mobileMenuToggle.style.height = '44px';
+            mobileMenuToggle.style.cursor = 'pointer';
+            document.body.appendChild(mobileMenuToggle);
+
+            mobileMenuToggle.addEventListener('click', () => {
+                document.querySelector('.sidebar').classList.toggle('open');
+            });
+        }
+    </script>
+</body>
+</html>
