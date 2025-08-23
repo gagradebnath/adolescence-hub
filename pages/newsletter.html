@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - Adolescence HUB</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Modern Social CSS -->
+    <link rel="stylesheet" href="../css/modern-social.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Adolescence HUB</span>
+                </a>
+            </div>
+            
+            <div class="header-center">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search newsletters, topics...">
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <button class="icon-btn notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                <div class="user-menu">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Profile" class="avatar">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3>Main</h3>
+                    <a href="../index.html" class="nav-item">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="community.html" class="nav-item">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                    </a>
+                    <a href="blog.html" class="nav-item">
+                        <i class="fas fa-pen-alt"></i>
+                        <span>Blog</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h3>Learning</h3>
+                    <a href="games.html" class="nav-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Games & Quizzes</span>
+                    </a>
+                    <a href="micro-courses.html" class="nav-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Micro-Courses</span>
+                    </a>
+                    <a href="habit-corner.html" class="nav-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Habit Corner</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h3>News & Analysis</h3>
+                    <a href="newsletter.html" class="nav-item active">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Newsletter</span>
+                    </a>
+                    <a href="rumor-confirm.html" class="nav-item">
+                        <i class="fas fa-search"></i>
+                        <span>Rumor Confirm</span>
+                    </a>
+                    <a href="biased-news.html" class="nav-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Biased News</span>
+                    </a>
+                    <a href="news-archive.html" class="nav-item">
+                        <i class="fas fa-archive"></i>
+                        <span>News Archive</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h3>AI Tools</h3>
+                    <a href="influencer-analyzer.html" class="nav-item">
+                        <i class="fas fa-user-check"></i>
+                        <span>Influencer Analyzer</span>
+                    </a>
+                    <a href="virtual-lawyer.html" class="nav-item">
+                        <i class="fas fa-gavel"></i>
+                        <span>Virtual Lawyer</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h3>Support</h3>
+                    <a href="anonymous-qa.html" class="nav-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Anonymous Q&A</span>
+                    </a>
+                    <a href="interest-groups.html" class="nav-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Interest Groups</span>
+                    </a>
+                    <a href="contact.html" class="nav-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Newsletter Header -->
+            <div class="page-header">
+                <div class="page-header-content">
+                    <div class="page-title-section">
+                        <h1 class="page-title">
+                            <i class="fas fa-newspaper"></i>
+                            Newsletter
+                        </h1>
+                        <p class="page-subtitle">Stay updated with weekly insights on digital literacy, youth trends, and safety tips</p>
+                    </div>
+                    <div class="page-actions">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscription Status -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="subscription-status">
+                        <div class="status-info">
+                            <div class="status-icon">
+                                <i class="fas fa-check-circle text-success"></i>
+                            </div>
+                            <div class="status-details">
+                                <h3>You're subscribed to our newsletter!</h3>
+                                <p>You'll receive weekly updates every Monday with the latest insights, tips, and community highlights.</p>
+                            </div>
+                        </div>
+                        <div class="subscription-actions">
+                            <button class="btn btn-outline">
+                                <i class="fas fa-cog"></i>
+                                Preferences
+                            </button>
+                            <button class="btn btn-outline text-red">
+                                <i class="fas fa-times"></i>
+                                Unsubscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Archives -->
+            <div class="newsletter-content">
+                <!-- Latest Newsletter -->
+                <div class="newsletter-item featured">
+                    <div class="newsletter-header">
+                        <span class="newsletter-badge">Latest Issue</span>
+                        <div class="newsletter-meta">
+                            <span class="newsletter-date">August 19, 2025</span>
+                            <span class="newsletter-issue">Issue #34</span>
+                        </div>
+                    </div>
+                    <div class="newsletter-content">
+                        <h2 class="newsletter-title">Digital Detox: Finding Balance in a Connected World</h2>
+                        <div class="newsletter-preview">
+                            <p>This week we explore the growing trend of digital detoxes among teens, share expert tips on managing screen time, and highlight inspiring stories from our community members who've found healthier relationships with technology.</p>
+                        </div>
+                        <div class="newsletter-topics">
+                            <span class="topic-tag">Screen Time</span>
+                            <span class="topic-tag">Mental Health</span>
+                            <span class="topic-tag">Community Stories</span>
+                        </div>
+                        <div class="newsletter-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-eye"></i>
+                                Read Full Issue
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-share"></i>
+                                Share
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-bookmark"></i>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter Archive -->
+                <div class="newsletter-archive">
+                    <h3>Previous Issues</h3>
+                    
+                    <div class="newsletter-item">
+                        <div class="newsletter-header">
+                            <div class="newsletter-meta">
+                                <span class="newsletter-date">August 12, 2025</span>
+                                <span class="newsletter-issue">Issue #33</span>
+                            </div>
+                        </div>
+                        <div class="newsletter-content">
+                            <h3 class="newsletter-title">Social Media Influence: Separating Authentic from Advertising</h3>
+                            <p class="newsletter-excerpt">Learn how to identify sponsored content, understand influencer marketing tactics, and make informed decisions about the products and lifestyle advice you see online.</p>
+                            <div class="newsletter-topics">
+                                <span class="topic-tag">Influencer Marketing</span>
+                                <span class="topic-tag">Critical Thinking</span>
+                            </div>
+                            <div class="newsletter-stats">
+                                <span><i class="fas fa-eye"></i> 2.3k reads</span>
+                                <span><i class="fas fa-heart"></i> 456 likes</span>
+                                <span><i class="fas fa-share"></i> 89 shares</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="newsletter-item">
+                        <div class="newsletter-header">
+                            <div class="newsletter-meta">
+                                <span class="newsletter-date">August 5, 2025</span>
+                                <span class="newsletter-issue">Issue #32</span>
+                            </div>
+                        </div>
+                        <div class="newsletter-content">
+                            <h3 class="newsletter-title">Misinformation Alert: How False News Spreads and How to Stop It</h3>
+                            <p class="newsletter-excerpt">A deep dive into recent misinformation trends, fact-checking tools, and practical strategies for verifying information before sharing it with your network.</p>
+                            <div class="newsletter-topics">
+                                <span class="topic-tag">Fact-Checking</span>
+                                <span class="topic-tag">News Literacy</span>
+                                <span class="topic-tag">Community Safety</span>
+                            </div>
+                            <div class="newsletter-stats">
+                                <span><i class="fas fa-eye"></i> 1.8k reads</span>
+                                <span><i class="fas fa-heart"></i> 324 likes</span>
+                                <span><i class="fas fa-share"></i> 156 shares</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="newsletter-item">
+                        <div class="newsletter-header">
+                            <div class="newsletter-meta">
+                                <span class="newsletter-date">July 29, 2025</span>
+                                <span class="newsletter-issue">Issue #31</span>
+                            </div>
+                        </div>
+                        <div class="newsletter-content">
+                            <h3 class="newsletter-title">Privacy Protection: Your Digital Rights and How to Exercise Them</h3>
+                            <p class="newsletter-excerpt">Understanding your privacy rights on social platforms, how to adjust privacy settings, and protect your personal information from data brokers.</p>
+                            <div class="newsletter-topics">
+                                <span class="topic-tag">Privacy Rights</span>
+                                <span class="topic-tag">Data Protection</span>
+                                <span class="topic-tag">Digital Security</span>
+                            </div>
+                            <div class="newsletter-stats">
+                                <span><i class="fas fa-eye"></i> 2.1k reads</span>
+                                <span><i class="fas fa-heart"></i> 378 likes</span>
+                                <span><i class="fas fa-share"></i> 112 shares</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="newsletter-item">
+                        <div class="newsletter-header">
+                            <div class="newsletter-meta">
+                                <span class="newsletter-date">July 22, 2025</span>
+                                <span class="newsletter-issue">Issue #30</span>
+                            </div>
+                        </div>
+                        <div class="newsletter-content">
+                            <h3 class="newsletter-title">Community Spotlight: Youth-Led Initiatives Making a Difference</h3>
+                            <p class="newsletter-excerpt">Celebrating amazing projects and initiatives led by young people in our community, from digital literacy workshops to peer support programs.</p>
+                            <div class="newsletter-topics">
+                                <span class="topic-tag">Community Impact</span>
+                                <span class="topic-tag">Youth Leadership</span>
+                                <span class="topic-tag">Success Stories</span>
+                            </div>
+                            <div class="newsletter-stats">
+                                <span><i class="fas fa-eye"></i> 1.9k reads</span>
+                                <span><i class="fas fa-heart"></i> 445 likes</span>
+                                <span class="topic-tag">89 shares</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Load More -->
+                    <div class="load-more-section">
+                        <button class="btn btn-outline btn-lg">
+                            <i class="fas fa-chevron-down"></i>
+                            Load More Issues
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Newsletter Stats -->
+            <div class="widget">
+                <div class="widget-header">
+                    <h3>Newsletter Stats</h3>
+                </div>
+                <div class="widget-body">
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">15.2k</div>
+                            <div class="stat-label">Subscribers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">94%</div>
+                            <div class="stat-label">Open Rate</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">34</div>
+                            <div class="stat-label">Issues Published</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">4.8</div>
+                            <div class="stat-label">Avg Rating</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular Topics -->
+            <div class="widget">
+                <div class="widget-header">
+                    <h3>Popular Topics</h3>
+                </div>
+                <div class="widget-body">
+                    <div class="topic-list">
+                        <div class="topic-item">
+                            <span class="topic-name">Digital Privacy</span>
+                            <span class="topic-count">28 articles</span>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-name">Social Media Safety</span>
+                            <span class="topic-count">24 articles</span>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-name">Fact-Checking</span>
+                            <span class="topic-count">19 articles</span>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-name">Mental Health</span>
+                            <span class="topic-count">15 articles</span>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-name">Community Stories</span>
+                            <span class="topic-count">12 articles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscription Preferences -->
+            <div class="widget">
+                <div class="widget-header">
+                    <h3>Preferences</h3>
+                </div>
+                <div class="widget-body">
+                    <div class="preference-options">
+                        <div class="preference-item">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <div class="preference-info">
+                                <h4>Weekly Newsletter</h4>
+                                <p>Main newsletter every Monday</p>
+                            </div>
+                        </div>
+                        <div class="preference-item">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <div class="preference-info">
+                                <h4>Breaking News Alerts</h4>
+                                <p>Important updates as they happen</p>
+                            </div>
+                        </div>
+                        <div class="preference-item">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <div class="preference-info">
+                                <h4>Community Highlights</h4>
+                                <p>Monthly community achievements</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Newsletter Modal -->
+    <div class="modal-overlay" id="newsletterModal">
+        <div class="modal-content newsletter-modal">
+            <div class="modal-header">
+                <h2>Newsletter Subscription</h2>
+                <button class="modal-close" onclick="closeModal('newsletterModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="subscription-form">
+                    <h3>Get Weekly Updates</h3>
+                    <p>Join 15,000+ young people staying informed about digital literacy, online safety, and community stories.</p>
+                    
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="your@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Subscription Frequency</label>
+                        <select>
+                            <option value="weekly">Weekly (Recommended)</option>
+                            <option value="monthly">Monthly Digest</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Interested Topics</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" checked>
+                                <span>Digital Privacy & Security</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" checked>
+                                <span>News & Media Literacy</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox">
+                                <span>Social Media Trends</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox">
+                                <span>Mental Health & Wellness</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox">
+                                <span>Community Stories</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-lg w-full">
+                        <i class="fas fa-envelope"></i>
+                        Subscribe to Newsletter
+                    </button>
+                    
+                    <p class="disclaimer">We respect your privacy. Unsubscribe anytime with one click.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Newsletter functionality
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Sidebar toggle
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+        });
+
+        // Newsletter actions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click handlers for newsletter items
+            const newsletterItems = document.querySelectorAll('.newsletter-item');
+            newsletterItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    if (!e.target.closest('.newsletter-actions')) {
+                        // Open newsletter reader
+                        console.log('Opening newsletter:', this.querySelector('.newsletter-title').textContent);
+                    }
+                });
+            });
+
+            // Subscribe button
+            const subscribeBtn = document.querySelector('.page-actions .btn-primary');
+            if (subscribeBtn) {
+                subscribeBtn.addEventListener('click', () => openModal('newsletterModal'));
+            }
+        });
+    </script>
+</body>
+</html>

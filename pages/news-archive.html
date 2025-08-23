@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Archive - Adolescence HUB</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Modern Social CSS -->
+    <link rel="stylesheet" href="../css/modern-social.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle" title="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Adolescence HUB</span>
+                </a>
+            </div>
+            
+            <div class="header-center">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search news archive, fake news cases...">
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <button class="icon-btn notification-btn" title="Notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">1</span>
+                </button>
+                <div class="user-menu">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Profile" class="avatar">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3>Main</h3>
+                    <a href="../index.html" class="nav-item">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="community.html" class="nav-item">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                    </a>
+                    <a href="blog.html" class="nav-item">
+                        <i class="fas fa-pen-alt"></i>
+                        <span>Blog</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h3>Learning</h3>
+                    <a href="games.html" class="nav-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Games & Quizzes</span>
+                    </a>
+                    <a href="micro-courses.html" class="nav-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Micro-Courses</span>
+                    </a>
+                    <a href="habit-corner.html" class="nav-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Habit Corner</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h3>News & Analysis</h3>
+                    <a href="newsletter.html" class="nav-item">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Newsletter</span>
+                    </a>
+                    <a href="rumor-confirm.html" class="nav-item">
+                        <i class="fas fa-search"></i>
+                        <span>Rumor Confirm</span>
+                    </a>
+                    <a href="biased-news.html" class="nav-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Biased News</span>
+                    </a>
+                    <a href="news-archive.html" class="nav-item active">
+                        <i class="fas fa-archive"></i>
+                        <span>News Archive</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h3>AI Tools</h3>
+                    <a href="influencer-analyzer.html" class="nav-item">
+                        <i class="fas fa-user-check"></i>
+                        <span>Influencer Analyzer</span>
+                    </a>
+                    <a href="virtual-lawyer.html" class="nav-item">
+                        <i class="fas fa-gavel"></i>
+                        <span>Virtual Lawyer</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h3>Support</h3>
+                    <a href="anonymous-qa.html" class="nav-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Anonymous Q&A</span>
+                    </a>
+                    <a href="interest-groups.html" class="nav-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Interest Groups</span>
+                    </a>
+                    <a href="contact.html" class="nav-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="page-header-content">
+                    <div class="page-title-section">
+                        <h1 class="page-title">
+                            <i class="fas fa-archive"></i>
+                            News Archive
+                        </h1>
+                        <p class="page-subtitle">Historical fake news cases and their impact on society - Learn from past misinformation campaigns</p>
+                    </div>
+                    <div class="page-actions">
+                        <button class="btn btn-outline">
+                            <i class="fas fa-filter"></i>
+                            Filter
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Submit Case
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Archive Stats -->
+            <div class="archive-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-exclamation-triangle text-red"></i>
+                    </div>
+                    <div class="stat-details">
+                        <span class="stat-value">247</span>
+                        <span class="stat-label">Documented Cases</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-eye text-blue"></i>
+                    </div>
+                    <div class="stat-details">
+                        <span class="stat-value">12.3M</span>
+                        <span class="stat-label">People Affected</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock text-orange"></i>
+                    </div>
+                    <div class="stat-details">
+                        <span class="stat-value">2020-2025</span>
+                        <span class="stat-label">Time Range</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shield-alt text-green"></i>
+                    </div>
+                    <div class="stat-details">
+                        <span class="stat-value">89%</span>
+                        <span class="stat-label">Detection Rate</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Cases</button>
+                    <button class="filter-tab" data-filter="health">Health Misinformation</button>
+                    <button class="filter-tab" data-filter="political">Political</button>
+                    <button class="filter-tab" data-filter="social">Social Issues</button>
+                    <button class="filter-tab" data-filter="technology">Technology</button>
+                    <button class="filter-tab" data-filter="financial">Financial Scams</button>
+                </div>
+                
+                <div class="filter-controls">
+                    <select class="filter-select" title="Sort by">
+                        <option value="recent">Most Recent</option>
+                        <option value="impact">Highest Impact</option>
+                        <option value="alphabetical">Alphabetical</option>
+                    </select>
+                    <select class="filter-select" title="Year filter">
+                        <option value="all">All Years</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Archive Cases -->
+            <div class="archive-cases">
+                <!-- Featured Case -->
+                <div class="case-card featured" data-category="health">
+                    <div class="case-header">
+                        <div class="case-status">
+                            <span class="status-badge high-impact">High Impact</span>
+                            <span class="case-date">March 2024</span>
+                        </div>
+                        <div class="case-category">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Health Misinformation</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h2 class="case-title">The "Miracle Cure" Social Media Campaign</h2>
+                        <div class="case-summary">
+                            <p>A coordinated misinformation campaign promoting unproven health supplements as "miracle cures" spread across social media platforms, targeting vulnerable health communities and generating millions in fraudulent sales.</p>
+                        </div>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <i class="fas fa-share-alt"></i>
+                                <span>2.3M shares</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-users"></i>
+                                <span>450K affected</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>$12M fraud</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-calendar"></i>
+                                <span>6 months duration</span>
+                            </div>
+                        </div>
+                        <div class="case-timeline">
+                            <h4>Key Timeline Events:</h4>
+                            <div class="timeline-item">
+                                <span class="timeline-date">Week 1-2</span>
+                                <span class="timeline-event">Initial posts appear on health forums with fake testimonials</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">Week 3-8</span>
+                                <span class="timeline-event">Viral spread through influencer partnerships and bot networks</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">Week 12</span>
+                                <span class="timeline-event">Medical authorities issue warnings; fact-checkers respond</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">Week 24</span>
+                                <span class="timeline-event">Legal action and platform removal; damage assessment</span>
+                            </div>
+                        </div>
+                        <div class="case-impact">
+                            <h4>Long-term Impact:</h4>
+                            <ul>
+                                <li>Delayed medical treatment for thousands of patients</li>
+                                <li>Increased skepticism towards legitimate health information</li>
+                                <li>Strengthened platform policies on health misinformation</li>
+                                <li>Led to improved fact-checking protocols</li>
+                            </ul>
+                        </div>
+                        <div class="case-lessons">
+                            <h4>Lessons Learned:</h4>
+                            <div class="lesson-tags">
+                                <span class="lesson-tag">Verify health claims with medical professionals</span>
+                                <span class="lesson-tag">Be suspicious of "miracle cure" language</span>
+                                <span class="lesson-tag">Check multiple credible sources</span>
+                                <span class="lesson-tag">Report suspicious health content</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regular Cases -->
+                <div class="case-card" data-category="political">
+                    <div class="case-header">
+                        <div class="case-status">
+                            <span class="status-badge medium-impact">Medium Impact</span>
+                            <span class="case-date">January 2025</span>
+                        </div>
+                        <div class="case-category">
+                            <i class="fas fa-vote-yea"></i>
+                            <span>Political</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">Deepfake Political Speech Campaign</h3>
+                        <p class="case-excerpt">AI-generated deepfake videos of political figures making controversial statements circulated widely before being debunked.</p>
+                        <div class="case-stats">
+                            <span><i class="fas fa-eye"></i> 1.8M views</span>
+                            <span><i class="fas fa-share"></i> 340K shares</span>
+                            <span><i class="fas fa-clock"></i> 72 hours spread</span>
+                        </div>
+                        <div class="case-actions">
+                            <button class="btn btn-outline">Read Full Analysis</button>
+                            <button class="btn btn-primary">View Evidence</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card" data-category="technology">
+                    <div class="case-header">
+                        <div class="case-status">
+                            <span class="status-badge low-impact">Low Impact</span>
+                            <span class="case-date">December 2024</span>
+                        </div>
+                        <div class="case-category">
+                            <i class="fas fa-microchip"></i>
+                            <span>Technology</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">5G Health Scare Misinformation</h3>
+                        <p class="case-excerpt">False claims about 5G technology causing health problems spread through social media groups and messaging apps.</p>
+                        <div class="case-stats">
+                            <span><i class="fas fa-eye"></i> 890K views</span>
+                            <span><i class="fas fa-share"></i> 156K shares</span>
+                            <span><i class="fas fa-clock"></i> 2 weeks duration</span>
+                        </div>
+                        <div class="case-actions">
+                            <button class="btn btn-outline">Read Full Analysis</button>
+                            <button class="btn btn-primary">View Evidence</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card" data-category="financial">
+                    <div class="case-header">
+                        <div class="case-status">
+                            <span class="status-badge high-impact">High Impact</span>
+                            <span class="case-date">November 2024</span>
+                        </div>
+                        <div class="case-category">
+                            <i class="fas fa-coins"></i>
+                            <span>Financial Scams</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">Cryptocurrency Investment Scam</h3>
+                        <p class="case-excerpt">Fake cryptocurrency investment opportunities promoted by fake celebrity endorsements led to millions in losses.</p>
+                        <div class="case-stats">
+                            <span><i class="fas fa-eye"></i> 3.2M views</span>
+                            <span><i class="fas fa-share"></i> 567K shares</span>
+                            <span><i class="fas fa-dollar-sign"></i> $8.5M losses</span>
+                        </div>
+                        <div class="case-actions">
+                            <button class="btn btn-outline">Read Full Analysis</button>
+                            <button class="btn btn-primary">View Evidence</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card" data-category="social">
+                    <div class="case-header">
+                        <div class="case-status">
+                            <span class="status-badge medium-impact">Medium Impact</span>
+                            <span class="case-date">October 2024</span>
+                        </div>
+                        <div class="case-category">
+                            <i class="fas fa-users"></i>
+                            <span>Social Issues</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">Natural Disaster Misinformation</h3>
+                        <p class="case-excerpt">False information about emergency procedures and government response during natural disasters caused confusion and panic.</p>
+                        <div class="case-stats">
+                            <span><i class="fas fa-eye"></i> 1.5M views</span>
+                            <span><i class="fas fa-share"></i> 298K shares</span>
+                            <span><i class="fas fa-exclamation-triangle"></i> Emergency response affected</span>
+                        </div>
+                        <div class="case-actions">
+                            <button class="btn btn-outline">Read Full Analysis</button>
+                            <button class="btn btn-primary">View Evidence</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card" data-category="health">
+                    <div class="case-header">
+                        <div class="case-status">
+                            <span class="status-badge low-impact">Low Impact</span>
+                            <span class="case-date">September 2024</span>
+                        </div>
+                        <div class="case-category">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Health Misinformation</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">Anti-Vaccine Social Media Campaign</h3>
+                        <p class="case-excerpt">Coordinated campaign spreading false information about vaccine safety targeted parent groups on social media.</p>
+                        <div class="case-stats">
+                            <span><i class="fas fa-eye"></i> 2.1M views</span>
+                            <span><i class="fas fa-share"></i> 445K shares</span>
+                            <span><i class="fas fa-chart-line"></i> Vaccination rates affected</span>
+                        </div>
+                        <div class="case-actions">
+                            <button class="btn btn-outline">Read Full Analysis</button>
+                            <button class="btn btn-primary">View Evidence</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more-section">
+                <button class="btn btn-outline btn-lg" id="loadMoreCases">
+                    <i class="fas fa-chevron-down"></i>
+                    Load More Cases
+                </button>
+                <p class="load-more-info">Showing 6 of 247 documented cases</p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Quick Stats -->
+            <div class="widget">
+                <div class="widget-header">
+                    <h3>Archive Insights</h3>
+                </div>
+                <div class="widget-body">
+                    <div class="insight-list">
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <i class="fas fa-trending-up text-red"></i>
+                            </div>
+                            <div class="insight-text">
+                                <h4>Health misinformation</h4>
+                                <p>Most common category (34%)</p>
+                            </div>
+                        </div>
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <i class="fas fa-clock text-orange"></i>
+                            </div>
+                            <div class="insight-text">
+                                <h4>Average spread time</h4>
+                                <p>48 hours to peak reach</p>
+                            </div>
+                        </div>
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <i class="fas fa-shield-alt text-green"></i>
+                            </div>
+                            <div class="insight-text">
+                                <h4>Detection improvement</h4>
+                                <p>67% faster than 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Tools -->
+            <div class="widget">
+                <div class="widget-header">
+                    <h3>Research Tools</h3>
+                </div>
+                <div class="widget-body">
+                    <div class="tool-list">
+                        <a href="#" class="tool-item">
+                            <i class="fas fa-search"></i>
+                            <span>Reverse Image Search</span>
+                        </a>
+                        <a href="#" class="tool-item">
+                            <i class="fas fa-link"></i>
+                            <span>URL Verification</span>
+                        </a>
+                        <a href="#" class="tool-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Date Verification</span>
+                        </a>
+                        <a href="#" class="tool-item">
+                            <i class="fas fa-user-check"></i>
+                            <span>Source Verification</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warning Signs -->
+            <div class="widget">
+                <div class="widget-header">
+                    <h3>Warning Signs</h3>
+                </div>
+                <div class="widget-body">
+                    <div class="warning-list">
+                        <div class="warning-item">
+                            <i class="fas fa-exclamation-triangle text-red"></i>
+                            <span>Emotional manipulation language</span>
+                        </div>
+                        <div class="warning-item">
+                            <i class="fas fa-bolt text-orange"></i>
+                            <span>Claims of "instant" or "miracle" solutions</span>
+                        </div>
+                        <div class="warning-item">
+                            <i class="fas fa-eye-slash text-purple"></i>
+                            <span>Anonymous or unverifiable sources</span>
+                        </div>
+                        <div class="warning-item">
+                            <i class="fas fa-clock text-blue"></i>
+                            <span>Pressure to act immediately</span>
+                        </div>
+                        <div class="warning-item">
+                            <i class="fas fa-money-bill text-green"></i>
+                            <span>Requests for money or personal info</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Case -->
+            <div class="widget">
+                <div class="widget-header">
+                    <h3>Contribute</h3>
+                </div>
+                <div class="widget-body">
+                    <p>Help us document and analyze misinformation cases to protect others.</p>
+                    <button class="btn btn-primary w-full">
+                        <i class="fas fa-plus"></i>
+                        Submit New Case
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        // Sidebar toggle
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+        });
+
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const caseCards = document.querySelectorAll('.case-card');
+
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    
+                    // Update active tab
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter cases
+                    caseCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Load more functionality
+            document.getElementById('loadMoreCases').addEventListener('click', function() {
+                // Simulate loading more cases
+                console.log('Loading more cases...');
+                // In a real app, this would make an API call
+            });
+        });
+    </script>
+</body>
+</html>
