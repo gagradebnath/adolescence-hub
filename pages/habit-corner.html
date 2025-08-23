@@ -13,34 +13,31 @@
     <link rel="stylesheet" href="../css/modern-social.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-container">
-            <div class="header-left">
-                <button class="sidebar-toggle" id="sidebarToggle" title="Toggle Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <a href="../index.html" class="logo">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Adolescence HUB</span>
-                </a>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>Adolescence HUB</span>
+            </a>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search habits, challenges...">
             </div>
             
-            <div class="header-center">
-                <div class="search-bar">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search habits, books, goals...">
-                </div>
-            </div>
-            
-            <div class="header-right">
-                <button class="icon-btn notification-btn" title="Notifications">
+            <div class="header-actions">
+                <button class="header-btn has-notification" title="Notifications">
                     <i class="fas fa-bell"></i>
-                    <span class="notification-badge">2</span>
                 </button>
-                <div class="user-menu">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Profile" class="avatar">
-                    <i class="fas fa-chevron-down"></i>
+                <button class="header-btn" title="Messages">
+                    <i class="fas fa-comment"></i>
+                </button>
+                <button class="header-btn" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <div class="user-avatar" title="Youth Member">
+                    YM
                 </div>
             </div>
         </div>
@@ -49,709 +46,239 @@
     <!-- Main Layout -->
     <div class="main-layout">
         <!-- Left Sidebar -->
-        <aside class="sidebar" id="sidebar">
-            <nav class="sidebar-nav">
-                <div class="nav-section">
-                    <h3>Main</h3>
-                    <a href="../index.html" class="nav-item">
+        <aside class="sidebar">
+            <!-- Navigation -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Menu</h3>
+                <nav class="sidebar-nav">
+                    <a href="../index.html" class="sidebar-item">
                         <i class="fas fa-home"></i>
-                        <span>Home</span>
+                        <span>Home Feed</span>
                     </a>
-                    <a href="community.html" class="nav-item">
+                    <a href="community.html" class="sidebar-item">
                         <i class="fas fa-users"></i>
                         <span>Community</span>
                     </a>
-                    <a href="blog.html" class="nav-item">
-                        <i class="fas fa-pen-alt"></i>
-                        <span>Blog</span>
-                    </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>Learning</h3>
-                    <a href="games.html" class="nav-item">
-                        <i class="fas fa-gamepad"></i>
-                        <span>Games & Quizzes</span>
-                    </a>
-                    <a href="micro-courses.html" class="nav-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Micro-Courses</span>
-                    </a>
-                    <a href="habit-corner.html" class="nav-item active">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Habit Corner</span>
-                    </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>News & Analysis</h3>
-                    <a href="newsletter.html" class="nav-item">
-                        <i class="fas fa-newspaper"></i>
-                        <span>Newsletter</span>
-                    </a>
-                    <a href="rumor-confirm.html" class="nav-item">
-                        <i class="fas fa-search"></i>
-                        <span>Rumor Confirm</span>
-                    </a>
-                    <a href="biased-news.html" class="nav-item">
-                        <i class="fas fa-balance-scale"></i>
-                        <span>Biased News</span>
-                    </a>
-                    <a href="news-archive.html" class="nav-item">
-                        <i class="fas fa-archive"></i>
-                        <span>News Archive</span>
-                    </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>AI Tools</h3>
-                    <a href="influencer-analyzer.html" class="nav-item">
-                        <i class="fas fa-user-check"></i>
-                        <span>Influencer Analyzer</span>
-                    </a>
-                    <a href="virtual-lawyer.html" class="nav-item">
-                        <i class="fas fa-gavel"></i>
-                        <span>Virtual Lawyer</span>
-                    </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>Support</h3>
-                    <a href="anonymous-qa.html" class="nav-item">
+                    <a href="anonymous-qa.html" class="sidebar-item">
                         <i class="fas fa-question-circle"></i>
                         <span>Anonymous Q&A</span>
                     </a>
-                    <a href="interest-groups.html" class="nav-item">
+                    <a href="blog.html" class="sidebar-item">
+                        <i class="fas fa-pen"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                    <a href="interest-groups.html" class="sidebar-item">
                         <i class="fas fa-heart"></i>
                         <span>Interest Groups</span>
                     </a>
-                    <a href="contact.html" class="nav-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>Contact</span>
+                </nav>
+            </div>
+
+            <!-- Learning Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Learning</h3>
+                <nav class="sidebar-nav">
+                    <a href="micro-courses.html" class="sidebar-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Micro-Courses</span>
                     </a>
+                    <a href="games.html" class="sidebar-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Games & Quizzes</span>
+                    </a>
+                    <a href="habit-corner.html" class="sidebar-item active">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Habit Corner</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Habit Categories -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Categories</h3>
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Digital Wellness</span>
+                        <span class="badge">4</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-book"></i>
+                        <span>Reading</span>
+                        <span class="badge">3</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Personal Growth</span>
+                        <span class="badge">5</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Health & Fitness</span>
+                        <span class="badge">2</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Habit Building Tips</h3>
+                <div style="font-size: 0.875rem; color: #64748b;">
+                    <div style="margin-bottom: 0.5rem;">✓ Start with small actions</div>
+                    <div style="margin-bottom: 0.5rem;">✓ Be consistent daily</div>
+                    <div style="margin-bottom: 0.5rem;">✓ Track your progress</div>
+                    <div style="margin-bottom: 0.5rem;">✓ Celebrate small wins</div>
+                    <div>✓ Stack with existing habits</div>
                 </div>
-            </nav>
+            </div>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Page Header -->
-            <div class="page-header">
-                <div class="page-header-content">
-                    <div class="page-title-section">
-                        <h1 class="page-title">
-                            <i class="fas fa-chart-line"></i>
-                            Habit Corner
-                        </h1>
-                        <p class="page-subtitle">Build healthy digital habits, track your reading, and develop personal growth routines</p>
-                    </div>
-                    <div class="page-actions">
-                        <button class="btn btn-primary" onclick="openModal('newHabitModal')">
-                            <i class="fas fa-plus"></i>
-                            New Habit
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Progress Overview -->
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div class="progress-overview">
-                        <h3>Your Progress This Week</h3>
-                        <div class="progress-stats">
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-fire text-orange"></i>
-                                </div>
-                                <div class="stat-details">
-                                    <span class="stat-value">7</span>
-                                    <span class="stat-label">Day Streak</span>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-target text-green"></i>
-                                </div>
-                                <div class="stat-details">
-                                    <span class="stat-value">85%</span>
-                                    <span class="stat-label">Goal Completion</span>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-book text-blue"></i>
-                                </div>
-                                <div class="stat-details">
-                                    <span class="stat-value">3</span>
-                                    <span class="stat-label">Books This Month</span>
-                                </div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <i class="fas fa-clock text-purple"></i>
-                                </div>
-                                <div class="stat-details">
-                                    <span class="stat-value">2.5h</span>
-                                    <span class="stat-label">Screen-Free Time</span>
-                                </div>
-                            </div>
+            <!-- Welcome to Habit Corner -->
+            <article class="post-card card">
+                <div class="post-header">
+                    <div class="post-avatar" style="background: linear-gradient(135deg, #059669, #0891b2);">HC</div>
+                    <div class="post-info">
+                        <div class="post-author">Habit Corner</div>
+                        <div class="post-meta">
+                            <span>Personal Growth</span>
+                            <span>•</span>
+                            <span>Habit Tracking Hub</span>
                         </div>
+                    </div>
+                    <div class="post-time">
+                        GROW
                     </div>
                 </div>
-            </div>
-
-            <!-- Habit Tracking Section -->
-            <div class="habit-section">
-                <div class="section-header">
-                    <h2>Active Habits</h2>
-                    <div class="section-actions">
-                        <button class="btn btn-outline" onclick="filterHabits('all')">All</button>
-                        <button class="btn btn-outline" onclick="filterHabits('digital')">Digital Wellness</button>
-                        <button class="btn btn-outline" onclick="filterHabits('reading')">Reading</button>
-                        <button class="btn btn-outline" onclick="filterHabits('personal')">Personal Growth</button>
+                <div class="post-content">
+                    <h2 class="post-title">🌱 Welcome to Habit Corner</h2>
+                    <p class="post-description">
+                        Build healthy digital habits, track your reading, and develop personal growth routines. 
+                        Join our community in creating positive changes, one small step at a time!
+                    </p>
+                    <div class="post-media" style="background: linear-gradient(135deg, #ecfdf5, #dbeafe);">
+                        <i class="fas fa-chart-line"></i>
                     </div>
                 </div>
-
-                <div class="habits-grid">
-                    <!-- Digital Detox Habit -->
-                    <div class="habit-card" data-category="digital">
-                        <div class="habit-header">
-                            <div class="habit-icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="habit-info">
-                                <h3>Digital Detox</h3>
-                                <p>30 minutes screen-free before bed</p>
-                            </div>
-                            <div class="habit-streak">
-                                <span class="streak-number">7</span>
-                                <span class="streak-label">days</span>
-                            </div>
-                        </div>
-                        <div class="habit-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 85%"></div>
-                            </div>
-                            <span class="progress-text">6/7 days this week</span>
-                        </div>
-                        <div class="habit-calendar">
-                            <div class="calendar-day completed" title="Monday">M</div>
-                            <div class="calendar-day completed" title="Tuesday">T</div>
-                            <div class="calendar-day completed" title="Wednesday">W</div>
-                            <div class="calendar-day completed" title="Thursday">T</div>
-                            <div class="calendar-day completed" title="Friday">F</div>
-                            <div class="calendar-day completed" title="Saturday">S</div>
-                            <div class="calendar-day current" title="Sunday">S</div>
-                        </div>
-                        <div class="habit-actions">
-                            <button class="btn btn-success btn-sm" onclick="markHabitComplete('digital-detox')">
-                                <i class="fas fa-check"></i>
-                                Mark Complete
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Reading Habit -->
-                    <div class="habit-card" data-category="reading">
-                        <div class="habit-header">
-                            <div class="habit-icon">
-                                <i class="fas fa-book-open"></i>
-                            </div>
-                            <div class="habit-info">
-                                <h3>Daily Reading</h3>
-                                <p>Read for 20 minutes daily</p>
-                            </div>
-                            <div class="habit-streak">
-                                <span class="streak-number">12</span>
-                                <span class="streak-label">days</span>
-                            </div>
-                        </div>
-                        <div class="habit-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 100%"></div>
-                            </div>
-                            <span class="progress-text">7/7 days this week</span>
-                        </div>
-                        <div class="habit-calendar">
-                            <div class="calendar-day completed" title="Monday">M</div>
-                            <div class="calendar-day completed" title="Tuesday">T</div>
-                            <div class="calendar-day completed" title="Wednesday">W</div>
-                            <div class="calendar-day completed" title="Thursday">T</div>
-                            <div class="calendar-day completed" title="Friday">F</div>
-                            <div class="calendar-day completed" title="Saturday">S</div>
-                            <div class="calendar-day completed" title="Sunday">S</div>
-                        </div>
-                        <div class="habit-actions">
-                            <button class="btn btn-outline btn-sm" disabled>
-                                <i class="fas fa-check"></i>
-                                Completed Today
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Mindfulness Habit -->
-                    <div class="habit-card" data-category="personal">
-                        <div class="habit-header">
-                            <div class="habit-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="habit-info">
-                                <h3>Mindfulness</h3>
-                                <p>5 minutes of reflection or meditation</p>
-                            </div>
-                            <div class="habit-streak">
-                                <span class="streak-number">4</span>
-                                <span class="streak-label">days</span>
-                            </div>
-                        </div>
-                        <div class="habit-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 57%"></div>
-                            </div>
-                            <span class="progress-text">4/7 days this week</span>
-                        </div>
-                        <div class="habit-calendar">
-                            <div class="calendar-day completed" title="Monday">M</div>
-                            <div class="calendar-day missed" title="Tuesday">T</div>
-                            <div class="calendar-day completed" title="Wednesday">W</div>
-                            <div class="calendar-day completed" title="Thursday">T</div>
-                            <div class="calendar-day missed" title="Friday">F</div>
-                            <div class="calendar-day completed" title="Saturday">S</div>
-                            <div class="calendar-day current" title="Sunday">S</div>
-                        </div>
-                        <div class="habit-actions">
-                            <button class="btn btn-success btn-sm" onclick="markHabitComplete('mindfulness')">
-                                <i class="fas fa-check"></i>
-                                Mark Complete
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Critical Thinking Habit -->
-                    <div class="habit-card" data-category="digital">
-                        <div class="habit-header">
-                            <div class="habit-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <div class="habit-info">
-                                <h3>Fact-Check Challenge</h3>
-                                <p>Verify one news article before sharing</p>
-                            </div>
-                            <div class="habit-streak">
-                                <span class="streak-number">9</span>
-                                <span class="streak-label">days</span>
-                            </div>
-                        </div>
-                        <div class="habit-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 71%"></div>
-                            </div>
-                            <span class="progress-text">5/7 days this week</span>
-                        </div>
-                        <div class="habit-calendar">
-                            <div class="calendar-day completed" title="Monday">M</div>
-                            <div class="calendar-day completed" title="Tuesday">T</div>
-                            <div class="calendar-day missed" title="Wednesday">W</div>
-                            <div class="calendar-day completed" title="Thursday">T</div>
-                            <div class="calendar-day completed" title="Friday">F</div>
-                            <div class="calendar-day missed" title="Saturday">S</div>
-                            <div class="calendar-day completed" title="Sunday">S</div>
-                        </div>
-                        <div class="habit-actions">
-                            <button class="btn btn-outline btn-sm" disabled>
-                                <i class="fas fa-check"></i>
-                                Completed Today
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reading Tracker Section -->
-            <div class="reading-section mt-5">
-                <div class="section-header">
-                    <h2>Reading Tracker</h2>
-                    <button class="btn btn-primary" onclick="openModal('addBookModal')">
+                <div class="post-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-calendar"></i>
+                        <span>My Habits</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-users"></i>
+                        <span>Community</span>
+                    </button>
+                    <button class="action-btn primary">
                         <i class="fas fa-plus"></i>
-                        Add Book
+                        <span>New Habit</span>
                     </button>
                 </div>
+            </article>
 
-                <div class="reading-stats mb-4">
-                    <div class="reading-stat">
-                        <span class="stat-value">3</span>
-                        <span class="stat-label">Books This Month</span>
+            <!-- Community Habit Voting -->
+            <article class="post-card card">
+                <div class="post-header">
+                    <div class="post-avatar" style="background: linear-gradient(135deg, #7c3aed, #ec4899);">CV</div>
+                    <div class="post-info">
+                        <div class="post-author">Community Voting</div>
+                        <div class="post-meta">
+                            <span>Habit Proposals</span>
+                            <span>•</span>
+                            <span>Vote & Support</span>
+                        </div>
                     </div>
-                    <div class="reading-stat">
-                        <span class="stat-value">156</span>
-                        <span class="stat-label">Pages Read</span>
-                    </div>
-                    <div class="reading-stat">
-                        <span class="stat-value">8.5h</span>
-                        <span class="stat-label">Reading Time</span>
-                    </div>
-                    <div class="reading-stat">
-                        <span class="stat-value">12/25</span>
-                        <span class="stat-label">Annual Goal</span>
+                    <div class="post-time">
+                        VOTE
                     </div>
                 </div>
-
-                <div class="books-grid">
-                    <!-- Currently Reading -->
-                    <div class="book-card current">
-                        <div class="book-cover">
-                            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=100&h=150&fit=crop" alt="Digital Minimalism">
-                        </div>
-                        <div class="book-info">
-                            <h3>Digital Minimalism</h3>
-                            <p class="book-author">Cal Newport</p>
-                            <div class="book-progress">
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 65%"></div>
+                <div class="post-content">
+                    <h2 class="post-title">🗳️ Community Habit Proposals</h2>
+                    <p class="post-description">
+                        Help decide which habits our community should focus on. Vote for the habits you think would benefit everyone!
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <!-- Habit Proposal 1 -->
+                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem; margin-bottom: 1rem;">
+                            <div style="margin-bottom: 0.75rem;">
+                                <h4 style="font-weight: 500; margin-bottom: 0.5rem;">📱 "30-minute phone-free study sessions"</h4>
+                                <p style="font-size: 0.875rem; color: #64748b;">Proposed by @StudyBuddy • Focus & Productivity</p>
+                            </div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="action-btn" style="background: #10b981; color: white;">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        Support (342)
+                                    </button>
+                                    <button class="action-btn" style="background: #ef4444; color: white;">
+                                        <i class="fas fa-thumbs-down"></i>
+                                        Pass (23)
+                                    </button>
                                 </div>
-                                <span class="progress-text">Page 156 of 240</span>
-                            </div>
-                            <div class="book-status">
-                                <span class="status-badge reading">Currently Reading</span>
+                                <span style="font-size: 0.875rem; color: #64748b;">94% support</span>
                             </div>
                         </div>
-                        <div class="book-actions">
-                            <button class="btn btn-primary btn-sm">Update Progress</button>
-                        </div>
-                    </div>
 
-                    <!-- Recently Finished -->
-                    <div class="book-card completed">
-                        <div class="book-cover">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=150&fit=crop" alt="The Tech-Wise Family">
-                        </div>
-                        <div class="book-info">
-                            <h3>The Tech-Wise Family</h3>
-                            <p class="book-author">Andy Crouch</p>
-                            <div class="book-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span>4.0</span>
+                        <!-- Habit Proposal 2 -->
+                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem; margin-bottom: 1rem;">
+                            <div style="margin-bottom: 0.75rem;">
+                                <h4 style="font-weight: 500; margin-bottom: 0.5rem;">📚 "Read for 15 minutes before bed"</h4>
+                                <p style="font-size: 0.875rem; color: #64748b;">Proposed by @BookWorm2024 • Reading & Learning</p>
                             </div>
-                            <div class="book-status">
-                                <span class="status-badge completed">Completed</span>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="action-btn" style="background: #10b981; color: white;">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        Support (278)
+                                    </button>
+                                    <button class="action-btn" style="background: #ef4444; color: white;">
+                                        <i class="fas fa-thumbs-down"></i>
+                                        Pass (45)
+                                    </button>
+                                </div>
+                                <span style="font-size: 0.875rem; color: #64748b;">86% support</span>
                             </div>
                         </div>
-                        <div class="book-actions">
-                            <button class="btn btn-outline btn-sm">Write Review</button>
-                        </div>
-                    </div>
 
-                    <!-- Want to Read -->
-                    <div class="book-card wishlist">
-                        <div class="book-cover">
-                            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=100&h=150&fit=crop" alt="Weapons of Math Destruction">
-                        </div>
-                        <div class="book-info">
-                            <h3>Weapons of Math Destruction</h3>
-                            <p class="book-author">Cathy O'Neil</p>
-                            <div class="book-status">
-                                <span class="status-badge wishlist">Want to Read</span>
+                        <!-- Habit Proposal 3 -->
+                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem;">
+                            <div style="margin-bottom: 0.75rem;">
+                                <h4 style="font-weight: 500; margin-bottom: 0.5rem;">💧 "Drink a glass of water every hour"</h4>
+                                <p style="font-size: 0.875rem; color: #64748b;">Proposed by @HealthyLife • Health & Wellness</p>
                             </div>
-                        </div>
-                        <div class="book-actions">
-                            <button class="btn btn-success btn-sm">Start Reading</button>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="action-btn" style="background: #10b981; color: white;">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        Support (156)
+                                    </button>
+                                    <button class="action-btn" style="background: #ef4444; color: white;">
+                                        <i class="fas fa-thumbs-down"></i>
+                                        Pass (78)
+                                    </button>
+                                </div>
+                                <span style="font-size: 0.875rem; color: #64748b;">67% support</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="post-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Propose Habit</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>View Results</span>
+                    </button>
+                    <button class="action-btn primary">
+                        <i class="fas fa-plus"></i>
+                        <span>Start Challenge</span>
+                    </button>
+                </div>
+            </article>
         </main>
-
-        <!-- Right Sidebar -->
-        <aside class="right-sidebar">
-            <!-- Daily Motivation -->
-            <div class="widget">
-                <div class="widget-header">
-                    <h3>Daily Motivation</h3>
-                </div>
-                <div class="widget-body">
-                    <div class="motivation-quote">
-                        <i class="fas fa-quote-left quote-icon"></i>
-                        <p>"The compound effect of small, consistent actions creates extraordinary results."</p>
-                        <span class="quote-author">- James Clear</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Habit Suggestions -->
-            <div class="widget">
-                <div class="widget-header">
-                    <h3>Suggested Habits</h3>
-                </div>
-                <div class="widget-body">
-                    <div class="suggestion-list">
-                        <div class="suggestion-item">
-                            <div class="suggestion-icon">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                            <div class="suggestion-info">
-                                <h4>20-20-20 Rule</h4>
-                                <p>Every 20 minutes, look at something 20 feet away for 20 seconds</p>
-                            </div>
-                            <button class="btn btn-sm btn-outline">Add</button>
-                        </div>
-                        <div class="suggestion-item">
-                            <div class="suggestion-icon">
-                                <i class="fas fa-journal-whills"></i>
-                            </div>
-                            <div class="suggestion-info">
-                                <h4>Gratitude Journal</h4>
-                                <p>Write down 3 things you're grateful for each day</p>
-                            </div>
-                            <button class="btn btn-sm btn-outline">Add</button>
-                        </div>
-                        <div class="suggestion-item">
-                            <div class="suggestion-icon">
-                                <i class="fas fa-walking"></i>
-                            </div>
-                            <div class="suggestion-info">
-                                <h4>Tech-Free Walk</h4>
-                                <p>Take a 10-minute walk without any devices</p>
-                            </div>
-                            <button class="btn btn-sm btn-outline">Add</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Weekly Challenge -->
-            <div class="widget">
-                <div class="widget-header">
-                    <h3>Weekly Challenge</h3>
-                </div>
-                <div class="widget-body">
-                    <div class="challenge-card">
-                        <div class="challenge-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h4>Digital Sunset</h4>
-                        <p>No screens 1 hour before bedtime for 7 days</p>
-                        <div class="challenge-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 57%"></div>
-                            </div>
-                            <span class="progress-text">4/7 days</span>
-                        </div>
-                        <div class="challenge-reward">
-                            <i class="fas fa-gem"></i>
-                            <span>50 XP Reward</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reading Recommendations -->
-            <div class="widget">
-                <div class="widget-header">
-                    <h3>Recommended Books</h3>
-                </div>
-                <div class="widget-body">
-                    <div class="book-recommendations">
-                        <div class="book-rec-item">
-                            <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=60&h=80&fit=crop" alt="Book">
-                            <div class="book-rec-info">
-                                <h4>Atomic Habits</h4>
-                                <p>James Clear</p>
-                                <div class="book-rating">
-                                    <i class="fas fa-star"></i>
-                                    <span>4.8</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-rec-item">
-                            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=60&h=80&fit=crop" alt="Book">
-                            <div class="book-rec-info">
-                                <h4>Mindset</h4>
-                                <p>Carol Dweck</p>
-                                <div class="book-rating">
-                                    <i class="fas fa-star"></i>
-                                    <span>4.6</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
     </div>
-
-    <!-- New Habit Modal -->
-    <div class="modal-overlay" id="newHabitModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Create New Habit</h2>
-                <button class="modal-close" onclick="closeModal('newHabitModal')" title="Close">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form class="habit-form">
-                    <div class="form-group">
-                        <label for="habitName">Habit Name</label>
-                        <input type="text" id="habitName" placeholder="e.g., Daily Reading" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="habitDescription">Description</label>
-                        <input type="text" id="habitDescription" placeholder="e.g., Read for 20 minutes every day">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="habitCategory">Category</label>
-                        <select id="habitCategory" title="Select habit category">
-                            <option value="digital">Digital Wellness</option>
-                            <option value="reading">Reading</option>
-                            <option value="personal">Personal Growth</option>
-                            <option value="health">Health & Fitness</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="habitFrequency">Frequency</label>
-                        <select id="habitFrequency" title="Select frequency">
-                            <option value="daily">Daily</option>
-                            <option value="weekly">Weekly</option>
-                            <option value="custom">Custom</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Icon</label>
-                        <div class="icon-selector">
-                            <button type="button" class="icon-option active" data-icon="fas fa-book">
-                                <i class="fas fa-book"></i>
-                            </button>
-                            <button type="button" class="icon-option" data-icon="fas fa-mobile-alt">
-                                <i class="fas fa-mobile-alt"></i>
-                            </button>
-                            <button type="button" class="icon-option" data-icon="fas fa-heart">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                            <button type="button" class="icon-option" data-icon="fas fa-brain">
-                                <i class="fas fa-brain"></i>
-                            </button>
-                            <button type="button" class="icon-option" data-icon="fas fa-dumbbell">
-                                <i class="fas fa-dumbbell"></i>
-                            </button>
-                            <button type="button" class="icon-option" data-icon="fas fa-leaf">
-                                <i class="fas fa-leaf"></i>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="form-actions">
-                        <button type="button" class="btn btn-outline" onclick="closeModal('newHabitModal')">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Create Habit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add Book Modal -->
-    <div class="modal-overlay" id="addBookModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Add Book</h2>
-                <button class="modal-close" onclick="closeModal('addBookModal')" title="Close">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form class="book-form">
-                    <div class="form-group">
-                        <label for="bookTitle">Book Title</label>
-                        <input type="text" id="bookTitle" placeholder="Enter book title" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="bookAuthor">Author</label>
-                        <input type="text" id="bookAuthor" placeholder="Enter author name">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="bookPages">Total Pages</label>
-                        <input type="number" id="bookPages" placeholder="Number of pages">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="bookStatus">Status</label>
-                        <select id="bookStatus" title="Select reading status">
-                            <option value="want-to-read">Want to Read</option>
-                            <option value="currently-reading">Currently Reading</option>
-                            <option value="completed">Completed</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-actions">
-                        <button type="button" class="btn btn-outline" onclick="closeModal('addBookModal')">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Add Book</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Modal functions
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'flex';
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-        }
-
-        // Sidebar toggle
-        document.getElementById('sidebarToggle').addEventListener('click', function() {
-            document.getElementById('sidebar').classList.toggle('collapsed');
-        });
-
-        // Habit functions
-        function markHabitComplete(habitId) {
-            // Mark habit as complete for today
-            console.log('Marking habit complete:', habitId);
-            // Update UI and send to backend
-        }
-
-        function filterHabits(category) {
-            const habitCards = document.querySelectorAll('.habit-card');
-            const buttons = document.querySelectorAll('.section-actions .btn');
-            
-            // Update button states
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            // Filter habits
-            habitCards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Icon selector
-        document.addEventListener('DOMContentLoaded', function() {
-            const iconOptions = document.querySelectorAll('.icon-option');
-            iconOptions.forEach(option => {
-                option.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    iconOptions.forEach(opt => opt.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-        });
-    </script>
 </body>
 </html>

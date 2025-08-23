@@ -13,34 +13,31 @@
     <link rel="stylesheet" href="../css/modern-social.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-container">
-            <div class="header-left">
-                <button class="sidebar-toggle" id="sidebarToggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <a href="../index.html" class="logo">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Adolescence HUB</span>
-                </a>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-seedling"></i>
+                <span>Adolescence HUB</span>
+            </a>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search newsletters, topics...">
             </div>
             
-            <div class="header-center">
-                <div class="search-bar">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search newsletters, topics...">
-                </div>
-            </div>
-            
-            <div class="header-right">
-                <button class="icon-btn notification-btn">
+            <div class="header-actions">
+                <button class="header-btn has-notification" title="Notifications">
                     <i class="fas fa-bell"></i>
-                    <span class="notification-badge">3</span>
                 </button>
-                <div class="user-menu">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Profile" class="avatar">
-                    <i class="fas fa-chevron-down"></i>
+                <button class="header-btn" title="Messages">
+                    <i class="fas fa-comment"></i>
+                </button>
+                <button class="header-btn" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <div class="user-avatar" title="Youth Member">
+                    YM
                 </div>
             </div>
         </div>
@@ -49,160 +46,158 @@
     <!-- Main Layout -->
     <div class="main-layout">
         <!-- Left Sidebar -->
-        <aside class="sidebar" id="sidebar">
-            <nav class="sidebar-nav">
-                <div class="nav-section">
-                    <h3>Main</h3>
-                    <a href="../index.html" class="nav-item">
+        <aside class="sidebar">
+            <!-- Navigation -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Menu</h3>
+                <nav class="sidebar-nav">
+                    <a href="../index.html" class="sidebar-item">
                         <i class="fas fa-home"></i>
-                        <span>Home</span>
+                        <span>Home Feed</span>
                     </a>
-                    <a href="community.html" class="nav-item">
+                    <a href="community.html" class="sidebar-item">
                         <i class="fas fa-users"></i>
                         <span>Community</span>
                     </a>
-                    <a href="blog.html" class="nav-item">
-                        <i class="fas fa-pen-alt"></i>
-                        <span>Blog</span>
-                    </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>Learning</h3>
-                    <a href="games.html" class="nav-item">
-                        <i class="fas fa-gamepad"></i>
-                        <span>Games & Quizzes</span>
-                    </a>
-                    <a href="micro-courses.html" class="nav-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Micro-Courses</span>
-                    </a>
-                    <a href="habit-corner.html" class="nav-item">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Habit Corner</span>
-                    </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>News & Analysis</h3>
-                    <a href="newsletter.html" class="nav-item active">
-                        <i class="fas fa-newspaper"></i>
-                        <span>Newsletter</span>
-                    </a>
-                    <a href="rumor-confirm.html" class="nav-item">
-                        <i class="fas fa-search"></i>
-                        <span>Rumor Confirm</span>
-                    </a>
-                    <a href="biased-news.html" class="nav-item">
-                        <i class="fas fa-balance-scale"></i>
-                        <span>Biased News</span>
-                    </a>
-                    <a href="news-archive.html" class="nav-item">
-                        <i class="fas fa-archive"></i>
-                        <span>News Archive</span>
-                    </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>AI Tools</h3>
-                    <a href="influencer-analyzer.html" class="nav-item">
-                        <i class="fas fa-user-check"></i>
-                        <span>Influencer Analyzer</span>
-                    </a>
-                    <a href="virtual-lawyer.html" class="nav-item">
-                        <i class="fas fa-gavel"></i>
-                        <span>Virtual Lawyer</span>
-                    </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>Support</h3>
-                    <a href="anonymous-qa.html" class="nav-item">
+                    <a href="anonymous-qa.html" class="sidebar-item">
                         <i class="fas fa-question-circle"></i>
                         <span>Anonymous Q&A</span>
                     </a>
-                    <a href="interest-groups.html" class="nav-item">
+                    <a href="blog.html" class="sidebar-item">
+                        <i class="fas fa-pen"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                    <a href="interest-groups.html" class="sidebar-item">
                         <i class="fas fa-heart"></i>
                         <span>Interest Groups</span>
                     </a>
-                    <a href="contact.html" class="nav-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>Contact</span>
+                </nav>
+            </div>
+
+            <!-- Learning Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Learning</h3>
+                <nav class="sidebar-nav">
+                    <a href="games.html" class="sidebar-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Games & Quizzes</span>
                     </a>
-                </div>
-            </nav>
+                    <a href="micro-courses.html" class="sidebar-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Micro-Courses</span>
+                    </a>
+                    <a href="habit-corner.html" class="sidebar-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Habit Corner</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- News & Analysis -->
+            <div class="sidebar-section">
+                <h3 class="section-title">News & Analysis</h3>
+                <nav class="sidebar-nav">
+                    <a href="newsletter.html" class="sidebar-item active">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Newsletter</span>
+                    </a>
+                    <a href="rumor-confirm.html" class="sidebar-item">
+                        <i class="fas fa-search"></i>
+                        <span>Rumor Confirm</span>
+                    </a>
+                    <a href="biased-news.html" class="sidebar-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Biased News</span>
+                    </a>
+                    <a href="news-archive.html" class="sidebar-item">
+                        <i class="fas fa-archive"></i>
+                        <span>News Archive</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Newsletter Topics -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Popular Topics</h3>
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Digital Privacy</span>
+                        <span class="badge">28</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-users"></i>
+                        <span>Social Media Safety</span>
+                        <span class="badge">24</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-search"></i>
+                        <span>Fact-Checking</span>
+                        <span class="badge">19</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Mental Health</span>
+                        <span class="badge">15</span>
+                    </a>
+                </nav>
+            </div>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
             <!-- Newsletter Header -->
-            <div class="page-header">
-                <div class="page-header-content">
-                    <div class="page-title-section">
-                        <h1 class="page-title">
-                            <i class="fas fa-newspaper"></i>
-                            Newsletter
-                        </h1>
-                        <p class="page-subtitle">Stay updated with weekly insights on digital literacy, youth trends, and safety tips</p>
-                    </div>
-                    <div class="page-actions">
-                        <button class="btn btn-primary">
-                            <i class="fas fa-plus"></i>
-                            Subscribe
-                        </button>
-                    </div>
+            <div class="card mb-6">
+                <div class="p-5">
+                    <h1 class="text-2xl font-bold mb-2">Newsletter</h1>
+                    <p class="text-secondary mb-4">Stay updated with weekly insights on digital literacy, youth trends, and safety tips</p>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Subscribe
+                    </button>
                 </div>
             </div>
 
             <!-- Subscription Status -->
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div class="subscription-status">
-                        <div class="status-info">
-                            <div class="status-icon">
-                                <i class="fas fa-check-circle text-success"></i>
-                            </div>
-                            <div class="status-details">
-                                <h3>You're subscribed to our newsletter!</h3>
-                                <p>You'll receive weekly updates every Monday with the latest insights, tips, and community highlights.</p>
-                            </div>
+            <div class="card mb-6">
+                <div class="p-5">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-check-circle text-green-600 text-xl"></i>
                         </div>
-                        <div class="subscription-actions">
-                            <button class="btn btn-outline">
+                        <div class="flex-1">
+                            <h3 class="font-semibold mb-1">You're subscribed to our newsletter!</h3>
+                            <p class="text-secondary text-sm">You'll receive weekly updates every Monday with the latest insights, tips, and community highlights.</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="btn btn-outline btn-sm">
                                 <i class="fas fa-cog"></i>
                                 Preferences
-                            </button>
-                            <button class="btn btn-outline text-red">
-                                <i class="fas fa-times"></i>
-                                Unsubscribe
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Newsletter Archives -->
-            <div class="newsletter-content">
+            <!-- Newsletter Archive -->
+            <div class="space-y-6">
                 <!-- Latest Newsletter -->
-                <div class="newsletter-item featured">
-                    <div class="newsletter-header">
-                        <span class="newsletter-badge">Latest Issue</span>
-                        <div class="newsletter-meta">
-                            <span class="newsletter-date">August 19, 2025</span>
-                            <span class="newsletter-issue">Issue #34</span>
+                <div class="card">
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="badge bg-blue-100 text-blue-800">Latest Issue</span>
+                            <div class="text-sm text-secondary">
+                                <span>August 19, 2025</span> • <span>Issue #34</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="newsletter-content">
-                        <h2 class="newsletter-title">Digital Detox: Finding Balance in a Connected World</h2>
-                        <div class="newsletter-preview">
-                            <p>This week we explore the growing trend of digital detoxes among teens, share expert tips on managing screen time, and highlight inspiring stories from our community members who've found healthier relationships with technology.</p>
+                        <h2 class="text-xl font-bold mb-3">Digital Detox: Finding Balance in a Connected World</h2>
+                        <p class="text-secondary mb-4">This week we explore the growing trend of digital detoxes among teens, share expert tips on managing screen time, and highlight inspiring stories from our community members who've found healthier relationships with technology.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag">Screen Time</span>
+                            <span class="tag">Mental Health</span>
+                            <span class="tag">Community Stories</span>
                         </div>
-                        <div class="newsletter-topics">
-                            <span class="topic-tag">Screen Time</span>
-                            <span class="topic-tag">Mental Health</span>
-                            <span class="topic-tag">Community Stories</span>
-                        </div>
-                        <div class="newsletter-actions">
+                        <div class="flex space-x-3">
                             <button class="btn btn-primary">
                                 <i class="fas fa-eye"></i>
                                 Read Full Issue

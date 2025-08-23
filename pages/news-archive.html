@@ -14,8 +14,8 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="header-container">
+    <header class="top-header">
+        <div class="header-content">
             <div class="header-left">
                 <button class="sidebar-toggle" id="sidebarToggle" title="Toggle Menu">
                     <i class="fas fa-bars"></i>
@@ -26,14 +26,14 @@
                 </a>
             </div>
             
-            <div class="header-center">
-                <div class="search-bar">
+            <div class="search-container">
+                <div class="search-box">
                     <i class="fas fa-search"></i>
                     <input type="text" placeholder="Search news archive, fake news cases...">
                 </div>
             </div>
             
-            <div class="header-right">
+            <div class="header-actions">
                 <button class="icon-btn notification-btn" title="Notifications">
                     <i class="fas fa-bell"></i>
                     <span class="notification-badge">1</span>
@@ -50,106 +50,163 @@
     <div class="main-layout">
         <!-- Left Sidebar -->
         <aside class="sidebar" id="sidebar">
-            <nav class="sidebar-nav">
-                <div class="nav-section">
-                    <h3>Main</h3>
-                    <a href="../index.html" class="nav-item">
+            <!-- Main Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Main</h3>
+                <nav class="sidebar-nav">
+                    <a href="../index.html" class="sidebar-item">
                         <i class="fas fa-home"></i>
                         <span>Home</span>
                     </a>
-                    <a href="community.html" class="nav-item">
+                    <a href="community.html" class="sidebar-item">
                         <i class="fas fa-users"></i>
                         <span>Community</span>
                     </a>
-                    <a href="blog.html" class="nav-item">
-                        <i class="fas fa-pen-alt"></i>
-                        <span>Blog</span>
-                    </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>Learning</h3>
-                    <a href="games.html" class="nav-item">
-                        <i class="fas fa-gamepad"></i>
-                        <span>Games & Quizzes</span>
-                    </a>
-                    <a href="micro-courses.html" class="nav-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Micro-Courses</span>
-                    </a>
-                    <a href="habit-corner.html" class="nav-item">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Habit Corner</span>
-                    </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>News & Analysis</h3>
-                    <a href="newsletter.html" class="nav-item">
-                        <i class="fas fa-newspaper"></i>
-                        <span>Newsletter</span>
-                    </a>
-                    <a href="rumor-confirm.html" class="nav-item">
-                        <i class="fas fa-search"></i>
-                        <span>Rumor Confirm</span>
-                    </a>
-                    <a href="biased-news.html" class="nav-item">
-                        <i class="fas fa-balance-scale"></i>
-                        <span>Biased News</span>
-                    </a>
-                    <a href="news-archive.html" class="nav-item active">
-                        <i class="fas fa-archive"></i>
-                        <span>News Archive</span>
-                    </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>AI Tools</h3>
-                    <a href="influencer-analyzer.html" class="nav-item">
-                        <i class="fas fa-user-check"></i>
-                        <span>Influencer Analyzer</span>
-                    </a>
-                    <a href="virtual-lawyer.html" class="nav-item">
-                        <i class="fas fa-gavel"></i>
-                        <span>Virtual Lawyer</span>
-                    </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>Support</h3>
-                    <a href="anonymous-qa.html" class="nav-item">
+                    <a href="anonymous-qa.html" class="sidebar-item">
                         <i class="fas fa-question-circle"></i>
                         <span>Anonymous Q&A</span>
                     </a>
-                    <a href="interest-groups.html" class="nav-item">
+                    <a href="blog.html" class="sidebar-item">
+                        <i class="fas fa-pen"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                    <a href="interest-groups.html" class="sidebar-item">
                         <i class="fas fa-heart"></i>
                         <span>Interest Groups</span>
                     </a>
-                    <a href="contact.html" class="nav-item">
+                </nav>
+            </div>
+
+            <!-- Learning Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Learning</h3>
+                <nav class="sidebar-nav">
+                    <a href="games.html" class="sidebar-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Games & Quizzes</span>
+                    </a>
+                    <a href="micro-courses.html" class="sidebar-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Micro-Courses</span>
+                    </a>
+                    <a href="habit-corner.html" class="sidebar-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Habit Corner</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- News & Analysis Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">News & Analysis</h3>
+                <nav class="sidebar-nav">
+                    <a href="newsletter.html" class="sidebar-item">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Newsletter</span>
+                    </a>
+                    <a href="rumor-confirm.html" class="sidebar-item">
+                        <i class="fas fa-search"></i>
+                        <span>Rumor Confirm</span>
+                    </a>
+                    <a href="biased-news.html" class="sidebar-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Biased News</span>
+                    </a>
+                    <a href="news-archive.html" class="sidebar-item active">
+                        <i class="fas fa-archive"></i>
+                        <span>News Archive</span>
+                    </a>
+                    <a href="contact.html" class="sidebar-item">
                         <i class="fas fa-envelope"></i>
                         <span>Contact</span>
                     </a>
-                </div>
-            </nav>
+            <!-- AI Tools Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">AI Tools</h3>
+                <nav class="sidebar-nav">
+                    <a href="influencer-analyzer.html" class="sidebar-item">
+                        <i class="fas fa-user-check"></i>
+                        <span>Influencer Analyzer</span>
+                    </a>
+                    <a href="virtual-lawyer.html" class="sidebar-item">
+                        <i class="fas fa-gavel"></i>
+                        <span>Virtual Lawyer</span>
+                    </a>
+                </nav>
+            </div>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Page Header -->
-            <div class="page-header">
-                <div class="page-header-content">
-                    <div class="page-title-section">
-                        <h1 class="page-title">
-                            <i class="fas fa-archive"></i>
-                            News Archive
-                        </h1>
-                        <p class="page-subtitle">Historical fake news cases and their impact on society - Learn from past misinformation campaigns</p>
+            <!-- Welcome to News Archive -->
+            <article class="post-card card">
+                <div class="post-header">
+                    <div class="post-avatar" style="background: linear-gradient(135deg, #ef4444, #dc2626);">NA</div>
+                    <div class="post-info">
+                        <div class="post-author">News Archive</div>
+                        <div class="post-meta">
+                            <span>Historical Analysis</span>
+                            <span>•</span>
+                            <span>Misinformation Database</span>
+                        </div>
                     </div>
-                    <div class="page-actions">
-                        <button class="btn btn-outline">
-                            <i class="fas fa-filter"></i>
-                            Filter
-                        </button>
+                    <div class="post-time">
+                        LEARN
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">📰 News Archive & Fact Database</h2>
+                    <p class="post-description">
+                        Explore historical fake news cases and their impact on society. Learn from past misinformation 
+                        campaigns to better identify and combat false information today.
+                    </p>
+                    <div class="post-media" style="background: linear-gradient(135deg, #fed7d7, #fef3c7);">
+                        <i class="fas fa-archive"></i>
+                    </div>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-filter"></i>
+                        <span>Filter Cases</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-search"></i>
+                        <span>Search Archive</span>
+                    </button>
+                    <button class="action-btn primary">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>View Statistics</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Archive Statistics Post -->
+            <article class="post-card card">
+                <div class="post-header">
+                    <div class="post-avatar" style="background: linear-gradient(135deg, #7c3aed, #ec4899);">AS</div>
+                    <div class="post-info">
+                        <div class="post-author">Archive Statistics</div>
+                        <div class="post-meta">
+                            <span>Data Overview</span>
+                            <span>•</span>
+                            <span>Updated Daily</span>
+                        </div>
+                    </div>
+                    <div class="post-time">
+                        DATA
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title">📈 Archive Overview</h2>
+                    <p class="post-description">
+                        Key statistics from our comprehensive misinformation database.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                        <div class="text-center p-3 bg-red-50 rounded-lg">
+                            <i class="fas fa-exclamation-triangle text-red-500 text-2xl mb-2"></i>
+                            <div class="font-bold text-lg">1,247</div>
+                            <div class="text-sm text-gray-600">Cases Documented</div>
+                        </div>
                         <button class="btn btn-primary">
                             <i class="fas fa-plus"></i>
                             Submit Case
@@ -159,44 +216,189 @@
             </div>
 
             <!-- Archive Stats -->
-            <div class="archive-stats">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-exclamation-triangle text-red"></i>
-                    </div>
-                    <div class="stat-details">
-                        <span class="stat-value">247</span>
-                        <span class="stat-label">Documented Cases</span>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-eye text-blue"></i>
-                    </div>
-                    <div class="stat-details">
-                        <span class="stat-value">12.3M</span>
-                        <span class="stat-label">People Affected</span>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-clock text-orange"></i>
-                    </div>
-                    <div class="stat-details">
-                        <span class="stat-value">2020-2025</span>
-                        <span class="stat-label">Time Range</span>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-shield-alt text-green"></i>
-                    </div>
-                    <div class="stat-details">
-                        <span class="stat-value">89%</span>
-                        <span class="stat-label">Detection Rate</span>
+            <div class="card mb-6">
+                <div class="p-5">
+                    <h3 class="text-lg font-semibold mb-4">Archive Statistics</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="text-center">
+                            <div class="stat-icon">
+                                <i class="fas fa-exclamation-triangle text-red-500"></i>
+                            </div>
+                            <div class="stat-details">
+                                <span class="stat-value">247</span>
+                                <span class="stat-label">Documented Cases</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="stat-icon">
+                                <i class="fas fa-eye text-blue-500"></i>
+                            </div>
+                            <div class="stat-details">
+                                <span class="stat-value">12.3M</span>
+                                <span class="stat-label">People Affected</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock text-orange-500"></i>
+                            </div>
+                            <div class="stat-details">
+                                <span class="stat-value">2020-2025</span>
+                                <span class="stat-label">Time Range</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="stat-icon">
+                                <i class="fas fa-shield-alt text-green-500"></i>
+                            </div>
+                            <div class="stat-details">
+                                <span class="stat-value">89%</span>
+                                <span class="stat-label">Detection Rate</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Community Fact-Check Voting -->
+            <div class="card mb-6">
+                <div class="p-5">
+                    <h3 class="text-lg font-semibold mb-4">🔍 Community Fact-Check Station</h3>
+                    <p class="text-secondary mb-4">Help verify recent news stories and build our community knowledge base</p>
+                    
+                    <div class="space-y-4">
+                        <!-- Fact-Check Item 1 -->
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <div class="mb-3">
+                                <h4 class="font-medium mb-2">Breaking: "New social media app gives away free money to users"</h4>
+                                <p class="text-sm text-secondary">Source: Viral TikTok video (2.1M views) • Submitted 2 hours ago</p>
+                                <div class="mt-2 text-xs">
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded">High Viral Risk</span>
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Needs Verification</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-3">
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-times"></i>
+                                        Fake (156)
+                                    </button>
+                                    <button class="btn btn-success btn-sm">
+                                        <i class="fas fa-check"></i>
+                                        Real (23)
+                                    </button>
+                                    <button class="btn btn-warning btn-sm">
+                                        <i class="fas fa-question"></i>
+                                        Investigating (45)
+                                    </button>
+                                </div>
+                                <span class="text-sm text-secondary">73% say fake</span>
+                            </div>
+                        </div>
+
+                        <!-- Fact-Check Item 2 -->
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <div class="mb-3">
+                                <h4 class="font-medium mb-2">Claim: "New study shows teen screen time linked to creativity boost"</h4>
+                                <p class="text-sm text-secondary">Source: Instagram infographic • Submitted 5 hours ago</p>
+                                <div class="mt-2 text-xs">
+                                    <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Moderate Risk</span>
+                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded">Source Check Needed</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-3">
+                                    <button class="btn btn-success btn-sm">
+                                        <i class="fas fa-check"></i>
+                                        Real (89)
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-times"></i>
+                                        Fake (67)
+                                    </button>
+                                    <button class="btn btn-warning btn-sm">
+                                        <i class="fas fa-question"></i>
+                                        Investigating (78)
+                                    </button>
+                                </div>
+                                <span class="text-sm text-secondary">38% say real</span>
+                            </div>
+                        </div>
+
+                        <!-- Fact-Check Item 3 -->
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <div class="mb-3">
+                                <h4 class="font-medium mb-2">Alert: "Government banning all social media for under 16s next month"</h4>
+                                <p class="text-sm text-secondary">Source: WhatsApp forward chain • Submitted 1 day ago</p>
+                                <div class="mt-2 text-xs">
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded">High Viral Risk</span>
+                                    <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded">Political Misinformation</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-3">
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-times"></i>
+                                        Fake (301)
+                                    </button>
+                                    <button class="btn btn-success btn-sm">
+                                        <i class="fas fa-check"></i>
+                                        Real (12)
+                                    </button>
+                                    <button class="btn btn-warning btn-sm">
+                                        <i class="fas fa-question"></i>
+                                        Investigating (8)
+                                    </button>
+                                </div>
+                                <span class="text-sm text-secondary">94% say fake</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 text-center">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Submit Story for Verification
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Fact-Check Results -->
+            <div class="card">
+                <div class="p-5">
+                    <h3 class="text-lg font-semibold mb-4">✅ Recent Community Verifications</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                            <div>
+                                <h5 class="font-medium text-sm">COVID vaccine misinformation debunked</h5>
+                                <p class="text-xs text-secondary">Community verdict: 89% False • Verified by medical sources</p>
+                            </div>
+                            <span class="badge bg-green-100 text-green-800">Verified False</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                            <div>
+                                <h5 class="font-medium text-sm">New teen privacy laws confirmed</h5>
+                                <p class="text-xs text-secondary">Community verdict: 76% True • Cross-referenced official sources</p>
+                            </div>
+                            <span class="badge bg-blue-100 text-blue-800">Verified True</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
+                            <div>
+                                <h5 class="font-medium text-sm">Celebrity death hoax spreading</h5>
+                                <p class="text-xs text-secondary">Community verdict: 92% False • No credible sources found</p>
+                            </div>
+                            <span class="badge bg-red-100 text-red-800">Verified False</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
 
             <!-- Filter Section -->
             <div class="filter-section">

@@ -14,8 +14,8 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="header-container">
+    <header class="top-header">
+        <div class="header-content">
             <div class="header-left">
                 <button class="sidebar-toggle" id="sidebarToggle" title="Toggle Menu">
                     <i class="fas fa-bars"></i>
@@ -26,14 +26,14 @@
                 </a>
             </div>
             
-            <div class="header-center">
-                <div class="search-bar">
+            <div class="search-container">
+                <div class="search-box">
                     <i class="fas fa-search"></i>
                     <input type="text" placeholder="Search contact info, support topics...">
                 </div>
             </div>
             
-            <div class="header-right">
+            <div class="header-actions">
                 <button class="icon-btn notification-btn" title="Notifications">
                     <i class="fas fa-bell"></i>
                     <span class="notification-badge">2</span>
@@ -50,130 +50,140 @@
     <div class="main-layout">
         <!-- Left Sidebar -->
         <aside class="sidebar" id="sidebar">
-            <nav class="sidebar-nav">
-                <div class="nav-section">
-                    <h3>Main</h3>
-                    <a href="../index.html" class="nav-item">
+            <!-- Main Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Main</h3>
+                <nav class="sidebar-nav">
+                    <a href="../index.html" class="sidebar-item">
                         <i class="fas fa-home"></i>
                         <span>Home</span>
                     </a>
-                    <a href="community.html" class="nav-item">
+                    <a href="community.html" class="sidebar-item">
                         <i class="fas fa-users"></i>
                         <span>Community</span>
                     </a>
-                    <a href="blog.html" class="nav-item">
-                        <i class="fas fa-pen-alt"></i>
-                        <span>Blog</span>
+                    <a href="anonymous-qa.html" class="sidebar-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Anonymous Q&A</span>
                     </a>
-                </div>
+                    <a href="blog.html" class="sidebar-item">
+                        <i class="fas fa-pen"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                    <a href="interest-groups.html" class="sidebar-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Interest Groups</span>
+                    </a>
+                </nav>
+            </div>
 
-                <div class="nav-section">
-                    <h3>Learning</h3>
-                    <a href="games.html" class="nav-item">
+            <!-- Learning Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Learning</h3>
+                <nav class="sidebar-nav">
+                    <a href="games.html" class="sidebar-item">
                         <i class="fas fa-gamepad"></i>
                         <span>Games & Quizzes</span>
                     </a>
-                    <a href="micro-courses.html" class="nav-item">
+                    <a href="micro-courses.html" class="sidebar-item">
                         <i class="fas fa-graduation-cap"></i>
                         <span>Micro-Courses</span>
                     </a>
-                    <a href="habit-corner.html" class="nav-item">
+                    <a href="habit-corner.html" class="sidebar-item">
                         <i class="fas fa-chart-line"></i>
                         <span>Habit Corner</span>
                     </a>
-                </div>
+                </nav>
+            </div>
 
-                <div class="nav-section">
-                    <h3>News & Analysis</h3>
-                    <a href="newsletter.html" class="nav-item">
+            <!-- News & Analysis Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">News & Analysis</h3>
+                <nav class="sidebar-nav">
+                    <a href="newsletter.html" class="sidebar-item">
                         <i class="fas fa-newspaper"></i>
                         <span>Newsletter</span>
                     </a>
-                    <a href="rumor-confirm.html" class="nav-item">
+                    <a href="rumor-confirm.html" class="sidebar-item">
                         <i class="fas fa-search"></i>
                         <span>Rumor Confirm</span>
                     </a>
-                    <a href="biased-news.html" class="nav-item">
+                    <a href="biased-news.html" class="sidebar-item">
                         <i class="fas fa-balance-scale"></i>
                         <span>Biased News</span>
                     </a>
-                    <a href="news-archive.html" class="nav-item">
+                    <a href="news-archive.html" class="sidebar-item">
+                        <i class="fas fa-archive"></i>
+                        <span>News Archive</span>
+                    </a>
+                    <a href="contact.html" class="sidebar-item active">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </nav>
+            </div>
                         <i class="fas fa-archive"></i>
                         <span>News Archive</span>
                     </a>
                 </div>
 
-                <div class="nav-section">
-                    <h3>AI Tools</h3>
-                    <a href="influencer-analyzer.html" class="nav-item">
+            <!-- AI Tools Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">AI Tools</h3>
+                <nav class="sidebar-nav">
+                    <a href="influencer-analyzer.html" class="sidebar-item">
                         <i class="fas fa-user-check"></i>
                         <span>Influencer Analyzer</span>
                     </a>
-                    <a href="virtual-lawyer.html" class="nav-item">
+                    <a href="virtual-lawyer.html" class="sidebar-item">
                         <i class="fas fa-gavel"></i>
                         <span>Virtual Lawyer</span>
                     </a>
-                </div>
-
-                <div class="nav-section">
-                    <h3>Support</h3>
-                    <a href="anonymous-qa.html" class="nav-item">
-                        <i class="fas fa-question-circle"></i>
-                        <span>Anonymous Q&A</span>
-                    </a>
-                    <a href="interest-groups.html" class="nav-item">
-                        <i class="fas fa-heart"></i>
-                        <span>Interest Groups</span>
-                    </a>
-                    <a href="contact.html" class="nav-item active">
-                        <i class="fas fa-envelope"></i>
-                        <span>Contact</span>
-                    </a>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
             <!-- Page Header -->
-            <div class="page-header">
-                <div class="page-header-content">
-                    <div class="page-title-section">
-                        <h1 class="page-title">
-                            <i class="fas fa-envelope"></i>
-                            Contact Us
-                        </h1>
-                        <p class="page-subtitle">Get in touch with our team for support, feedback, or collaboration opportunities</p>
-                    </div>
+            <div class="card mb-6">
+                <div class="p-5">
+                    <h1 class="text-2xl font-bold mb-2">Contact Us</h1>
+                    <p class="text-secondary">Get in touch with our team for support, feedback, or collaboration opportunities</p>
                 </div>
             </div>
 
             <!-- Contact Options -->
-            <div class="contact-options">
-                <div class="contact-option">
-                    <div class="contact-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Support</h3>
-                        <p>Need help with the platform or have technical issues?</p>
-                        <button class="btn btn-primary">Get Support</button>
-                    </div>
-                </div>
-                
-                <div class="contact-option">
-                    <div class="contact-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Feedback</h3>
-                        <p>Share your thoughts and suggestions for improvement</p>
-                        <button class="btn btn-primary">Send Feedback</button>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div class="card">
+                    <div class="p-5 text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Support</h3>
+                            <p>Need help with the platform or have technical issues?</p>
+                            <button class="btn btn-primary">Get Support</button>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="contact-option">
-                    <div class="contact-icon">
+                <div class="card">
+                    <div class="p-5 text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Feedback</h3>
+                            <p>Share your thoughts and suggestions for improvement</p>
+                            <button class="btn btn-primary">Send Feedback</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="p-5 text-center">
+                        <div class="contact-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <div class="contact-details">
