@@ -489,7 +489,7 @@
     </div>
 
     <!-- Mobile Menu Toggle -->
-    <button class="mobile-menu-toggle" id="mobileMenuToggle" style="display: none;">
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" title="Toggle Menu">
         <i class="fas fa-bars"></i>
     </button>
 
@@ -499,23 +499,19 @@
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const sidebar = document.querySelector('.sidebar');
         
-        if (window.innerWidth <= 768) {
-            mobileMenuToggle.style.display = 'block';
-            mobileMenuToggle.style.position = 'fixed';
-            mobileMenuToggle.style.top = '20px';
-            mobileMenuToggle.style.left = '20px';
-            mobileMenuToggle.style.zIndex = '101';
-            mobileMenuToggle.style.background = 'var(--primary-blue)';
-            mobileMenuToggle.style.color = 'white';
-            mobileMenuToggle.style.border = 'none';
-            mobileMenuToggle.style.borderRadius = '50%';
-            mobileMenuToggle.style.width = '44px';
-            mobileMenuToggle.style.height = '44px';
-            mobileMenuToggle.style.cursor = 'pointer';
-        }
-        
+        // Handle mobile menu toggle
         mobileMenuToggle?.addEventListener('click', () => {
-            sidebar.classList.toggle('open');
+            sidebar?.classList.toggle('open');
+        });
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && 
+                !sidebar?.contains(e.target) && 
+                !mobileMenuToggle?.contains(e.target) && 
+                sidebar?.classList.contains('open')) {
+                sidebar.classList.remove('open');
+            }
         });
 
         // Interactive features

@@ -1020,3 +1020,43 @@ h6 { font-size: var(--font-size-base); }
         border: 1px solid var(--gray-300);
     }
 }
+
+/* Extra Mobile Responsiveness for All Components */
+@media (max-width: 480px) {
+    body, html {
+        font-size: 15px;
+    }
+    .main-layout, .main-content, .sidebar {
+        padding: var(--space-2) !important;
+        margin: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+    img, video {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+    }
+    .card, .course-card, .game-card, .resource-card, .post-card, .question-card, .rumor-card, .analysis-card, .metric-card {
+        padding: var(--space-2) !important;
+        margin: var(--space-2) 0 !important;
+        font-size: var(--font-size-sm) !important;
+        box-sizing: border-box;
+    }
+    .hero-title, .tool-title, .section-title {
+        font-size: var(--font-size-xl) !important;
+    }
+    .sidebar {
+        position: static !important;
+        width: 100% !important;
+        margin-bottom: var(--space-4);
+    }
+    .feature-grid, .article-grid, .game-grid, .metrics-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-2) !important;
+    }
+    .page-hero, .tool-header, .community-header, .news-banner, .game-hero, .stats-header {
+        padding: var(--space-4) var(--space-2) !important;
+        margin: var(--space-2) !important;
+    }
+}

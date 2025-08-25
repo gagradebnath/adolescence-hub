@@ -453,3 +453,33 @@
         --border-strong: #4b5563;
     }
 }
+
+/* Extra Mobile Responsiveness for Page Components */
+@media (max-width: 480px) {
+    .user-avatar, .anonymous-avatar {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: var(--font-size-xs) !important;
+    }
+    .chat-messages {
+        height: 300px !important;
+        padding: var(--space-2) !important;
+    }
+    .message-content {
+        max-width: 95% !important;
+        font-size: var(--font-size-sm) !important;
+        padding: var(--space-2) !important;
+    }
+    .course-thumbnail, .game-thumbnail {
+        height: 120px !important;
+        font-size: var(--font-size-lg) !important;
+    }
+    .filter-tabs {
+        flex-direction: column !important;
+        padding: var(--space-1) !important;
+    }
+    .filter-tab {
+        padding: var(--space-1) var(--space-2) !important;
+        font-size: var(--font-size-xs) !important;
+    }
+}

@@ -254,7 +254,34 @@
         </main>
     </div>
 
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" title="Toggle Menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
     <!-- Virtual Lawyer JavaScript -->
     <script src="../js/virtual-lawyer.js"></script>
+    
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        // Handle mobile menu toggle
+        mobileMenuToggle?.addEventListener('click', () => {
+            sidebar?.classList.toggle('open');
+        });
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && 
+                !sidebar?.contains(e.target) && 
+                !mobileMenuToggle?.contains(e.target) && 
+                sidebar?.classList.contains('open')) {
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
 </body>
 </html>
