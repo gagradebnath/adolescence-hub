@@ -11,8 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Modern Social CSS -->
     <link rel="stylesheet" href="../css/modern-social.css">
+    <!-- Page-Specific Layouts -->
+    <link rel="stylesheet" href="../css/page-layouts.css">
+    <!-- Virtual Lawyer Specific Styles -->
+    <link rel="stylesheet" href="../css/virtual-lawyer.css">
 </head>
-<body>
+<body class="layout-professional">
     <!-- Top Header -->
     <header class="top-header">
         <div class="header-content">
@@ -119,203 +123,138 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Welcome to Virtual Lawyer -->
-            <article class="post-card card">
-                <div class="post-header">
-                    <div class="post-avatar" style="background: linear-gradient(135deg, #1e3a8a, #7c3aed);">VL</div>
-                    <div class="post-info">
-                        <div class="post-author">Virtual Lawyer AI</div>
-                        <div class="post-meta">
-                            <span>Legal AI Assistant</span>
-                            <span>•</span>
-                            <span>Online • Ready to Help</span>
-                        </div>
+            <!-- Professional Tool Header -->
+            <div class="tool-header">
+                <h1 class="tool-title">⚖️ Virtual Lawyer AI</h1>
+                <p class="tool-description">
+                    Get instant legal guidance on digital rights, privacy, and online safety issues. 
+                    Professional AI-powered legal assistance tailored for youth in the digital age.
+                </p>
+            </div>
+
+            <!-- Feature Grid -->
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <div class="post-time">
-                        AI
+                    <h3 class="feature-title">Privacy Rights</h3>
+                    <p class="feature-description">
+                        Understand your digital privacy rights and how to protect your personal information online.
+                    </p>
+                    <div class="feature-actions">
+                        <button class="feature-btn primary">Ask About Privacy</button>
                     </div>
                 </div>
-                <div class="post-content">
-                    <h2 class="post-title">⚖️ Welcome to Legal AI Assistant</h2>
-                    <p class="post-description">
-                        Get instant legal guidance on digital rights, privacy, and online safety issues. 
-                        I'm here to help you understand your rights in the digital world!
-                    </p>
-                    <div class="post-media" style="background: linear-gradient(135deg, #dbeafe, #f3e8ff);">
-                        <i class="fas fa-balance-scale"></i>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-secret"></i>
                     </div>
-                    <div style="margin-top: 0.75rem; padding: 0.75rem; background: #dbeafe; border-radius: 0.5rem;">
-                        <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: #1e40af;">
+                    <h3 class="feature-title">Cyberbullying Law</h3>
+                    <p class="feature-description">
+                        Learn about legal protections against cyberbullying and harassment online.
+                    </p>
+                    <div class="feature-actions">
+                        <button class="feature-btn primary">Get Legal Help</button>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-copyright"></i>
+                    </div>
+                    <h3 class="feature-title">Intellectual Property</h3>
+                    <p class="feature-description">
+                        Understanding copyright, fair use, and intellectual property in the digital realm.
+                    </p>
+                    <div class="feature-actions">
+                        <button class="feature-btn primary">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="feature-title">Digital Contracts</h3>
+                    <p class="feature-description">
+                        Navigate terms of service, privacy policies, and digital agreements with confidence.
+                    </p>
+                    <div class="feature-actions">
+                        <button class="feature-btn primary">Get Guidance</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Chat Interface -->
+            <div class="ai-chat-container">
+                <div class="chat-header">
+                    <div class="ai-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="ai-info">
+                        <h3 class="ai-name">Legal AI Assistant</h3>
+                        <p class="ai-status">Online • Ready to Help</p>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ai-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hello! I'm your Virtual Lawyer AI. I can help you understand legal issues related to digital rights, privacy, and online safety. What legal question can I help you with today?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h4 class="quick-actions-title">Quick Legal Topics:</h4>
+                    <div class="quick-buttons">
+                        <button class="quick-btn" onclick="askQuestion('What are my privacy rights online?')">
+                            Privacy Rights
+                        </button>
+                        <button class="quick-btn" onclick="askQuestion('How do I report cyberbullying?')">
+                            Cyberbullying Help
+                        </button>
+                        <button class="quick-btn" onclick="askQuestion('What is fair use in copyright?')">
+                            Copyright & Fair Use
+                        </button>
+                        <button class="quick-btn" onclick="askQuestion('How do I understand terms of service?')">
+                            Terms of Service
+                        </button>
+                        <button class="quick-btn" onclick="askQuestion('What should I do if my data is breached?')">
+                            Data Breach
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="chat-input-wrapper">
+                        <input type="text" id="chatInput" placeholder="Ask a legal question..." class="chat-input">
+                        <button onclick="sendMessage()" class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
                             <i class="fas fa-info-circle"></i>
                             <span>For educational purposes only - consult a real lawyer for serious legal matters</span>
                         </div>
                     </div>
                 </div>
-                <div class="post-actions">
-                    <button class="action-btn">
-                        <i class="fas fa-question-circle"></i>
-                        <span>FAQ</span>
-                    </button>
-                    <button class="action-btn">
-                        <i class="fas fa-book"></i>
-                        <span>Legal Guide</span>
-                    </button>
-                    <button class="action-btn primary">
-                        <i class="fas fa-comment"></i>
-                        <span>Start Chat</span>
-                    </button>
-                </div>
+                
             </article>
 
-            <!-- AI Chat Interface Post -->
-            <article class="post-card card">
-                <div class="post-header">
-                    <div class="post-avatar" style="background: linear-gradient(135deg, #059669, #0891b2);">AI</div>
-                    <div class="post-info">
-                        <div class="post-author">Legal AI Chat</div>
-                        <div class="post-meta">
-                            <span>Real-time Assistance</span>
-                            <span>•</span>
-                            <span>Powered by Legal Knowledge</span>
-                        </div>
-                    </div>
-                    <div class="post-time">
-                        CHAT
-                    </div>
-                </div>
-                <div class="post-content">
-                    <h2 class="post-title">💬 Interactive Legal Chat</h2>
-                    <p class="post-description">
-                        Ask me anything about digital rights, privacy laws, cyberbullying, or online safety!
-                    </p>
-                    
-                    <!-- Chat Interface -->
-                    <div style="background: #f8fafc; border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
-                        <div style="margin-bottom: 1rem; max-height: 16rem; overflow-y: auto;">
-                            <!-- AI Message -->
-                            <div style="display: flex; gap: 0.75rem;">
-                                <div style="width: 2rem; height: 2rem; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.875rem;">
-                                    <i class="fas fa-gavel"></i>
-                                </div>
-                                <div style="flex: 1; background: white; padding: 0.75rem; border-radius: 0.5rem;">
-                                    <p style="font-size: 0.875rem;">Hello! I'm your Virtual Lawyer AI. I can help you understand legal issues related to digital rights, privacy, and online safety. What would you like to know?</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Quick Questions -->
-                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem;">
-                                <button style="font-size: 0.75rem; background: #dbeafe; color: #1e40af; padding: 0.25rem 0.75rem; border-radius: 9999px; border: none; cursor: pointer;">
-                                    "Can schools monitor my social media?"
-                                </button>
-                                <button style="font-size: 0.75rem; background: #dcfce7; color: #166534; padding: 0.25rem 0.75rem; border-radius: 9999px; border: none; cursor: pointer;">
-                                    "What are my privacy rights online?"
-                                </button>
-                                <button style="font-size: 0.75rem; background: #e9d5ff; color: #6b21a8; padding: 0.25rem 0.75rem; border-radius: 9999px; border: none; cursor: pointer;">
-                                    "How to report cyberbullying?"
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- Chat Input -->
-                        <div style="display: flex; gap: 0.5rem;">
-                            <input type="text" placeholder="Ask a legal question..." style="flex: 1; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 0.5rem; outline: none;">
-                            <button style="background: #3b82f6; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; border: none; cursor: pointer;">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-actions">
-                    <button class="action-btn">
-                        <i class="fas fa-history"></i>
-                        <span>Chat History</span>
-                    </button>
-                    <button class="action-btn">
-                        <i class="fas fa-download"></i>
-                        <span>Save Chat</span>
-                    </button>
-                    <button class="action-btn primary">
-                        <i class="fas fa-refresh"></i>
-                        <span>New Session</span>
-                    </button>
-                </div>
-            </article>
+            
 
-            <!-- Legal Resources Post -->
-            <article class="post-card card">
-                <div class="post-header">
-                    <div class="post-avatar" style="background: linear-gradient(135deg, #ea580c, #dc2626);">LR</div>
-                    <div class="post-info">
-                        <div class="post-author">Legal Resources</div>
-                        <div class="post-meta">
-                            <span>Educational Materials</span>
-                            <span>•</span>
-                            <span>Quick Access Guides</span>
-                        </div>
-                    </div>
-                    <div class="post-time">
-                        GUIDE
-                    </div>
-                </div>
-                <div class="post-content">
-                    <h2 class="post-title">📚 Essential Legal Guides</h2>
-                    <p class="post-description">
-                        Quick access to important legal information every digital citizen should know.
-                    </p>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem;">
-                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-                                <i class="fas fa-shield-alt" style="color: #3b82f6; font-size: 1.25rem;"></i>
-                                <h4 style="font-weight: 500;">Privacy Rights</h4>
-                            </div>
-                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Learn about your right to privacy online and how to protect personal data</p>
-                            <div style="font-size: 0.75rem; color: #64748b;">📖 5 min read • 🏷️ Essential</div>
-                        </div>
-                        
-                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem;">
-                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-                                <i class="fas fa-copyright" style="color: #10b981; font-size: 1.25rem;"></i>
-                                <h4 style="font-weight: 500;">Copyright Basics</h4>
-                            </div>
-                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Understand copyright law for photos, videos, and content creation</p>
-                            <div style="font-size: 0.75rem; color: #64748b;">📖 7 min read • 🎨 Creators</div>
-                        </div>
-                        
-                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem;">
-                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-                                <i class="fas fa-user-secret" style="color: #ef4444; font-size: 1.25rem;"></i>
-                                <h4 style="font-weight: 500;">Cyberbullying Laws</h4>
-                            </div>
-                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Know your rights and legal options against online harassment</p>
-                            <div style="font-size: 0.75rem; color: #64748b;">📖 6 min read • 🚨 Safety</div>
-                        </div>
-                        
-                        <div style="border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem;">
-                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-                                <i class="fas fa-mobile-alt" style="color: #8b5cf6; font-size: 1.25rem;"></i>
-                                <h4 style="font-weight: 500;">Digital Rights</h4>
-                            </div>
-                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.75rem;">Your rights in the digital age and how to exercise them</p>
-                            <div style="font-size: 0.75rem; color: #64748b;">📖 8 min read • ⚖️ Rights</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-actions">
-                    <button class="action-btn">
-                        <i class="fas fa-download"></i>
-                        <span>Download Guides</span>
-                    </button>
-                    <button class="action-btn">
-                        <i class="fas fa-bookmark"></i>
-                        <span>Save All</span>
-                    </button>
-                    <button class="action-btn primary">
-                        <i class="fas fa-book-open"></i>
-                        <span>Browse Library</span>
-                    </button>
-                </div>
-            </article>
+           
         </main>
     </div>
+
+    <!-- Virtual Lawyer JavaScript -->
+    <script src="../js/virtual-lawyer.js"></script>
 </body>
 </html>

@@ -1,0 +1,571 @@
+/* Page-Specific Layout Variations - Adolescence HUB */
+
+/* Layout Base Overrides */
+.layout-learning,
+.layout-professional,
+.layout-social,
+.layout-news,
+.layout-interactive,
+.layout-analytics {
+    --layout-max-width: none;
+}
+
+.layout-learning .main-layout,
+.layout-professional .main-layout,
+.layout-social .main-layout,
+.layout-news .main-layout,
+.layout-interactive .main-layout,
+.layout-analytics .main-layout {
+    max-width: var(--layout-max-width);
+    width: 100%;
+}
+
+.layout-learning .main-content,
+.layout-professional .main-content,
+.layout-social .main-content,
+.layout-news .main-content,
+.layout-interactive .main-content,
+.layout-analytics .main-content {
+    margin-left: var(--sidebar-width);
+    margin-right: 0;
+    max-width: none;
+    width: calc(100vw - var(--sidebar-width));
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* Ensure mobile sidebar behavior is maintained */
+@media (max-width: 1024px) {
+    .layout-learning .main-content,
+    .layout-professional .main-content,
+    .layout-social .main-content,
+    .layout-news .main-content,
+    .layout-interactive .main-content,
+    .layout-analytics .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: var(--space-4);
+    }
+}
+
+/* Dashboard Style - For home/main pages */
+.layout-dashboard {
+    --content-padding: var(--space-6);
+    --content-bg: var(--bg-primary);
+}
+
+.layout-dashboard .main-content {
+    background: var(--content-bg);
+    border-radius: var(--radius-lg);
+    margin: var(--space-4);
+    box-shadow: var(--shadow-sm);
+    margin-left: var(--sidebar-width);
+    margin-right: var(--right-sidebar-width);
+    width: auto;
+    max-width: var(--content-max-width);
+}
+
+/* Learning Platform Style - For courses, games, habits */
+.layout-learning {
+    --hero-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --card-hover-lift: translateY(-4px);
+}
+
+.layout-learning .main-content {
+    padding: 0;
+}
+
+.layout-learning .page-hero {
+    background: var(--hero-gradient);
+    color: white;
+    padding: var(--space-12) var(--space-6) var(--space-8);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.layout-learning .page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+}
+
+.layout-learning .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.layout-learning .hero-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    margin-bottom: var(--space-4);
+    background: linear-gradient(45deg, #ffffff, #e2e8f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.layout-learning .hero-subtitle {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+    margin-bottom: var(--space-6);
+}
+
+.layout-learning .content-section {
+    padding: var(--space-8) var(--space-6);
+    background: var(--bg-secondary);
+}
+
+.layout-learning .card {
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.layout-learning .card:hover {
+    transform: var(--card-hover-lift);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Professional/Tool Style - For AI tools, legal, analyzer */
+.layout-professional {
+    --primary-accent: #1e40af;
+    --secondary-accent: #059669;
+    --bg-pattern: radial-gradient(circle at 20% 50%, rgba(30, 64, 175, 0.05) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(5, 150, 105, 0.05) 0%, transparent 50%);
+}
+
+.layout-professional .main-content {
+    background: var(--bg-pattern);
+    min-height: calc(100vh - var(--header-height));
+}
+
+.layout-professional .tool-header {
+    background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+    color: white;
+    padding: var(--space-8) var(--space-6);
+    margin: var(--space-6);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.layout-professional .tool-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.layout-professional .tool-title {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+    position: relative;
+    z-index: 1;
+}
+
+.layout-professional .tool-description {
+    font-size: var(--font-size-lg);
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+}
+
+.layout-professional .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+    padding: var(--space-6);
+}
+
+.layout-professional .feature-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.layout-professional .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+}
+
+.layout-professional .feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-accent);
+}
+
+/* Community/Social Style - For community, blog, Q&A */
+.layout-social {
+    --community-primary: #ec4899;
+    --community-secondary: #8b5cf6;
+    --feed-bg: var(--bg-primary);
+}
+
+.layout-social .main-content {
+    background: var(--feed-bg);
+}
+
+.layout-social .community-header {
+    background: linear-gradient(135deg, var(--community-primary), var(--community-secondary));
+    color: white;
+    padding: var(--space-6);
+    margin: var(--space-4);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    position: relative;
+}
+
+.layout-social .community-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--community-secondary);
+}
+
+.layout-social .post-create {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    margin: var(--space-4) var(--space-6);
+    box-shadow: var(--shadow-sm);
+    border: 2px dashed var(--border-light);
+    transition: all var(--transition-normal);
+}
+
+.layout-social .post-create:hover {
+    border-color: var(--community-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.layout-social .post-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    margin: var(--space-4) var(--space-6);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    border-left: 4px solid transparent;
+}
+
+.layout-social .post-card:hover {
+    border-left-color: var(--community-primary);
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md);
+}
+
+/* News/Information Style - For news, newsletter, bias analysis */
+.layout-news {
+    --news-primary: #f59e0b;
+    --news-secondary: #ef4444;
+    --info-bg: linear-gradient(135deg, #fef3c7 0%, #fee2e2 100%);
+}
+
+.layout-news .main-content {
+    background: var(--info-bg);
+    min-height: calc(100vh - var(--header-height));
+}
+
+.layout-news .news-banner {
+    background: linear-gradient(135deg, var(--news-primary), var(--news-secondary));
+    color: white;
+    padding: var(--space-8) var(--space-6);
+    margin: var(--space-6);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+}
+
+.layout-news .news-banner::before {
+    content: '📰';
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-6);
+    font-size: var(--font-size-3xl);
+    opacity: 0.7;
+}
+
+.layout-news .article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--space-6);
+    padding: var(--space-6);
+}
+
+.layout-news .article-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    border-top: 4px solid var(--news-primary);
+}
+
+.layout-news .article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Games/Interactive Style - For games, quizzes, interactive content */
+.layout-interactive {
+    --game-primary: #10b981;
+    --game-secondary: #3b82f6;
+    --game-accent: #f59e0b;
+    --interactive-bg: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.1) 0%, transparent 70%),
+                      linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%);
+}
+
+.layout-interactive .main-content {
+    background: var(--interactive-bg);
+    min-height: calc(100vh - var(--header-height));
+}
+
+.layout-interactive .game-hero {
+    background: linear-gradient(135deg, var(--game-primary), var(--game-secondary));
+    color: white;
+    padding: var(--space-10) var(--space-6);
+    margin: var(--space-6);
+    border-radius: var(--radius-2xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.layout-interactive .game-hero::before {
+    content: '🎮';
+    position: absolute;
+    top: var(--space-6);
+    right: var(--space-8);
+    font-size: var(--font-size-5xl);
+    opacity: 0.6;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+.layout-interactive .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    padding: var(--space-6);
+}
+
+.layout-interactive .game-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    text-align: center;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.layout-interactive .game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--game-primary), var(--game-secondary), var(--game-accent));
+}
+
+.layout-interactive .game-card:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--game-primary);
+}
+
+/* Analytics/Tracking Style - For habit corner, progress tracking */
+.layout-analytics {
+    --analytics-primary: #8b5cf6;
+    --analytics-secondary: #06b6d4;
+    --analytics-bg: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+}
+
+.layout-analytics .main-content {
+    background: var(--analytics-bg);
+    min-height: calc(100vh - var(--header-height));
+}
+
+.layout-analytics .stats-header {
+    background: linear-gradient(135deg, var(--analytics-primary), var(--analytics-secondary));
+    color: white;
+    padding: var(--space-8) var(--space-6);
+    margin: var(--space-6);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    position: relative;
+}
+
+.layout-analytics .stats-header::before {
+    content: '📊';
+    position: absolute;
+    top: var(--space-4);
+    left: var(--space-6);
+    font-size: var(--font-size-3xl);
+    opacity: 0.8;
+}
+
+.layout-analytics .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-4);
+    padding: var(--space-6);
+}
+
+.layout-analytics .metric-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.layout-analytics .metric-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--analytics-primary), var(--analytics-secondary));
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.layout-analytics .metric-card:hover::after {
+    transform: scaleX(1);
+}
+
+.layout-analytics .metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Sidebar Enhancements for Different Layouts */
+.layout-learning .sidebar,
+.layout-professional .sidebar {
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, #f1f5f9 100%);
+}
+
+.layout-social .sidebar {
+    background: linear-gradient(180deg, #fdf2f8 0%, var(--bg-secondary) 100%);
+}
+
+.layout-news .sidebar {
+    background: linear-gradient(180deg, #fffbeb 0%, var(--bg-secondary) 100%);
+}
+
+.layout-interactive .sidebar {
+    background: linear-gradient(180deg, #f0fdf4 0%, var(--bg-secondary) 100%);
+}
+
+.layout-analytics .sidebar {
+    background: linear-gradient(180deg, #faf5ff 0%, var(--bg-secondary) 100%);
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 1024px) {
+    .layout-learning .main-content,
+    .layout-professional .main-content,
+    .layout-social .main-content,
+    .layout-news .main-content,
+    .layout-interactive .main-content,
+    .layout-analytics .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: var(--space-4);
+    }
+    
+    .layout-learning .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .layout-professional .feature-grid,
+    .layout-news .article-grid,
+    .layout-interactive .game-grid,
+    .layout-analytics .metrics-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--space-4);
+    }
+}
+
+@media (max-width: 768px) {
+    .layout-learning .main-content,
+    .layout-professional .main-content,
+    .layout-social .main-content,
+    .layout-news .main-content,
+    .layout-interactive .main-content,
+    .layout-analytics .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: var(--space-2);
+    }
+    
+    .layout-learning .page-hero,
+    .layout-professional .tool-header,
+    .layout-social .community-header,
+    .layout-news .news-banner,
+    .layout-interactive .game-hero,
+    .layout-analytics .stats-header {
+        margin: var(--space-2);
+        padding: var(--space-6) var(--space-4);
+    }
+    
+    .layout-learning .hero-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .layout-professional .tool-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .layout-professional .feature-grid,
+    .layout-news .article-grid,
+    .layout-interactive .game-grid,
+    .layout-analytics .metrics-grid {
+        grid-template-columns: 1fr;
+        padding: var(--space-4);
+    }
+}
